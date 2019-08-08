@@ -1,0 +1,17 @@
+
+/* ---------------------------------
+FlashCards styles
+--------------------------------- */
+
+
+.invisible { display: none; }
+
+.flashCardsControls a { position: fixed; }
+
+.flashCardsControls a:first-child { left: 40px; }
+
+.flashCardsControls a:last-child { right: 40px; }
+
+.flashCardBody { font-size: 22px; text-align: center; padding: 80px 16px; }
+
+.flashCardFlipButton { padding: 8px; float: right; }
