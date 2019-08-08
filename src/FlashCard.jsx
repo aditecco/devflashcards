@@ -21,11 +21,11 @@ export default function FlashCard(props) {
     <article className="flashCard" style={styles.FlashCard}>
       <div className="flashCardFront">
         <header className="flashCardTitle">
-          {/*  */}
+          {props.meta}
         </header>
 
         <div className="flashCardBody">
-          question here
+          {props.question}
         </div>
 
         <footer className="flashCardFooter">
@@ -36,7 +36,7 @@ export default function FlashCard(props) {
       </div>
 
       <div className="flashCardBack invisible">
-        Solution here
+        {props.answer}
       </div>
       
     </article>

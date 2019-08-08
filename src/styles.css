@@ -12,6 +12,6 @@ FlashCards styles
 
 .flashCardsControls a:last-child { right: 40px; }
 
-.flashCardBody { font-size: 22px; text-align: center; padding: 80px 16px; }
+.flashCardBody { font-size: 22px; text-align: center; padding: 80px 32px; line-height: 1.5; }
 
 .flashCardFlipButton { padding: 8px; float: right; }

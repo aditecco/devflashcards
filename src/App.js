@@ -29,7 +29,11 @@ function App() {
         <a href="#">next &rarr;</a>
       </div>
 
-      <FlashCard></FlashCard>
+      <FlashCard
+      meta=''
+      question='Explain the behavior of this in JavaScript'
+      answer=''
+      />
     </div>
   );
 }
