@@ -1,0 +1,55 @@
+
+/* ---------------------------------
+FlashCards styles
+--------------------------------- */
+
+
+.invisible { display: none; }
+
+
+.flashCardsControls {
+  a {
+    position: fixed;
+    top: 50%;
+
+    &:first-child { left: 40px; }
+    &:last-child { right: 40px; }
+  }
+} 
+
+
+.flashCard {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 40px rgba(0,0,0,.1);
+
+  &Front, &Back { height: 100%; }
+
+  &Front {}
+
+  &Back {
+    @extend .flashCard;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &Title {}
+
+  &Body {
+    height: 80%;
+    padding: 80px 32px;
+    border-bottom: 1px solid #eee;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &Footer {}
+
+  &FlipButton { padding: 8px; float: right; }
+}
