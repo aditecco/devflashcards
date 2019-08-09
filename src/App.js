@@ -1,12 +1,12 @@
 
 /* ---------------------------------
-FlashCards
+App
 --------------------------------- */
 
 import React from 'react';
 import FlashCard from './FlashCard';
 
-import './styles.css';
+import './index.scss';
 
 const styles = {
   App: {
@@ -32,7 +32,8 @@ function App() {
       <FlashCard
       meta=''
       question='Explain the behavior of this in JavaScript'
-      answer=''
+      answer='heeeyyy!'
+      
       />
     </div>
   );
