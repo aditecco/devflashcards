@@ -3,9 +3,14 @@
 App
 --------------------------------- */
 
+// deps
 import React from 'react';
 import FlashCard from './FlashCard';
 
+// assets
+import data from './data.json';
+
+// styles
 import './index.scss';
 
 const styles = {
@@ -31,8 +36,8 @@ function App() {
 
       <FlashCard
       meta=''
-      question='Explain the behavior of this in JavaScript'
-      answer='heeeyyy!'
+      question={data.card_01.question}
+      answer={data.card_01.answer}
       
       />
     </div>
