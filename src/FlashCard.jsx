@@ -14,6 +14,7 @@ export default function FlashCard(props) {
   return (
     <article
     className={`flashCard animated ${flipped ? 'flipInY' : ''}`}
+    onAnimationEnd={e => console.log(e)}
     >
       <div
       className={`flashCardFront ${flipped ? 'invisible' : ''}`}
@@ -55,7 +56,7 @@ export default function FlashCard(props) {
           className="flashCardFlipButton"
           onClick={() => flipper(flipped = !flipped)}
           >
-            Flip it!
+            Flip back
           </a>
         </footer>
       </div>
