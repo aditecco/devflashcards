@@ -4,6 +4,7 @@ Flip
 
 import * as React from "react";
 import {
+  CSSProperties,
   PropsWithChildren,
   ReactChild,
   ReactChildren,
@@ -18,7 +19,7 @@ export type FlippableState = {
   setFlipped?: React.Dispatch<boolean>;
 };
 
-export type FlipProps = {} & { children };
+export type FlipProps = {} & { children; style?: CSSProperties };
 
 // FlipContext
 const FlipContext = React.createContext<FlippableState>({
@@ -29,9 +30,10 @@ const FlipContext = React.createContext<FlippableState>({
 /**
  * Flip
  * @param children
+ * @param style
  * @constructor
  */
-const Flip = ({ children }: FlipProps) => {
+const Flip = ({ children, style }: FlipProps) => {
   const [flipped, setFlipped] = useState(false);
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -41,7 +43,14 @@ const Flip = ({ children }: FlipProps) => {
 
   return (
     <FlipContext.Provider value={{ flipped, setFlipped, transform, opacity }}>
-      <div style={{ position: "relative" }}>{children}</div>
+      <div
+        style={{
+          position: "relative",
+          ...(style ?? {}),
+        }}
+      >
+        {children}
+      </div>
     </FlipContext.Provider>
   );
 };

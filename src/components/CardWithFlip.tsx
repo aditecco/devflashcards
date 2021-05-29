@@ -3,7 +3,7 @@ CardWithFlip
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement } from "react";
+import { CSSProperties, PropsWithChildren, ReactElement } from "react";
 import Flip from "./Flip";
 import Card from "./Card";
 import CardFlipControls from "./CardFlipControls";
@@ -12,10 +12,12 @@ import CardFooter from "./CardFooter";
 
 type OwnProps = {
   card: unknown;
+  style?: CSSProperties;
 };
 
 export default function CardWithFlip({
   card,
+  style,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const {
     id,
@@ -24,7 +26,7 @@ export default function CardWithFlip({
   } = card ?? {};
 
   return (
-    <Flip>
+    <Flip style={style ?? {}}>
       <Flip.Front>
         {({ setFlipped }) => (
           <Card>
