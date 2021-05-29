@@ -18,12 +18,40 @@ export default function CardViewer({
     <div
       className="card-viewer"
       css={css`
-        background-color: palegoldenrod;
+        background: radial-gradient(at center, white, whitesmoke);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card-container {
+          position: relative;
+          width: 300px;
+          height: 400px;
+        }
       `}
     >
-      {cards?.map?.((card) => (
-        <CardWithFlip key={card?.node?.id} card={card?.node} />
-      ))}
+      <div className="card-container">
+        {cards?.map?.((card, i, cards) => {
+          const zIndexes = [];
+
+          for (let j = cards.length; j > 0; j--) {
+            zIndexes.push(j);
+          }
+
+          return (
+            <CardWithFlip
+              key={card?.node?.id}
+              card={card?.node}
+              style={{
+                position: "absolute",
+                inset: 0,
+                zIndex: zIndexes[i],
+              }}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
