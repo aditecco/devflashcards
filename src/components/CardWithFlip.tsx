@@ -29,7 +29,7 @@ export default function CardWithFlip({
     <Flip style={style ?? {}}>
       <Flip.Front>
         {({ setFlipped }) => (
-          <Card>
+          <Card noShadow>
             <div className="card-content">
               <h4>{question}</h4>
               <div dangerouslySetInnerHTML={{ __html: html }} />

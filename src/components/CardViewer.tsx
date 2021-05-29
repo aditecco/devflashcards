@@ -28,6 +28,7 @@ export default function CardViewer({
           position: relative;
           width: 300px;
           height: 400px;
+          box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.25);
         }
       `}
     >

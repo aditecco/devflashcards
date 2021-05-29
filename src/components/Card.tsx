@@ -12,16 +12,21 @@ import {
 import { css } from "@emotion/react";
 import { PropsWithChildren, ReactElement } from "react";
 
+type CardProps = {
+  noShadow?: boolean;
+};
+
 export default function Card({
   children,
-}: PropsWithChildren<{}>): ReactElement {
+  noShadow,
+}: PropsWithChildren<CardProps>): ReactElement {
   return (
     <article
       className={"Card"}
       css={css`
         background-color: white;
         border-radius: 6px;
-        box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: ${noShadow ? "" : "0 10px 10px 2px rgba(0, 0, 0, 0.25)"};
         width: ${cardWidth};
         max-width: ${cardMaxWidth};
         height: ${cardHeight};
