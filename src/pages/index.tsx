@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 // markup
 const IndexPage = ({ data }) => {
   const {
-    allMdx: { edges: cards },
+    allMarkdownRemark: { edges: cards },
   } = data ?? {};
 
   console.log(data);
@@ -23,14 +23,21 @@ export default IndexPage;
 
 export const query = graphql`
   {
-    allMdx {
+    allMarkdownRemark {
       edges {
         node {
           id
+          html
+          headings {
+            depth
+            value
+          }
           frontmatter {
-            title
-            topic
             timestamp
+            topic
+            title
+            question
+            answer
           }
         }
       }

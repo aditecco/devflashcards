@@ -19,7 +19,8 @@ export default function CardWithFlip({
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const {
     id,
-    frontmatter: { title, topic, timestamp },
+    frontmatter: { title, topic, timestamp, question, answer },
+    html,
   } = card ?? {};
 
   return (
@@ -28,9 +29,8 @@ export default function CardWithFlip({
         {({ setFlipped }) => (
           <Card>
             <div className="card-content">
-              <h4>{title}</h4>
-              <h6>{timestamp}</h6>
-              <span>{topic}</span>
+              <h4>{question}</h4>
+              <div dangerouslySetInnerHTML={{ __html: html }} />
             </div>
 
             <CardFlipControls onFlip={() => setFlipped((f) => !f)} />
@@ -56,7 +56,7 @@ export default function CardWithFlip({
       <Flip.Back>
         {({ setFlipped }) => (
           <Card>
-            <span>Back</span>
+            <span>{answer}</span>
             <CardFlipControls back onFlip={() => setFlipped((f) => !f)} />
           </Card>
         )}
