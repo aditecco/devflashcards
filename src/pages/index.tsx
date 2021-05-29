@@ -1,6 +1,6 @@
 import * as React from "react";
-import CardWithFlip from "../components/CardWithFlip";
 import { graphql } from "gatsby";
+import CardViewer from "../components/CardViewer";
 
 // markup
 const IndexPage = ({ data }) => {
@@ -11,11 +11,9 @@ const IndexPage = ({ data }) => {
   console.log(data);
 
   return (
-    <main>
-      {cards?.map?.((card) => (
-        <CardWithFlip key={card?.node?.id} card={card?.node} />
-      ))}
-    </main>
+    <>
+      <CardViewer cards={cards} />
+    </>
   );
 };
 
