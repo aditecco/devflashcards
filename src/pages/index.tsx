@@ -21,7 +21,7 @@ export default IndexPage;
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: frontmatter___order }) {
       edges {
         node {
           id
@@ -36,6 +36,7 @@ export const query = graphql`
             title
             question
             answer
+            options
           }
         }
       }

@@ -11,7 +11,6 @@ export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
     <Global
       styles={css`
-        // other globals
         *,
         *::before,
         *::after {
