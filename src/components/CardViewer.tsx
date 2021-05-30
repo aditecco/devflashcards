@@ -37,12 +37,13 @@ export default function CardViewer({
 
         .card-container {
           position: relative;
-          border-radius: 6px;
+          width: 300px;
+          height: 400px;
         }
       `}
     >
       <div className="card-container" ref={containerRef}>
-        {cards.slice(0, 1)?.map?.((card, i, cards) => {
+        {cards?.map?.((card, i, cards) => {
           const zIndexes = [];
 
           for (let j = cards.length; j > 0; j--) {
@@ -51,24 +52,28 @@ export default function CardViewer({
 
           return (
             <motion.div
+              key={card?.node?.id}
               drag="x"
               dragConstraints={containerRef}
-              style={{ x }}
-              dragElastic={1}
+              data-card={"card__" + i}
+              style={{
+                ...x,
+                position: "absolute",
+                inset: 0,
+                zIndex: zIndexes[i],
+              }}
+              dragElastic={0.7}
               onDragEnd={(event, info) => {
                 console.log(event, info);
               }}
             >
               <CardWithFlip
-                key={card?.node?.id}
                 card={card?.node}
-                style={{
-                  // position: "absolute",
-                  // inset: 0,
-                  width: 300,
-                  height: 400,
-                  zIndex: zIndexes[i],
-                }}
+                noShadow={i !== 0}
+
+                // style={{
+                //   ...(i !== cards.length - 1 ? { boxShadow: "none" } : {}),
+                // }}
               />
             </motion.div>
           );

@@ -12,7 +12,7 @@ import {
 import { css } from "@emotion/react";
 import { CSSProperties, PropsWithChildren, ReactElement } from "react";
 
-type CardProps = {
+export type CardProps = {
   noShadow?: boolean;
   style?: CSSProperties;
 };

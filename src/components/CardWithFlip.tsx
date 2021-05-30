@@ -5,7 +5,7 @@ CardWithFlip
 import * as React from "react";
 import { CSSProperties, PropsWithChildren, ReactElement } from "react";
 import Flip from "./Flip";
-import Card from "./Card";
+import Card, { CardProps } from "./Card";
 import CardFlipControls from "./CardFlipControls";
 import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
@@ -15,11 +15,12 @@ import { rem } from "../css-functions";
 type OwnProps = {
   card: unknown;
   style?: CSSProperties;
-};
+} & Omit<CardProps, "style">;
 
 export default function CardWithFlip({
   card,
   style,
+  ...cardProps
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const {
     id,
@@ -31,7 +32,7 @@ export default function CardWithFlip({
     <Flip style={style ?? {}}>
       <Flip.Front>
         {({ setFlipped }) => (
-          <Card noShadow>
+          <Card {...cardProps}>
             <div
               className="card-content"
               css={css`
@@ -78,20 +79,14 @@ export default function CardWithFlip({
               <div className="card-content-options">{options}</div>
             </div>
 
-            <CardFlipControls onFlip={() => setFlipped((f) => !f)} />
-
             <CardFooter>
               <CardControls>
-                <button className="CardControlsButton" type="button">
-                  Cobaltum
-                </button>
-
-                <button className="CardControlsButton" type="button">
-                  Germanus
-                </button>
-
-                <button className="CardControlsButton" type="button">
-                  Nunquam
+                <button
+                  className="CardControlsButton"
+                  type="button"
+                  onClick={() => setFlipped((f) => !f)}
+                >
+                  Show answer
                 </button>
               </CardControls>
             </CardFooter>
@@ -102,8 +97,29 @@ export default function CardWithFlip({
       <Flip.Back>
         {({ setFlipped }) => (
           <Card>
-            <span>{answer}</span>
             <CardFlipControls back onFlip={() => setFlipped((f) => !f)} />
+
+            <span>{answer}</span>
+
+            <CardFooter>
+              <CardControls>
+                <button className="CardControlsButton" type="button">
+                  Again
+                </button>
+
+                <button className="CardControlsButton" type="button">
+                  Hard
+                </button>
+
+                <button className="CardControlsButton" type="button">
+                  Good
+                </button>
+
+                <button className="CardControlsButton" type="button">
+                  Easy
+                </button>
+              </CardControls>
+            </CardFooter>
           </Card>
         )}
       </Flip.Back>
