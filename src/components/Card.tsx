@@ -10,15 +10,17 @@ import {
   cardWidth,
 } from "../css-vars";
 import { css } from "@emotion/react";
-import { PropsWithChildren, ReactElement } from "react";
+import { CSSProperties, PropsWithChildren, ReactElement } from "react";
 
 type CardProps = {
   noShadow?: boolean;
+  style?: CSSProperties;
 };
 
 export default function Card({
   children,
   noShadow,
+  style,
 }: PropsWithChildren<CardProps>): ReactElement {
   return (
     <article
@@ -33,6 +35,7 @@ export default function Card({
         font-family: ${baseFontStack};
         font-weight: 400;
       `}
+      style={style ?? {}}
     >
       <div
         className={"CardBody"}
