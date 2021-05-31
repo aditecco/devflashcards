@@ -1,0 +1,20 @@
+###### 43. What does this return?
+
+```javascript
+[...'Lydia'];
+```
+
+- A: `["L", "y", "d", "i", "a"]`
+- B: `["Lydia"]`
+- C: `[[], "Lydia"]`
+- D: `[["L", "y", "d", "i", "a"]]`
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+A string is an iterable. The spread operator maps every character of an iterable to one element.
+
+</p>
+</details>
