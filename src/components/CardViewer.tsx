@@ -70,7 +70,7 @@ export default function CardViewer({
               dragConstraints={{ left: 0, right: 0 }}
               // dragTransition={{ bounceStiffness: 300, bounceDamping: 10 }}
               // dragConstraints={containerRef}
-              data-card={"card__" + i}
+              data-card={"card__" + (i + 1)}
               dragElastic={0.8}
               onDragEnd={(_, info) => {
                 const dragMax = info.point.x;
@@ -91,7 +91,6 @@ export default function CardViewer({
                 zIndex: cardStackingOrder[i],
               }}
             >
-              <small>zIndex: {cardStackingOrder[i]}</small>
               <CardWithFlip
                 card={card?.node}
                 noShadow={i !== 0}
