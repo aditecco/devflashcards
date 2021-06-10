@@ -28,15 +28,25 @@ export default function CardWithFlip({
     html,
   } = card ?? {};
 
-  const cleared = html
-    .replace(/<h6>[a-zA-Z]{.}<\/h6>/g, "")
-    .replace(/<h6>[a-zA-Z0-9\.]{.}<\/h6>/g, "")
-    .replace(/<details><summary><b>Answer<\/b><\/summary>/g, "")
-    .replace(/<p>/, "")
-    .replace(/<\/p>/, "")
-    .replace(/<\/details>/, "");
-  const q = cleared.split(/\<h4\>Answer\:\s[A-Z]{1}\<\/h4\>/g).shift();
-  const a = cleared.split(/\<h4\>Answer\:\s[A-Z]{1}\<\/h4\>/g).pop();
+  const PATTERNS = {
+    QUESTION_HEADING: /<h6>(\d\.\s\w.*)<\/h6>/g,
+    ANSWER_REVEAL: /<details><summary><b>Answer<\/b><\/summary>/g,
+    PARAGRAPHS: /<[\/]?p>/g,
+    MISC_TAGS: /\<[\/]?(p|details|summary)\>/g,
+    ANSWER_HEADING: /\<h4\>Answer\:\s[A-Z]{1}\<\/h4\>/g,
+  };
+
+  const {
+    ANSWER_HEADING,
+    ANSWER_REVEAL,
+    QUESTION_HEADING,
+    MISC_TAGS,
+    PARAGRAPHS,
+  } = PATTERNS;
+
+  const cleared = html.replace(QUESTION_HEADING, "").replace(ANSWER_REVEAL, "");
+  const q = cleared.split(ANSWER_HEADING).shift();
+  const a = cleared.split(ANSWER_HEADING).pop();
 
   return (
     <Flip style={style ?? {}}>
