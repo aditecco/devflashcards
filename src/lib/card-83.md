@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: What kind of information would get logged?
-answer: Answer: C
+answer: C
 ---
 
   

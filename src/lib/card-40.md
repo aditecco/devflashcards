@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: What does the `setInterval` method return in the browser?
-answer: Answer: A
+answer: A
 ---
 
   

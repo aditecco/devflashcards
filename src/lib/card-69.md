@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: How can we log the values that are commented out after the console.log statement?
-answer: Answer: C
+answer: C
 ---
 
   

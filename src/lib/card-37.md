@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: Everything in JavaScript is either a...
-answer: Answer: A
+answer: A
 ---
 
   

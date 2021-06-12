@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: Which of the options result(s) in an error?
-answer: Answer: D
+answer: D
 ---
 
   

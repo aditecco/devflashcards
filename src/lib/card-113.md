@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: Which method(s) will return the value `'Hello world!'`?
-answer: Answer: B
+answer: B
 ---
 
   

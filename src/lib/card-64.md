@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: With which constructor can we successfully extend the `Dog` class?
-answer: Answer: B
+answer: B
 ---
 
   

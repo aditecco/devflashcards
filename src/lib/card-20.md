@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: How long is cool_secret accessible?
-answer: Answer: B
+answer: B
 ---
 
   

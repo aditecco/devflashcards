@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: What do we need to add to the `person` object to get `["Lydia Hallie", 21]` as the output of `[...person]`?
-answer: Answer: C
+answer: C
 ---
 
   

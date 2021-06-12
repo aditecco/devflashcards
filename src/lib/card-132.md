@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: How can we invoke `sum` in `sum.js` from `index.js?`
-answer: Answer: C
+answer: C
 ---
 
   

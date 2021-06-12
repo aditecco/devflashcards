@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: Which option is a way to set `hasName` equal to `true`, provided you cannot pass `true` as an argument?
-answer: Answer: A
+answer: A
 ---
 
   

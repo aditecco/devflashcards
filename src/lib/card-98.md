@@ -5,7 +5,7 @@ topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
 title: What's the value of output?
-answer: Answer: B
+answer: B
 ---
 
   
