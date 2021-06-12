@@ -1,4 +1,3 @@
-
 ---
 order: 83
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ fetch('https://www.website.com/api/user/1')
 
 
 
-
+SPLIT_MARKER
 
 The value of `res` in the second `.then` is equal to the returned value of the previous `.then`. You can keep chaining `.then`s like this, where the value is passed to the next handler.
 

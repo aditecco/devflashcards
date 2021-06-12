@@ -1,4 +1,3 @@
-
 ---
 order: 27
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ console.log(a[b]);
 
 
 
-
+SPLIT_MARKER
 
 Object keys are automatically converted into strings. We are trying to set an object as a key to object `a`, with the value of `123`.
 

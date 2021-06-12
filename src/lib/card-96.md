@@ -1,4 +1,3 @@
-
 ---
 order: 96
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ console.log(getUser(user))
 
 
 
-
+SPLIT_MARKER
 
 The `getList` function receives an array as its argument. Between the parentheses of the `getList` function, we destructure this array right away. You could see this as:
 

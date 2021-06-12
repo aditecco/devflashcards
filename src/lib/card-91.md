@@ -1,4 +1,3 @@
-
 ---
 order: 91
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ for (const [x, y] of Object.entries(person)) {
 
 
 
-
+SPLIT_MARKER
 
 `Object.entries(person)` returns an array of nested arrays, containing the keys and objects:
 

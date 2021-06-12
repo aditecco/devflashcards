@@ -1,4 +1,3 @@
-
 ---
 order: 29
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ answer: Answer: C
 
 
 
-
+SPLIT_MARKER
 
 The deepest nested element that caused the event is the target of the event. You can stop bubbling by `event.stopPropagation`
 

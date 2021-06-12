@@ -1,4 +1,3 @@
-
 ---
 order: 28
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ baz();
 
 
 
-
+SPLIT_MARKER
 
 We have a `setTimeout` function and invoked it first. Yet, it was logged last.
 

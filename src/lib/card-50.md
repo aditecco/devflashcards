@@ -1,4 +1,3 @@
-
 ---
 order: 50
 timestamp: 6/12/2021
@@ -36,7 +35,7 @@ sayHi();
 
 
 
-
+SPLIT_MARKER
 
 With the `throw` statement, we can create custom errors. With this statement, you can throw exceptions. An exception can be a <b>string</b>, a <b>number</b>, a <b>boolean</b> or an <b>object</b>. In this case, our exception is the string `'Hello world!'`.
 

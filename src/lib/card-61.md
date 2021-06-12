@@ -1,4 +1,3 @@
-
 ---
 order: 61
 timestamp: 6/12/2021
@@ -32,7 +31,7 @@ console.log(num2);
 
 
 
-
+SPLIT_MARKER
 
 The unary operator `++` _first returns_ the value of the operand, _then increments_ the value of the operand. The value of `num1` is `10`, since the `increaseNumber` function first returns the value of `num`, which is `10`, and only increments the value of `num` afterwards.
 

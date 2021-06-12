@@ -1,4 +1,3 @@
-
 ---
 order: 30
 timestamp: 6/12/2021
@@ -27,7 +26,7 @@ answer: Answer: A
 
 
 
-
+SPLIT_MARKER
 
 If we click `p`, we see two logs: `p` and `div`. During event propagation, there are 3 phases: capturing, target, and bubbling. By default, event handlers are executed in the bubbling phase (unless you set `useCapture` to `true`). It goes from the deepest nested element outwards.
 

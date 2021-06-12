@@ -1,4 +1,3 @@
-
 ---
 order: 89
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ console.log(newList.push(5));
 
 
 
-
+SPLIT_MARKER
 
 The `.push` method returns the _new length_ of the array, not the array itself! By setting `newList` equal to `[1, 2, 3].push(4)`, we set `newList` equal to the new length of the array: `4`.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 100
 timestamp: 6/12/2021
@@ -36,7 +35,7 @@ secondFunction();
 
 
 
-
+SPLIT_MARKER
 
 With a promise, we basically say _I want to execute this function, but I'll put it aside for now while it's running since this might take a while. Only when a certain value is resolved (or rejected), and when the call stack is empty, I want to use this value._
 

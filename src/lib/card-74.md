@@ -1,4 +1,3 @@
-
 ---
 order: 74
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ console.log(name);
 
 
 
-
+SPLIT_MARKER
 
 When we unpack the property `name` from the object on the right-hand side, we assign its value `"Lydia"` to a variable with the name `myName`.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 112
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ config = null;
 
 
 
-
+SPLIT_MARKER
 
 Normally when we set objects equal to `null`, those objects get _garbage collected_ as there is no reference anymore to that object. However, since the callback function within `setInterval` is an arrow function (thus bound to the `config` object), the callback function still holds a reference to the `config` object. 
 As long as there is a reference, the object won't get garbage collected. 

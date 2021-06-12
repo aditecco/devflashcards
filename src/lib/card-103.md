@@ -1,4 +1,3 @@
-
 ---
 order: 103
 timestamp: 6/12/2021
@@ -33,7 +32,7 @@ compareMembers(person);
 
 
 
-
+SPLIT_MARKER
 
 Objects are passed by reference. When we check objects for strict equality (`===`), we're comparing their references.
 

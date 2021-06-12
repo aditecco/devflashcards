@@ -1,4 +1,3 @@
-
 ---
 order: 38
 timestamp: 6/12/2021
@@ -28,7 +27,7 @@ answer: Answer: C
 
 
 
-
+SPLIT_MARKER
 
 `[1, 2]` is our initial value. This is the value we start with, and the value of the very first `acc`. During the first round, `acc` is `[1,2]`, and `cur` is `[0, 1]`. We concatenate them, which results in `[1, 2, 0, 1]`.
 

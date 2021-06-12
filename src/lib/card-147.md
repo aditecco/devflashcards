@@ -1,4 +1,3 @@
-
 ---
 order: 147
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ console.log(fruit)
 
 
 
-
+SPLIT_MARKER
 
 First, we invoke the `slice` method on the fruit array. The slice method does not modify the original array, but returns the value that it sliced off the array: the banana emoji.
 Then, we invoke the `splice` method on the fruit array. The splice method does modify the original array, which means that the fruit array now consists of `['🍊', '🍎']`.

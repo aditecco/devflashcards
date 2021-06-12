@@ -1,4 +1,3 @@
-
 ---
 order: 88
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ console.log(typeof member);
 
 
 
-
+SPLIT_MARKER
 
 Classes are syntactical sugar for function constructors. The equivalent of the `Person` class as a function constructor would be:
 

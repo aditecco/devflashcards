@@ -1,4 +1,3 @@
-
 ---
 order: 99
 timestamp: 6/12/2021
@@ -27,7 +26,7 @@ console.log(one, two, three);
 
 
 
-
+SPLIT_MARKER
 
 With the `||` operator, we can return the first truthy operand. If all values are falsy, the last operand gets returned.
 

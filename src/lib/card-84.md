@@ -1,4 +1,3 @@
-
 ---
 order: 84
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ function getName(name) {
 
 
 
-
+SPLIT_MARKER
 
 With `!!name`, we determine whether the value of `name` is truthy or falsy. If name is truthy, which we want to test for, `!name` returns `false`. `!false` (which is what `!!name` practically is) returns `true`.
 

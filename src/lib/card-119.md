@@ -1,4 +1,3 @@
-
 ---
 order: 119
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ console.log(config.language);
 
 
 
-
+SPLIT_MARKER
 
 The `language` method is a `setter`. Setters don't hold an actual value, their purpose is to _modify_ properties. When calling a `setter` method, `undefined` gets returned.
 

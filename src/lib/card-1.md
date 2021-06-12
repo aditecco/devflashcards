@@ -1,4 +1,3 @@
-
 ---
 order: 1
 timestamp: 6/12/2021
@@ -32,7 +31,7 @@ console.log(shape.perimeter());
 
 
 
-
+SPLIT_MARKER
 
 Note that the value of `diameter` is a regular function, whereas the value of `perimeter` is an arrow function.
 

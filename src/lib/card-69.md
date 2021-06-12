@@ -1,4 +1,3 @@
-
 ---
 order: 69
 timestamp: 6/12/2021
@@ -33,7 +32,7 @@ console.log(/* 2 */); // JavaScript loves you back ❤️
 
 
 
-
+SPLIT_MARKER
 
 A generator function "pauses" its execution when it sees the `yield` keyword. First, we have to let the function yield the string "Do you love JavaScript?", which can be done by calling `game.next().value`.
 

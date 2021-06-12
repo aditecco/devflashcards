@@ -1,4 +1,3 @@
-
 ---
 order: 20
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ sessionStorage.setItem('cool_secret', 123);
 
 
 
-
+SPLIT_MARKER
 
 The data stored in `sessionStorage` is removed after closing the _tab_.
 

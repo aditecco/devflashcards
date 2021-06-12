@@ -1,4 +1,3 @@
-
 ---
 order: 71
 timestamp: 6/12/2021
@@ -28,7 +27,7 @@ console.log(data);
 
 
 
-
+SPLIT_MARKER
 
 An async function always returns a promise. The `await` still has to wait for the promise to resolve: a pending promise gets returned when we call `getData()` in order to set `data` equal to it.
 

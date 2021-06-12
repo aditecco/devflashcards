@@ -1,4 +1,3 @@
-
 ---
 order: 11
 timestamp: 6/12/2021
@@ -19,7 +18,7 @@ answer: Answer: D
 
 
 
-
+SPLIT_MARKER
 
 During the **capturing** phase, the event goes through the ancestor elements down to the target element. It then reaches the **target** element, and **bubbling** begins.
 

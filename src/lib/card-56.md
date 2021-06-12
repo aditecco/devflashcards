@@ -1,4 +1,3 @@
-
 ---
 order: 56
 timestamp: 6/12/2021
@@ -27,7 +26,7 @@ console.log(delete age);
 
 
 
-
+SPLIT_MARKER
 
 The `delete` operator returns a boolean value: `true` on a successful deletion, else it'll return `false`. However, variables declared with the `var`, `const` or `let` keyword cannot be deleted using the `delete` operator.
 

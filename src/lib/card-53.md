@@ -1,4 +1,3 @@
-
 ---
 order: 53
 timestamp: 6/12/2021
@@ -39,7 +38,7 @@ pet.bark();
 
 
 
-
+SPLIT_MARKER
 
 We can delete properties from objects using the `delete` keyword, also on the prototype. By deleting a property on the prototype, it is not available anymore in the prototype chain. In this case, the `bark` function is not available anymore on the prototype after `delete Dog.prototype.bark`, yet we still try to access it.
 

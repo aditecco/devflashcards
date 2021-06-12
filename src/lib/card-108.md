@@ -1,4 +1,3 @@
-
 ---
 order: 108
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ JSON.parse();
 
 
 
-
+SPLIT_MARKER
 
 With the `JSON.parse()` method, we can parse JSON string to a JavaScript value.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 90
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ console.log(giveLydiaChocolate.prototype);
 
 
 
-
+SPLIT_MARKER
 
 Regular functions, such as the `giveLydiaPizza` function, have a `prototype` property, which is an object (prototype object) with a `constructor` property. Arrow functions however, such as the `giveLydiaChocolate` function, do not have this `prototype` property. `undefined` gets returned when trying to access the `prototype` property using `giveLydiaChocolate.prototype`.
 

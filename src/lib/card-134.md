@@ -1,4 +1,3 @@
-
 ---
 order: 134
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ Object.seal(person);
 
 
 
-
+SPLIT_MARKER
 
 With `Object.seal` we can prevent new properies from being _added_, or existing properties to be _removed_.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 76
 timestamp: 6/12/2021
@@ -39,7 +38,7 @@ console.log(addFunction(5 * 2));
 
 
 
-
+SPLIT_MARKER
 
 The `add` function is a _memoized_ function. With memoization, we can cache the results of a function in order to speed up its execution. In this case, we create a `cache` object that stores the previously returned values.
 

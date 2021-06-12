@@ -1,4 +1,3 @@
-
 ---
 order: 135
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ Object.freeze(person);
 
 
 
-
+SPLIT_MARKER
 
 The `Object.freeze` method _freezes_ an object. No properties can be added, modified, or removed.
 

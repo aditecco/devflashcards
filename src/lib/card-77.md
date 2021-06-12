@@ -1,4 +1,3 @@
-
 ---
 order: 77
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ for (let item of myLifeSummedUp) {
 
 
 
-
+SPLIT_MARKER
 
 With a _for-in_ loop, we can iterate over **enumerable** properties. In an array, the enumerable properties are the "keys" of array elements, which are actually their indexes. You could see an array as:
 

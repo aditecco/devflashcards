@@ -1,4 +1,3 @@
-
 ---
 order: 116
 timestamp: 6/12/2021
@@ -26,7 +25,7 @@ console.log(list[(num += 1)]);
 
 
 
-
+SPLIT_MARKER
 
 With the `+=` operand, we're incrementing the value of `num` by `1`. `num` had the initial value `1`, so `1 + 1` is `2`. The item on the second index in the `list` array is 🥰, `console.log(list[2])` prints 🥰.
 

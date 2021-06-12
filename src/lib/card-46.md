@@ -1,4 +1,3 @@
-
 ---
 order: 46
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ console.log(3 + 4 + '5');
 
 
 
-
+SPLIT_MARKER
 
 Operator associativity is the order in which the compiler evaluates the expressions, either left-to-right or right-to-left. This only happens if all operators have the _same_ precedence. We only have one type of operator: `+`. For addition, the associativity is left-to-right.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 152
 timestamp: 6/12/2021
@@ -34,7 +33,7 @@ console.log(member)
 
 
 
-
+SPLIT_MARKER
 
 The default value of `address` is an empty object `{}`. When we set the variable `member` equal to the object returned by the `createMember` function, we didn't pass a value for address, which means that the value of address is the default empty object `{}`. An empty object is a truthy value, which means that the condition of the `address ? address : null` conditional returns `true`. The value of address is the empty object `{}`.
 

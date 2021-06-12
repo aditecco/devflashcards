@@ -1,4 +1,3 @@
-
 ---
 order: 92
 timestamp: 6/12/2021
@@ -27,7 +26,7 @@ getItems(["banana", "apple"], "pear", "orange")
 
 
 
-
+SPLIT_MARKER
 
 `...args` is a rest parameter. The rest parameter's value is an array containing all remaining arguments, **and can only be the last parameter**! In this example, the rest parameter was the second parameter. This is not possible, and will throw a syntax error.
 

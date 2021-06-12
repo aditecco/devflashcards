@@ -1,4 +1,3 @@
-
 ---
 order: 35
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ console.log(numbers);
 
 
 
-
+SPLIT_MARKER
 
 When you set a value to an element in an array that exceeds the length of the array, JavaScript creates something called "empty slots". These actually have the value of `undefined`, but you will see something like:
 

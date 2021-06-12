@@ -1,4 +1,3 @@
-
 ---
 order: 106
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ emojis.splice(1, 2, '✨');
 
 
 
-
+SPLIT_MARKER
 
 With `splice` method, we modify the original array by deleting, replacing or adding elements. In this case, we removed 2 items from index 1 (we removed `'🥑'` and `'😍'`) and added the ✨ emoji instead.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 36
 timestamp: 6/12/2021
@@ -33,7 +32,7 @@ answer: Answer: A
 
 
 
-
+SPLIT_MARKER
 
 The `catch` block receives the argument `x`. This is not the same `x` as the variable when we pass arguments. This variable `x` is block-scoped.
 

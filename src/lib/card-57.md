@@ -1,4 +1,3 @@
-
 ---
 order: 57
 timestamp: 6/12/2021
@@ -26,7 +25,7 @@ console.log(y);
 
 
 
-
+SPLIT_MARKER
 
 We can unpack values from arrays or properties from objects through destructuring. For example:
 

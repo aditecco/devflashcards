@@ -1,4 +1,3 @@
-
 ---
 order: 82
 timestamp: 6/12/2021
@@ -33,7 +32,7 @@ console.log(checkAge(21));
 
 
 
-
+SPLIT_MARKER
 
 Variables with the `const` and `let` keyword are _block-scoped_. A block is anything between curly brackets (`{ }`). In this case, the curly brackets of the if/else statements. You cannot reference a variable outside of the block it's declared in, a ReferenceError gets thrown.
 

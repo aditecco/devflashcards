@@ -1,4 +1,3 @@
-
 ---
 order: 139
 timestamp: 6/12/2021
@@ -37,7 +36,7 @@ console.log(person.hobbies);
 
 
 
-
+SPLIT_MARKER
 
 The `addHobby` function receives two arguments, `hobby` and `hobbies` with the default value of the `hobbies` array on the `person` object.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 93
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ console.log(nums(1, 2));
 
 
 
-
+SPLIT_MARKER
 
 In JavaScript, we don't _have_ to write the semicolon (`;`) explicitly, however the JavaScript engine still adds them after statements. This is called **Automatic Semicolon Insertion**. A statement can for example be variables, or keywords like `throw`, `return`, `break`, etc.
 

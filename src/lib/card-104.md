@@ -1,4 +1,3 @@
-
 ---
 order: 104
 timestamp: 6/12/2021
@@ -33,7 +32,7 @@ console.log(colorConfig.colors[1]);
 
 
 
-
+SPLIT_MARKER
 
 In JavaScript, we have two ways to access properties on an object: bracket notation, or dot notation. In this example, we use dot notation (`colorConfig.colors`) instead of bracket notation (`colorConfig["colors"]`).
 

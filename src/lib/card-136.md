@@ -1,4 +1,3 @@
-
 ---
 order: 136
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ myFunc(3);
 
 
 
-
+SPLIT_MARKER
 
 First, we invoked `myFunc()` without passing any arguments. Since we didn't pass arguments, `num` and `value` got their default values: num is `2`, and `value` the returned value of the function `add`. To the `add` function, we pass `num` as an argument, which had the value of `2`. `add` returns `4`, which is the value of `value`.
 

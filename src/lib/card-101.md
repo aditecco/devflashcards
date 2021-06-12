@@ -1,4 +1,3 @@
-
 ---
 order: 101
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ for (let item of set) {
 
 
 
-
+SPLIT_MARKER
 
 The `+` operator is not only used for adding numerical values, but we can also use it to concatenate strings. Whenever the JavaScript engine sees that one or more values are not a number, it coerces the number into a string.
 

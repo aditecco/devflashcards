@@ -1,4 +1,3 @@
-
 ---
 order: 48
 timestamp: 6/12/2021
@@ -26,7 +25,7 @@ answer: Answer: C
 
 
 
-
+SPLIT_MARKER
 
 When mapping over the array, the value of `num` is equal to the element it’s currently looping over. In this case, the elements are numbers, so the condition of the if statement `typeof num === "number"` returns `true`. The map function creates a new array and inserts the values returned from the function.
 

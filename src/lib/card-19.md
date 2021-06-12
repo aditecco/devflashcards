@@ -1,4 +1,3 @@
-
 ---
 order: 19
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ const sum = eval('10*10+5');
 
 
 
-
+SPLIT_MARKER
 
 `eval` evaluates codes that's passed as a string. If it's an expression, like in this case, it evaluates the expression. The expression is `10 * 10 + 5`. This returns the number `105`.
 

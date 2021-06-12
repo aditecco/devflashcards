@@ -1,4 +1,3 @@
-
 ---
 order: 67
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ console.log(name.padStart(2));
 
 
 
-
+SPLIT_MARKER
 
 With the `padStart` method, we can add padding to the beginning of a string. The value passed to this method is the _total_ length of the string together with the padding. The string `"Lydia Hallie"` has a length of `12`. `name.padStart(13)` inserts 1 space at the start of the string, because 12 + 1 is 13.
 

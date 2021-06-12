@@ -1,4 +1,3 @@
-
 ---
 order: 124
 timestamp: 6/12/2021
@@ -37,7 +36,7 @@ console.log(getFine(130, 300))
 
 
 
-
+SPLIT_MARKER
 
 With the `Intl.NumberFormat` method, we can format numeric values to any locale. We format the numeric value `130` to the `en-US` locale as a `unit` in `mile-per-hour`, which results in `130 mph`. The numeric value `300` to the `en-US` locale as a `currency` in `USD` results in `$300.00`.
 

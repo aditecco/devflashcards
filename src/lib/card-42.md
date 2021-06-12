@@ -1,4 +1,3 @@
-
 ---
 order: 42
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ console.log(gen.next().value);
 
 
 
-
+SPLIT_MARKER
 
 Regular functions cannot be stopped mid-way after invocation. However, a generator function can be "stopped" midway, and later continue from where it stopped. Every time a generator function encounters a `yield` keyword, the function yields the value specified after it. Note that the generator function in that case doesn’t _return_ the value, it _yields_ the value.
 

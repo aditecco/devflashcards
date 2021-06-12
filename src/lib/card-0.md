@@ -1,4 +1,3 @@
-
 ---
 order: 0
 timestamp: 6/12/2021
@@ -28,7 +27,7 @@ for (let i = 0; i < 3; i++) {
 
 
 
-
+SPLIT_MARKER
 
 Because of the event queue in JavaScript, the `setTimeout` callback function is called _after_ the loop has been executed. Since the variable `i` in the first loop was declared using the `var` keyword, this value was global. During the loop, we incremented the value of `i` by `1` each time, using the unary operator `++`. By the time the `setTimeout` callback function was invoked, `i` was equal to `3` in the first example.
 

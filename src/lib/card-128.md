@@ -1,4 +1,3 @@
-
 ---
 order: 128
 timestamp: 6/12/2021
@@ -33,7 +32,7 @@ const myPromise = Promise.resolve('Woah some cool data');
 
 
 
-
+SPLIT_MARKER
 
 In the `try` block, we're logging the awaited value of the `myPromise` variable: `"Woah some cool data"`. Since no errors were thrown in the `try` block, the code in the `catch` block doesn't run. The code in the `finally` block _always_ runs, `"Oh finally!"` gets logged.
 

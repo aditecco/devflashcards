@@ -1,4 +1,3 @@
-
 ---
 order: 117
 timestamp: 6/12/2021
@@ -38,7 +37,7 @@ console.log(member.getLastName?.());
 
 
 
-
+SPLIT_MARKER
 
 With the optional chaining operator `?.`, we no longer have to explicitly check whether the deeper nested values are valid or not. If we're trying to access a property on an `undefined` or `null` value (_nullish_), the expression short-circuits and returns `undefined`.
 

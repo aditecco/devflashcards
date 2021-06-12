@@ -1,4 +1,3 @@
-
 ---
 order: 22
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ set.has(1);
 
 
 
-
+SPLIT_MARKER
 
 All object keys (excluding Symbols) are strings under the hood, even if you don't type it yourself as a string. This is why `obj.hasOwnProperty('1')` also returns true.
 

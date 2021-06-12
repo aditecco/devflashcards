@@ -1,4 +1,3 @@
-
 ---
 order: 64
 timestamp: 6/12/2021
@@ -50,7 +49,7 @@ class Labrador extends Dog {
 
 
 
-
+SPLIT_MARKER
 
 In a derived class, you cannot access the `this` keyword before calling `super`. If you try to do that, it will throw a ReferenceError: 1 and 4 would throw a reference error.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 72
 timestamp: 6/12/2021
@@ -28,7 +27,7 @@ console.log(result);
 
 
 
-
+SPLIT_MARKER
 
 The `.push()` method returns the _length_ of the new array! Previously, the array contained one element (the string `"banana"`) and had a length of `1`. After adding the string `"apple"` to the array, the array contains two elements, and has a length of `2`. This gets returned from the `addToList` function.
 

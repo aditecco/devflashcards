@@ -1,4 +1,3 @@
-
 ---
 order: 63
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ answer: Answer: D
 
 
 
-
+SPLIT_MARKER
 
 The first argument that the `reduce` method receives is the _accumulator_, `x` in this case. The second argument is the _current value_, `y`. With the reduce method, we execute a callback function on every element in the array, which could ultimately result in one single value.
 

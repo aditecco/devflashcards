@@ -1,4 +1,3 @@
-
 ---
 order: 133
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ person.name;
 
 
 
-
+SPLIT_MARKER
 
 With a Proxy object, we can add custom behavior to an object that we pass to it as the second argument. In this case, we pass the `handler` object which contained two properties: `set` and `get`. `set` gets invoked whenever we _set_ property values, `get` gets invoked whenever we _get_ (access) property values.
 

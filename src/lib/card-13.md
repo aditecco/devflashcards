@@ -1,4 +1,3 @@
-
 ---
 order: 13
 timestamp: 6/12/2021
@@ -27,7 +26,7 @@ sum(1, '2');
 
 
 
-
+SPLIT_MARKER
 
 JavaScript is a **dynamically typed language**: we don't specify what types certain variables are. Values can automatically be converted into another type without you knowing, which is called _implicit type coercion_. **Coercion** is converting from one type into another.
 

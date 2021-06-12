@@ -1,4 +1,3 @@
-
 ---
 order: 65
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ export const sum = (a, b) => a + b;
 
 
 
-
+SPLIT_MARKER
 
 With the `import` keyword, all imported modules are _pre-parsed_. This means that the imported modules get run _first_, the code in the file which imports the module gets executed _after_.
 

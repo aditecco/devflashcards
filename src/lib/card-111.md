@@ -1,4 +1,3 @@
-
 ---
 order: 111
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ console.log(`${(x => x)('I love')} to program`);
 
 
 
-
+SPLIT_MARKER
 
 Expressions within template literals are evaluated first. This means that the string will contain the returned value of the expression, the immediately invoked function `(x => x)('I love')` in this case. We pass the value `'I love'` as an argument to the `x => x` arrow function. `x` is equal to `'I love'`, which gets returned. This results in `I love to program`.
 

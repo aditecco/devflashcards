@@ -1,4 +1,3 @@
-
 ---
 order: 85
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ console.log('I want pizza'[0]);
 
 
 
-
+SPLIT_MARKER
 
 In order to get an character on a specific index in a string, you can use bracket notation. The first character in the string has index 0, and so on. In this case we want to get the element which index is 0, the character `"I'`, which gets logged.
 

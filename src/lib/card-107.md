@@ -1,4 +1,3 @@
-
 ---
 order: 107
 timestamp: 6/12/2021
@@ -28,7 +27,7 @@ console.log(food);
 
 
 
-
+SPLIT_MARKER
 
 We set the value of the `favoriteFood` property on the `info` object equal to the string with the pizza emoji, `'🍕'`. A string is a primitive data type. In JavaScript, primitive data types don't interact by reference.
 

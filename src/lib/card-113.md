@@ -1,4 +1,3 @@
-
 ---
 order: 113
 timestamp: 6/12/2021
@@ -33,7 +32,7 @@ myMap.get(() => 'greeting');
 
 
 
-
+SPLIT_MARKER
 
 When adding a key/value pair using the `set` method, the key will be the value of the first argument passed to the `set` function, and the value will be the second argument passed to the `set` function. The key is the _function_ `() => 'greeting'` in this case, and the value `'Hello world'`. `myMap` is now `{ () => 'greeting' => 'Hello world!' }`.
 

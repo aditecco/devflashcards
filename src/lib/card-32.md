@@ -1,4 +1,3 @@
-
 ---
 order: 32
 timestamp: 6/12/2021
@@ -27,7 +26,7 @@ console.log(typeof sayHi());
 
 
 
-
+SPLIT_MARKER
 
 The `sayHi` function returns the returned value of the immediately invoked function expression (IIFE). This function returned `0`, which is type `"number"`.
 

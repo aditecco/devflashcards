@@ -1,4 +1,3 @@
-
 ---
 order: 70
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ console.log(String.raw`Hello\nworld`);
 
 
 
-
+SPLIT_MARKER
 
 `String.raw` returns a string where the escapes (`\n`, `\v`, `\t` etc.) are ignored! Backslashes can be an issue since you could end up with something like:
 

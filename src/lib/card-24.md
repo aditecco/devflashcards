@@ -1,4 +1,3 @@
-
 ---
 order: 24
 timestamp: 6/12/2021
@@ -18,7 +17,7 @@ answer: Answer: A
 
 
 
-
+SPLIT_MARKER
 
 The base execution context is the global execution context: it's what's accessible everywhere in your code.
 

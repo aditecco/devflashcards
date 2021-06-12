@@ -1,4 +1,3 @@
-
 ---
 order: 80
 timestamp: 6/12/2021
@@ -37,7 +36,7 @@ setTimeout(() => {
 
 
 
-
+SPLIT_MARKER
 
 The value of the `this` keyword is dependent on where you use it. In a **method**, like the `getStatus` method, the `this` keyword refers to _the object that the method belongs to_. The method belongs to the `data` object, so `this` refers to the `data` object. When we log `this.status`, the `status` property on the `data` object gets logged, which is `"🥑"`.
 

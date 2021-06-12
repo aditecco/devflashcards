@@ -1,4 +1,3 @@
-
 ---
 order: 131
 timestamp: 6/12/2021
@@ -39,7 +38,7 @@ funcTwo();
 
 
 
-
+SPLIT_MARKER
 
 First, we invoke `funcOne`. On the first line of `funcOne`, we call the `myPromise` promise, which is an _asynchronous_ operation. While the engine is busy completing the promise, it keeps on running the function `funcOne`. The next line is the _asynchronous_ `setTimeout` function, from which the callback is sent to the Web API. (see my article on the event loop <a href="https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif">here</a>.)
 

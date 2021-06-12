@@ -1,4 +1,3 @@
-
 ---
 order: 62
 timestamp: 6/12/2021
@@ -32,7 +31,7 @@ multiply(value);
 
 
 
-
+SPLIT_MARKER
 
 In ES6, we can initialize parameters with a default value. The value of the parameter will be the default value, if no other value has been passed to the function, or if the value of the parameter is `"undefined"`. In this case, we spread the properties of the `value` object into a new object, so `x` has the default value of `{ number: 10 }`.
 

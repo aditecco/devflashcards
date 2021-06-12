@@ -1,4 +1,3 @@
-
 ---
 order: 132
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ import * as sum from './sum';
 
 
 
-
+SPLIT_MARKER
 
 With the asterisk `*`, we import all exported values from that file, both default and named. If we had the following file:
 

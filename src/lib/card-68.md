@@ -1,4 +1,3 @@
-
 ---
 order: 68
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ console.log('🥑' + '💻');
 
 
 
-
+SPLIT_MARKER
 
 With the `+` operator, you can concatenate strings. In this case, we are concatenating the string `"🥑"` with the string `"💻"`, resulting in `"🥑💻"`.
 

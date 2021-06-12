@@ -1,4 +1,3 @@
-
 ---
 order: 110
 timestamp: 6/12/2021
@@ -35,7 +34,7 @@ console.log(two.next().value);
 
 
 
-
+SPLIT_MARKER
 
 With the `yield` keyword, we `yield` values in a generator function. With the `yield*` keyword, we can yield values from another generator function, or iterable object (for example an array).
 

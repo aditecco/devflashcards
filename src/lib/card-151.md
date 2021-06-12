@@ -1,4 +1,3 @@
-
 ---
 order: 151
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ Object[method](keys.map((_, i) => {
 
 
 
-
+SPLIT_MARKER
 
 The `fromEntries` method turns a 2d array into an object. The first element in each subarray will be the key, and the second element in each subarray will be the value. In this case, we’re mapping over the `keys` array, which returns an array which first element is the item on the key array on the current index, and the second element is the item of the values array on the current index. 
 

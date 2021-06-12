@@ -1,4 +1,3 @@
-
 ---
 order: 87
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ console.log(data);
 
 
 
-
+SPLIT_MARKER
 
 With the `import * as name` syntax, we import _all exports_ from the `module.js` file into the `index.js` file as a new object called `data` is created. In the `module.js` file, there are two exports: the default export, and a named export. The default export is a function which returns the string `"Hello World"`, and the named export is a variable called `name` which has the value of the string `"Lydia"`.
 

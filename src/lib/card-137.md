@@ -1,4 +1,3 @@
-
 ---
 order: 137
 timestamp: 6/12/2021
@@ -38,7 +37,7 @@ console.log(counter.#number)
 
 
 
-
+SPLIT_MARKER
 
 In ES2020, we can add private variables in classes by using the `#`. We cannot access these variables outside of the class. When we try to log `counter.#number`, a SyntaxError gets thrown: we cannot acccess it outside the `Counter` class!
 

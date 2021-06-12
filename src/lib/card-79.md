@@ -1,4 +1,3 @@
-
 ---
 order: 79
 timestamp: 6/12/2021
@@ -27,7 +26,7 @@ console.log(sayHi());
 
 
 
-
+SPLIT_MARKER
 
 By default, arguments have the value of `undefined`, unless a value has been passed to the function. In this case, we didn't pass a value for the `name` argument. `name` is equal to `undefined` which gets logged.
 

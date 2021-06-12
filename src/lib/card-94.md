@@ -1,4 +1,3 @@
-
 ---
 order: 94
 timestamp: 6/12/2021
@@ -36,7 +35,7 @@ console.log(member.name);
 
 
 
-
+SPLIT_MARKER
 
 We can set classes equal to other classes/function constructors. In this case, we set `Person` equal to `AnotherPerson`. The name on this constructor is `Sarah`, so the name property on the new `Person` instance `member` is `"Sarah"`.
 

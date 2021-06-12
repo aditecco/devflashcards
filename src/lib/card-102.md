@@ -1,4 +1,3 @@
-
 ---
 order: 102
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ Promise.resolve(5);
 
 
 
-
+SPLIT_MARKER
 
 We can pass any type of value we want to `Promise.resolve`, either a promise or a non-promise. The method itself returns a promise with the resolved value (`<fulfilled>`). If you pass a regular function, it'll be a resolved promise with a regular value. If you pass a promise, it'll be a resolved promise with the resolved value of that passed promise.
 

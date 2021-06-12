@@ -1,4 +1,3 @@
-
 ---
 order: 149
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ console.log(user.email)
 
 
 
-
+SPLIT_MARKER
 
 The `updateEmail` function is an arrow function, and is not bound to the `user` object. This means that the `this` keyword is not referring to the `user` object, but refers to  the global scope in this case. The value of `email` within the `user` object does not get updated. When logging the value of `user.email`, the original value of `my@email.com` gets returned. 
 

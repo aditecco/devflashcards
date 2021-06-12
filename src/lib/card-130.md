@@ -1,4 +1,3 @@
-
 ---
 order: 130
 timestamp: 6/12/2021
@@ -40,7 +39,7 @@ console.log(counterOne.count);
 
 
 
-
+SPLIT_MARKER
 
 `counterOne` is an instance of the `Counter` class. The counter class contains a `count` property on its constructor, and an `increment` method. First, we invoked the `increment` method twice by calling `counterOne.increment()`. Currently, `counterOne.count` is `2`.
 

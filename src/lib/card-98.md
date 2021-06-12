@@ -1,4 +1,3 @@
-
 ---
 order: 98
 timestamp: 6/12/2021
@@ -26,7 +25,7 @@ You should${'' && `n't`} see a therapist after so much JavaScript lol`;
 
 
 
-
+SPLIT_MARKER
 
 `[]` is a truthy value. With the `&&` operator, the right-hand value will be returned if the left-hand value is a truthy value. In this case, the left-hand value `[]` is a truthy value, so `"Im'` gets returned.
 

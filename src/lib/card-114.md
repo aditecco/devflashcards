@@ -1,4 +1,3 @@
-
 ---
 order: 114
 timestamp: 6/12/2021
@@ -37,7 +36,7 @@ console.log(person);
 
 
 
-
+SPLIT_MARKER
 
 Both the `changeAge` and `changeAgeAndName` functions have a default parameter, namely a _newly_ created object `{ ...person }`. This object has copies of all the key/values in the `person` object.
 

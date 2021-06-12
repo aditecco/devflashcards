@@ -1,4 +1,3 @@
-
 ---
 order: 15
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ getPersonInfo`${person} is ${age} years old`;
 
 
 
-
+SPLIT_MARKER
 
 If you use tagged template literals, the value of the first argument is always an array of the string values. The remaining arguments get the values of the passed expressions!
 

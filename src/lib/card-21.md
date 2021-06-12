@@ -1,4 +1,3 @@
-
 ---
 order: 21
 timestamp: 6/12/2021
@@ -26,7 +25,7 @@ console.log(num);
 
 
 
-
+SPLIT_MARKER
 
 With the `var` keyword, you can declare multiple variables with the same name. The variable will then hold the latest value.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 115
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ function sumValues(x, y, z) {
 
 
 
-
+SPLIT_MARKER
 
 With the spread operator `...`, we can _spread_ iterables to individual elements. The `sumValues` function receives three arguments: `x`, `y` and `z`. `...[1, 2, 3]` will result in `1, 2, 3`, which we pass to the `sumValues` function.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 51
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ console.log(myCar.make);
 
 
 
-
+SPLIT_MARKER
 
 When you return a property, the value of the property is equal to the _returned_ value, not the value set in the constructor function. We return the string `"Maserati"`, so `myCar.make` is equal to `"Maserati"`.
 

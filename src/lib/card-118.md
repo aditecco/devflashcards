@@ -1,4 +1,3 @@
-
 ---
 order: 118
 timestamp: 6/12/2021
@@ -29,7 +28,7 @@ if (groceries.indexOf('banana')) {
 
 
 
-
+SPLIT_MARKER
 
 We passed the condition `groceries.indexOf("banana")` to the if-statement. `groceries.indexOf("banana")` returns `0`, which is a falsy value. Since the condition in the if-statement is falsy, the code in the `else` block runs, and `We don't have to buy bananas!` gets logged.
 

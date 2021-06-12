@@ -1,4 +1,3 @@
-
 ---
 order: 81
 timestamp: 6/12/2021
@@ -31,7 +30,7 @@ console.log(person);
 
 
 
-
+SPLIT_MARKER
 
 We set the variable `city` equal to the value of the property called `city` on the `person` object. There is no property on this object called `city`, so the variable `city` has the value of `undefined`.
 

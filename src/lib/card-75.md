@@ -1,4 +1,3 @@
-
 ---
 order: 75
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ function sum(a, b) {
 
 
 
-
+SPLIT_MARKER
 
 A pure function is a function that _always_ returns the same result, if the same arguments are passed.
 

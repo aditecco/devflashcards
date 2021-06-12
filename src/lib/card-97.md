@@ -1,4 +1,3 @@
-
 ---
 order: 97
 timestamp: 6/12/2021
@@ -25,7 +24,7 @@ console.log(name());
 
 
 
-
+SPLIT_MARKER
 
 The variable `name` holds the value of a string, which is not a function, thus cannot invoke.
 

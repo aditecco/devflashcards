@@ -1,4 +1,3 @@
-
 ---
 order: 153
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ if (!typeof randomValue === "string") {
 
 
 
-
+SPLIT_MARKER
 
 The condition within the `if` statement checks whether the value of `!typeof randomValue` is equal to `"string"`. The `!` operator converts the value to a boolean value. If the value is truthy, the returned value will be `false`, if the value is falsy, the returned value will be `true`. In this case, the returned value of `typeof randomValue` is the truthy value `"number"`, meaning that the value of `!typeof randomValue` is the boolean value `false`.
 

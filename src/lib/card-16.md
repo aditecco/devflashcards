@@ -1,4 +1,3 @@
-
 ---
 order: 16
 timestamp: 6/12/2021
@@ -32,7 +31,7 @@ checkAge({ age: 18 });
 
 
 
-
+SPLIT_MARKER
 
 When testing equality, primitives are compared by their _value_, while objects are compared by their _reference_. JavaScript checks if the objects have a reference to the same location in memory.
 

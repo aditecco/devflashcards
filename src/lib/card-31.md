@@ -1,4 +1,3 @@
-
 ---
 order: 31
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ console.log(sayHi.bind(person, 21));
 
 
 
-
+SPLIT_MARKER
 
 With both, we can pass the object to which we want the `this` keyword to refer to. However, `.call` is also _executed immediately_!
 

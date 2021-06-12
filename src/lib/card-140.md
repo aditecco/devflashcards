@@ -1,4 +1,3 @@
-
 ---
 order: 140
 timestamp: 6/12/2021
@@ -36,7 +35,7 @@ const pet = new Flamingo();
 
 
 
-
+SPLIT_MARKER
 
 We create the variable `pet` which is an instance of the `Flamingo` class. When we instantiate this instance, the `constructor` on `Flamingo` gets called. First, `"I'm pink. 🌸"` gets logged, after which we call `super()`. `super()` calls the constructor of the parent class, `Bird`. The constructor in `Bird` gets called, and logs `"I'm a bird. 🦢"`.
 

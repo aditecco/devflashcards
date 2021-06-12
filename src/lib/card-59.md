@@ -1,4 +1,3 @@
-
 ---
 order: 59
 timestamp: 6/12/2021
@@ -28,7 +27,7 @@ console.log(Object.keys(person));
 
 
 
-
+SPLIT_MARKER
 
 With the `defineProperty` method, we can add new properties to an object, or modify existing ones. When we add a property to an object using the `defineProperty` method, they are by default _not enumerable_. The `Object.keys` method returns all _enumerable_ property names from an object, in this case only `"name"`.
 

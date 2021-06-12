@@ -1,4 +1,3 @@
-
 ---
 order: 78
 timestamp: 6/12/2021
@@ -24,7 +23,7 @@ console.log(list);
 
 
 
-
+SPLIT_MARKER
 
 Array elements can hold any value. Numbers, strings, objects, other arrays, null, boolean values, undefined, and other expressions such as dates, functions, and calculations.
 

@@ -1,4 +1,3 @@
-
 ---
 order: 34
 timestamp: 6/12/2021
@@ -23,7 +22,7 @@ console.log(typeof typeof 1);
 
 
 
-
+SPLIT_MARKER
 
 `typeof 1` returns `"number"`.
 `typeof "number"` returns `"string"`

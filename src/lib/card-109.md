@@ -1,4 +1,3 @@
-
 ---
 order: 109
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ getName();
 
 
 
-
+SPLIT_MARKER
 
 Each function has its own _execution context_ (or _scope_). The `getName` function first looks within its own context (scope) to see if it contains the variable `name` we're trying to access. In this case, the `getName` function contains its own `name` variable: we declare the variable `name` with the `let` keyword, and with the value of `'Sarah'`.
 

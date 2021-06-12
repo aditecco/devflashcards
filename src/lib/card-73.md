@@ -1,4 +1,3 @@
-
 ---
 order: 73
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ console.log(shape);
 
 
 
-
+SPLIT_MARKER
 
 `Object.freeze` makes it impossible to add, remove, or modify properties of an object (unless the property's value is another object).
 

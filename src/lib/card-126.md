@@ -1,4 +1,3 @@
-
 ---
 order: 126
 timestamp: 6/12/2021
@@ -30,7 +29,7 @@ console.log(isNaN(age));
 
 
 
-
+SPLIT_MARKER
 
 With the `Number.isNaN` method, you can check if the value you pass is a _numeric value_ and equal to `NaN`. `name` is not a numeric value, so `Number.isNaN(name)` returns `false`. `age` is a numeric value, but is not equal to `NaN`, so `Number.isNaN(age)` returns `false`.
 

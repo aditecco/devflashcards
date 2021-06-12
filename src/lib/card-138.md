@@ -1,4 +1,3 @@
-
 ---
 order: 138
 timestamp: 6/12/2021
@@ -42,7 +41,7 @@ obj.next(); // { value: "Lisa", done: false }
 
 
 
-
+SPLIT_MARKER
 
 In order to iterate over the `members` in each element in the `teams` array, we need to pass `teams[i].members` to the `getMembers` generator function. The generator function returns a generator object. In order to iterate over each element in this generator object, we need to use `yield*`.
 

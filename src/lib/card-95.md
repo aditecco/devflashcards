@@ -1,4 +1,3 @@
-
 ---
 order: 95
 timestamp: 6/12/2021
@@ -28,7 +27,7 @@ console.log(Object.keys(info));
 
 
 
-
+SPLIT_MARKER
 
 A Symbol is not _enumerable_. The Object.keys method returns all _enumerable_ key properties on an object. The Symbol won't be visible, and an empty array is returned. When logging the entire object, all properties will be visible, even non-enumerable ones.
 

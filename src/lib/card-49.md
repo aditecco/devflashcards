@@ -1,4 +1,3 @@
-
 ---
 order: 49
 timestamp: 6/12/2021
@@ -33,7 +32,7 @@ console.log(person, birthYear);
 
 
 
-
+SPLIT_MARKER
 
 Arguments are passed by _value_, unless their value is an object, then they're passed by _reference_. `birthYear` is passed by value, since it's a string, not an object. When we pass arguments by value, a _copy_ of that value is created (see question 46).
 

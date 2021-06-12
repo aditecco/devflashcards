@@ -1,4 +1,3 @@
-
 ---
 order: 120
 timestamp: 6/12/2021
@@ -26,7 +25,7 @@ console.log(!typeof name === 'string');
 
 
 
-
+SPLIT_MARKER
 
 `typeof name` returns `"string"`. The string `"string"` is a truthy value, so `!typeof name` returns the boolean value `false`. `false === "object"` and `false === "string"` both return`false`.
 
