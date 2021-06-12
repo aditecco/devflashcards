@@ -13,6 +13,7 @@ fs.readFile(PATH, (err, data) => {
   const EXTRACTOR_PATTERNS = {
     ANSWER_HEADING: /\<h4\>(Answer\:\s[A-Z]{1})\<\/h4\>/g,
     ANSWER_HEADING_MD: /\#{4}\s(Answer\:\s[A-Z]{1})/g,
+    ANSWER_OPTIONS_MD: /(?:\-\s)(?<options>[A-Z]\:.*)/g,
     ANSWER_REVEAL: /<details><summary><b>Answer<\/b><\/summary>/g,
     MISC_TAGS: /\<[\/]?(p|details|summary)\>/g,
     PARAGRAPHS: /<[\/]?p>/g,
@@ -30,6 +31,7 @@ fs.readFile(PATH, (err, data) => {
   const {
     ANSWER_HEADING,
     ANSWER_HEADING_MD,
+    ANSWER_OPTIONS_MD,
     QUESTION_HEADING_MD,
     ANSWER_REVEAL,
     MISC_TAGS,
@@ -49,18 +51,60 @@ fs.readFile(PATH, (err, data) => {
   const DECK_TOPIC = "programming";
   const DATE = new Date().toLocaleDateString();
 
+  const ALPHABET = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+
   // breaks the file in chunks, based on the `---` separator
   const processedSource = data.toString().split(SPLITTER);
 
   processedSource.slice(1).forEach((markdownBlob, i) => {
     const title = markdownBlob?.match?.(_QUESTION_HEADING_MD)?.[1];
     const answer = markdownBlob?.match?.(_ANSWER_HEADING_MD)?.[2];
+    const answerOptions = markdownBlob.match(ANSWER_OPTIONS_MD);
+
+    let formOptions = "";
+
+    answerOptions.forEach((option, i) => {
+      formOptions += `
+<label for="${"option-" + ALPHABET[i]}">Option ${ALPHABET[i]}</label>
+<input type="radio" name="answer-option" id="${
+        "option-" + ALPHABET[i]
+      }" value="${ALPHABET[i]}">${option}</input>
+`;
+    });
 
     const strippedMarkdownBlob = markdownBlob
       .replace(ANSWER_REVEAL, "")
       .replace(MISC_TAGS, "")
       .replace(QUESTION_HEADING_MD, "")
-      .replace(ANSWER_HEADING_MD, "SPLIT_MARKER");
+      .replace(ANSWER_HEADING_MD, "SPLIT_MARKER")
+      .replace(ANSWER_OPTIONS_MD, formOptions);
 
     const frontMatter = `---
 order: ${i}
