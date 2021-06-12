@@ -20,9 +20,18 @@ for (let i = 0; i < 3; i++) {
 }
 ```
 
-- A: `0 1 2` and `0 1 2`
-- B: `0 1 2` and `3 3 3`
-- C: `3 3 3` and `0 1 2`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`0 1 2` and `0 1 2`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`0 1 2` and `3 3 3`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`3 3 3` and `0 1 2`</input>
+    
 
 
 

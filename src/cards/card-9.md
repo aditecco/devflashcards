@@ -24,10 +24,22 @@ Person.getFullName = function() {
 console.log(member.getFullName());
 ```
 
-- A: `TypeError`
-- B: `SyntaxError`
-- C: `Lydia Hallie`
-- D: `undefined` `undefined`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`TypeError`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`SyntaxError`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Lydia Hallie`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`undefined` `undefined`</input>
+    
 
 
 
