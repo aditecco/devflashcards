@@ -60,10 +60,9 @@ fs.readFile(PATH, (err, data) => {
       .replace(ANSWER_REVEAL, "")
       .replace(MISC_TAGS, "")
       .replace(QUESTION_HEADING_MD, "")
-      .replace(ANSWER_HEADING_MD, "");
+      .replace(ANSWER_HEADING_MD, "SPLIT_MARKER");
 
-    const frontMatter = `
----
+    const frontMatter = `---
 order: ${i}
 timestamp: ${DATE}
 topic: ${DECK_TOPIC}
