@@ -36,25 +36,8 @@ export default function CardWithFlip({
     },
   } = card ?? {};
 
-  const PATTERNS = {
-    QUESTION_HEADING: /<h6>(\d\.\s\w.*)<\/h6>/g,
-    ANSWER_REVEAL: /<details><summary><b>Answer<\/b><\/summary>/g,
-    PARAGRAPHS: /<[\/]?p>/g,
-    MISC_TAGS: /\<[\/]?(p|details|summary)\>/g,
-    ANSWER_HEADING: /\<h4\>Answer\:\s[A-Z]{1}\<\/h4\>/g,
-  };
-
-  const {
-    ANSWER_HEADING,
-    ANSWER_REVEAL,
-    QUESTION_HEADING,
-    MISC_TAGS,
-    PARAGRAPHS,
-  } = PATTERNS;
-
-  const cleared = html.replace(QUESTION_HEADING, "").replace(ANSWER_REVEAL, "");
-  const q = cleared.split(ANSWER_HEADING).shift();
-  const a = cleared.split(ANSWER_HEADING).pop();
+  const questionBlock = html.split(/SPLIT_MARKER/).shift();
+  const answerBlock = html.split(/SPLIT_MARKER/).pop();
 
   return (
     <Flip style={style ?? {}}>
