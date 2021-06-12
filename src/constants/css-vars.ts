@@ -39,23 +39,26 @@ export const $XL = "1268px";
 export const $XXL = "null";
 
 // UI
-export const $wrapper = "780px";
-export const $wrapperSm = "425px";
-export const $cardMinWidth = "280px;";
-export const cardWidth = "300px;";
-export const cardMaxWidth = "340px;";
-export const $cardInModalWidth = "370px;";
-export const $cardInModalHeight = "470px;";
-export const mediaHeight = "400px;";
-export const cardHeight = "400px;";
-export const $headerHeight = "65px;";
-export const $searchHeight = "72px;";
-export const $navbarHeight = $headerHeight;
-export const $pageHeaderHeight = "79px;";
-export const $footerHeight = "20px;";
 export const $appContent = "$headerHeight + $navbarHeight + 98 + 49;";
 export const $bottomDrawerHeight = "100vh;";
 export const $bottomDrawerPadding = "45vh;";
+export const $cardInModalHeight = "470px;";
+export const $cardInModalWidth = "370px;";
+export const $cardMinWidth = "280px;";
+export const $footerHeight = "20px;";
+export const $headerHeight = "65px;";
+export const $navbarHeight = $headerHeight;
+export const $pageHeaderHeight = "79px;";
+export const $searchHeight = "72px;";
+export const $wrapper = "780px";
+export const $wrapperSm = "425px";
+export const CARD_HEIGHT = "440px;";
+export const CARD_WIDTH = "320px;";
+export const CARD_MAX_WIDTH = "340px;";
+export const CARD_RATIO =
+  Number(CARD_WIDTH.match(/\d*/)) / Number(CARD_HEIGHT.match(/\d*/));
+export const CARD_RADIUS = "8px";
+export const mediaHeight = "400px;";
 
 // FX
 export const $border = "1px solid rgba($flat-gray-2, 0.5)";

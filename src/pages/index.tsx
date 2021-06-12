@@ -2,13 +2,10 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import CardViewer from "../components/CardViewer";
 
-// markup
 const IndexPage = ({ data }) => {
   const {
     allMarkdownRemark: { edges: cards },
   } = data ?? {};
-
-  console.log(data);
 
   return (
     <>

@@ -7,7 +7,7 @@ import { PropsWithChildren, ReactElement, useRef, useState } from "react";
 import CardWithFlip from "./CardWithFlip";
 import { css } from "@emotion/react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import Card from "./Card";
+import { CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
 
 type OwnProps = {
   cards: unknown[];
@@ -55,8 +55,8 @@ export default function CardViewer({
 
         .card-container {
           position: relative;
-          width: 300px;
-          height: 400px;
+          width: ${CARD_WIDTH};
+          height: ${CARD_HEIGHT};
         }
       `}
       // style={{ background }}

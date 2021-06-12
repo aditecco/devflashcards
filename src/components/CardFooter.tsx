@@ -5,7 +5,7 @@ CardFooter
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css } from "@emotion/react";
-import { radius } from "../css-vars";
+import { radius } from "../constants/css-vars";
 
 type OwnProps = {};
 

@@ -6,9 +6,14 @@ CardControls
 
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
-import { flex } from "../css-functions";
+import { flex } from "../lib/css-functions";
 import { css } from "@emotion/react";
-import { $small, $strokeLight, $success, transparent } from "../css-vars";
+import {
+  $small,
+  $strokeLight,
+  $success,
+  transparent,
+} from "../constants/css-vars";
 
 interface OwnProps {}
 

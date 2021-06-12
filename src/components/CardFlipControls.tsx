@@ -4,7 +4,7 @@ CardFlipControls
 
 import * as React from "react";
 import { css } from "@emotion/react";
-import { flex } from "../css-functions";
+import { flex } from "../lib/css-functions";
 import classNames from "classnames";
 import { PropsWithChildren, ReactElement } from "react";
 import MaterialIcon from "./MaterialIcon";

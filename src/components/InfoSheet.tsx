@@ -15,8 +15,8 @@ import {
   margin,
   padding,
   workSans,
-} from "../css-vars";
-import { box } from "../css-functions";
+} from "../constants/css-vars";
+import { box } from "../lib/css-functions";
 
 export interface InfoSheetProps {
   title: string;

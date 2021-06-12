@@ -4,11 +4,12 @@ Card
 
 import * as React from "react";
 import {
-  cardMaxWidth,
   baseFontStack,
-  cardHeight,
-  cardWidth,
-} from "../css-vars";
+  CARD_HEIGHT,
+  CARD_WIDTH,
+  CARD_MAX_WIDTH,
+  CARD_RADIUS,
+} from "../constants/css-vars";
 import { css } from "@emotion/react";
 import { CSSProperties, PropsWithChildren, ReactElement } from "react";
 
@@ -24,22 +25,17 @@ export default function Card({
 }: PropsWithChildren<CardProps>): ReactElement {
   return (
     <article
-      className={"Card"}
+      className={"card"}
       css={css`
         background-color: white;
-        border-radius: 6px;
+        border-radius: ${CARD_RADIUS};
         box-shadow: ${noShadow ? "" : "0 10px 10px 2px rgba(0, 0, 0, 0.25)"};
-        width: ${cardWidth};
-        max-width: ${cardMaxWidth};
-        height: ${cardHeight};
+        width: ${CARD_WIDTH};
+        height: ${CARD_HEIGHT};
         font-family: ${baseFontStack};
         font-weight: 400;
-      `}
-      style={style ?? {}}
-    >
-      <div
-        className={"CardBody"}
-        css={css`
+
+        .card-body {
           position: relative;
           display: flex;
           flex-direction: column;
@@ -48,10 +44,11 @@ export default function Card({
           > *:first-child {
             flex-grow: 1;
           }
-        `}
-      >
-        {children}
-      </div>
+        }
+      `}
+      style={style ?? {}}
+    >
+      <div className={"card-body"}>{children}</div>
     </article>
   );
 }

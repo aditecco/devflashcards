@@ -10,7 +10,7 @@ import CardFlipControls from "./CardFlipControls";
 import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import { css } from "@emotion/react";
-import { rem } from "../css-functions";
+import { rem } from "../lib/css-functions";
 
 type OwnProps = {
   card: unknown;
@@ -68,7 +68,7 @@ export default function CardWithFlip({
                   margin: 0;
                 }
 
-                .card-content-html {
+                .card-content-body {
                   overflow-y: auto;
                 }
 
@@ -80,22 +80,28 @@ export default function CardWithFlip({
                 {order} &middot; {topic} &middot; {timestamp}
               </div>
 
-              <h4 className="card-content-title">{title}</h4>
+              <header className="card-content-title">
+                <h4>{title}</h4>
+              </header>
 
-              <div
-                className={"card-content-html"}
+              <main
+                className={"card-content-body"}
                 dangerouslySetInnerHTML={{ __html: questionBlock }}
               />
             </div>
 
             <CardFooter>
               <CardControls>
+                <button className="card-controls-button" type="button">
+                  Pass
+                </button>
+
                 <button
-                  className="CardControlsButton"
+                  className="card-controls-button"
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
                 >
-                  Show answer
+                  Submit
                 </button>
               </CardControls>
             </CardFooter>
@@ -106,12 +112,13 @@ export default function CardWithFlip({
       <Flip.Back>
         {({ setFlipped }) => (
           <Card>
-            {/*<span>{answer}</span>*/}
-            <div className="card-content-html" style={{ overflowY: "auto" }}>
-              <h4 className="card-content-title">Answer: {answer}</h4>
+            <div style={{ overflowY: "auto" }}>
+              <header className="card-content-title">
+                <h4>Answer: {answer}</h4>
+              </header>
 
               <div
-                className={"card-content-html-inner"}
+                className={"card-content-body"}
                 dangerouslySetInnerHTML={{ __html: answerBlock }}
                 style={{
                   padding: "2rem 1.5rem",
@@ -124,22 +131,22 @@ export default function CardWithFlip({
             <CardFooter>
               <CardControls>
                 <button
-                  className="CardControlsButton"
+                  className="card-controls-button"
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
                 >
                   Flip
                 </button>
 
-                <button className="CardControlsButton" type="button">
+                <button className="card-controls-button" type="button">
                   Hard
                 </button>
 
-                <button className="CardControlsButton" type="button">
+                <button className="card-controls-button" type="button">
                   Good
                 </button>
 
-                <button className="CardControlsButton" type="button">
+                <button className="card-controls-button" type="button">
                   Easy
                 </button>
               </CardControls>
