@@ -24,8 +24,16 @@ export default function CardWithFlip({
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const {
     id,
-    frontmatter: { title, topic, timestamp, question, answer, options },
     html,
+    frontmatter: {
+      order,
+      timestamp,
+      topic,
+      deck,
+      contentSource,
+      title,
+      answer,
+    },
   } = card ?? {};
 
   const PATTERNS = {
@@ -86,17 +94,15 @@ export default function CardWithFlip({
               `}
             >
               <div className="card-content-meta">
-                {topic} &middot; {timestamp}
+                {order} &middot; {topic} &middot; {timestamp}
               </div>
 
-              <h4 className="card-content-title">{question}</h4>
+              <h4 className="card-content-title">{title}</h4>
 
               <div
                 className={"card-content-html"}
-                dangerouslySetInnerHTML={{ __html: q }}
+                dangerouslySetInnerHTML={{ __html: questionBlock }}
               />
-
-              <div className="card-content-options">{options}</div>
             </div>
 
             <CardFooter>
@@ -119,9 +125,11 @@ export default function CardWithFlip({
           <Card>
             {/*<span>{answer}</span>*/}
             <div className="card-content-html" style={{ overflowY: "auto" }}>
+              <h4 className="card-content-title">{answer}</h4>
+
               <div
                 className={"card-content-html-inner"}
-                dangerouslySetInnerHTML={{ __html: a }}
+                dangerouslySetInnerHTML={{ __html: answerBlock }}
                 style={{
                   padding: "2rem 1.5rem",
                   lineHeight: "1.6",

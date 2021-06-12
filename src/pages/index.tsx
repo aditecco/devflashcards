@@ -31,12 +31,13 @@ export const query = graphql`
             value
           }
           frontmatter {
+            order
             timestamp
             topic
+            deck
+            contentSource
             title
-            question
             answer
-            options
           }
         }
       }
