@@ -19,7 +19,7 @@ fs.readFile(PATH, (err, data) => {
     QUESTION_HEADING: /<h6>(\d\.\s\w.*)<\/h6>/g,
     QUESTION_HEADING_MD: /\#{6}\s[0-9]*\.\s(\w.*)/gm,
     _ANSWER_HEADING: /\<h4\>(Answer\:\s[A-Z]{1})\<\/h4\>/,
-    _ANSWER_HEADING_MD: /\#{4}\s(Answer\:\s[A-Z]{1})/,
+    _ANSWER_HEADING_MD: /\#{4}\s(Answer\:\s)([A-Z]{1})/,
     _ANSWER_REVEAL: /<details><summary><b>Answer<\/b><\/summary>/,
     _MISC_TAGS: /\<[\/]?(p|details|summary)\>/,
     _PARAGRAPHS: /<[\/]?p>/,
@@ -54,7 +54,7 @@ fs.readFile(PATH, (err, data) => {
 
   processedSource.slice(1).forEach((markdownBlob, i) => {
     const title = markdownBlob?.match?.(_QUESTION_HEADING_MD)?.[1];
-    const answer = markdownBlob?.match?.(_ANSWER_HEADING_MD)?.[1];
+    const answer = markdownBlob?.match?.(_ANSWER_HEADING_MD)?.[2];
 
     const strippedMarkdownBlob = markdownBlob
       .replace(ANSWER_REVEAL, "")
