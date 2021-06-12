@@ -24,10 +24,22 @@ const myPromise = Promise.resolve('Woah some cool data');
 })();
 ```
 
-- A: `Woah some cool data`
-- B: `Oh finally!`
-- C: `Woah some cool data` `Oh finally!`
-- D: `Oops didn't work` `Oh finally!`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`Woah some cool data`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`Oh finally!`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Woah some cool data` `Oh finally!`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`Oops didn't work` `Oh finally!`</input>
+    
 
 
 

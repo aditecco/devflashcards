@@ -24,10 +24,22 @@ getInfo(person, birthYear);
 console.log(person, birthYear);
 ```
 
-- A: `{ name: "Lydia" }, "1997"`
-- B: `{ name: "Sarah" }, "1998"`
-- C: `{ name: "Lydia" }, "1998"`
-- D: `{ name: "Sarah" }, "1997"`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`{ name: "Lydia" }, "1997"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`{ name: "Sarah" }, "1998"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`{ name: "Lydia" }, "1998"`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`{ name: "Sarah" }, "1997"`</input>
+    
 
 
 

@@ -22,10 +22,22 @@ for (let item of set) {
 }
 ```
 
-- A: `3`, `NaN`, `NaN`
-- B: `3`, `7`, `NaN`
-- C: `3`, `Lydia2`, `[object Object]2`
-- D: `"12"`, `Lydia2`, `[object Object]2`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`3`, `NaN`, `NaN`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`3`, `7`, `NaN`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`3`, `Lydia2`, `[object Object]2`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`"12"`, `Lydia2`, `[object Object]2`</input>
+    
 
 
 

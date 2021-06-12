@@ -18,10 +18,22 @@ function sum(a, b) {
 sum(1, '2');
 ```
 
-- A: `NaN`
-- B: `TypeError`
-- C: `"12"`
-- D: `3`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`NaN`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`TypeError`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`"12"`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`3`</input>
+    
 
 
 

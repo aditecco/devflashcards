@@ -21,10 +21,22 @@ const data = JSON.stringify(settings, ['level', 'health']);
 console.log(data);
 ```
 
-- A: `"{"level":19, "health":90}"`
-- B: `"{"username": "lydiahallie"}"`
-- C: `"["level", "health"]"`
-- D: `"{"username": "lydiahallie", "level":19, "health":90}"`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"{"level":19, "health":90}"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"{"username": "lydiahallie"}"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`"["level", "health"]"`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`"{"username": "lydiahallie", "level":19, "health":90}"`</input>
+    
 
 
 

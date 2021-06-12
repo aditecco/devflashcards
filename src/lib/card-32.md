@@ -18,10 +18,22 @@ function sayHi() {
 console.log(typeof sayHi());
 ```
 
-- A: `"object"`
-- B: `"number"`
-- C: `"function"`
-- D: `"undefined"`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"object"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"number"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`"function"`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`"undefined"`</input>
+    
 
 
 

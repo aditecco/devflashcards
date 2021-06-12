@@ -14,10 +14,22 @@ answer: C
 console.log(String.raw`Hello\nworld`);
 ```
 
-- A: `Hello world!`
-- B: `Hello` <br />&nbsp; &nbsp; &nbsp;`world`
-- C: `Hello\nworld`
-- D: `Hello\n` <br /> &nbsp; &nbsp; &nbsp;`world`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`Hello world!`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`Hello` <br />&nbsp; &nbsp; &nbsp;`world`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Hello\nworld`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`Hello\n` <br /> &nbsp; &nbsp; &nbsp;`world`</input>
+    
 
 
 

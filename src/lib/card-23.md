@@ -15,10 +15,22 @@ const obj = { a: 'one', b: 'two', a: 'three' };
 console.log(obj);
 ```
 
-- A: `{ a: "one", b: "two" }`
-- B: `{ b: "two", a: "three" }`
-- C: `{ a: "three", b: "two" }`
-- D: `SyntaxError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`{ a: "one", b: "two" }`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`{ b: "two", a: "three" }`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`{ a: "three", b: "two" }`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`SyntaxError`</input>
+    
 
 
 

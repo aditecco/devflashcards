@@ -28,10 +28,22 @@ function getFine(speed, amount) {
 console.log(getFine(130, 300))
 ```
 
-- A: The driver drove 130 and has to pay 300
-- B: The driver drove 130 mph and has to pay \$300.00
-- C: The driver drove undefined and has to pay undefined
-- D: The driver drove 130.00 and has to pay 300.00
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">The driver drove 130 and has to pay 300</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">The driver drove 130 mph and has to pay \$300.00</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">The driver drove undefined and has to pay undefined</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">The driver drove 130.00 and has to pay 300.00</input>
+    
 
 
 

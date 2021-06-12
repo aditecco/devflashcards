@@ -14,10 +14,22 @@ answer: A
 console.log(`${(x => x)('I love')} to program`);
 ```
 
-- A: `I love to program`
-- B: `undefined to program`
-- C: `${(x => x)('I love') to program`
-- D: `TypeError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`I love to program`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`undefined to program`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`${(x => x)('I love') to program`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`TypeError`</input>
+    
 
 
 

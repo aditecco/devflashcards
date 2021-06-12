@@ -21,10 +21,22 @@ console.log(sayHi.call(person, 21));
 console.log(sayHi.bind(person, 21));
 ```
 
-- A: `undefined is 21` `Lydia is 21`
-- B: `function` `function`
-- C: `Lydia is 21` `Lydia is 21`
-- D: `Lydia is 21` `function`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`undefined is 21` `Lydia is 21`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`function` `function`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Lydia is 21` `Lydia is 21`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`Lydia is 21` `function`</input>
+    
 
 
 

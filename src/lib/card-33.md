@@ -19,10 +19,22 @@ new Boolean(false);
 undefined;
 ```
 
-- A: `0`, `''`, `undefined`
-- B: `0`, `new Number(0)`, `''`, `new Boolean(false)`, `undefined`
-- C: `0`, `''`, `new Boolean(false)`, `undefined`
-- D: All of them are falsy
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`0`, `''`, `undefined`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`0`, `new Number(0)`, `''`, `new Boolean(false)`, `undefined`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`0`, `''`, `new Boolean(false)`, `undefined`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">All of them are falsy</input>
+    
 
 
 

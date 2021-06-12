@@ -27,10 +27,22 @@ function sayHi() {
 sayHi();
 ```
 
-- A: `It worked! Hello world!`
-- B: `Oh no an error: undefined`
-- C: `SyntaxError: can only throw Error objects`
-- D: `Oh no an error: Hello world!`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`It worked! Hello world!`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`Oh no an error: undefined`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`SyntaxError: can only throw Error objects`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`Oh no an error: Hello world!`</input>
+    
 
 
 

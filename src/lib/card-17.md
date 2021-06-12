@@ -18,10 +18,22 @@ function getAge(...args) {
 getAge(21);
 ```
 
-- A: `"number"`
-- B: `"array"`
-- C: `"object"`
-- D: `"NaN"`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"number"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"array"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`"object"`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`"NaN"`</input>
+    
 
 
 

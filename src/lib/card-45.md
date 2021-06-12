@@ -21,10 +21,22 @@ for (const item in person) {
 }
 ```
 
-- A: `{ name: "Lydia" }, { age: 21 }`
-- B: `"name", "age"`
-- C: `"Lydia", 21`
-- D: `["name", "Lydia"], ["age", 21]`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`{ name: "Lydia" }, { age: 21 }`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"name", "age"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`"Lydia", 21`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`["name", "Lydia"], ["age", 21]`</input>
+    
 
 
 

@@ -24,10 +24,22 @@ const colors = ['pink', 'red', 'blue'];
 console.log(colorConfig.colors[1]);
 ```
 
-- A: `true`
-- B: `false`
-- C: `undefined`
-- D: `TypeError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`true`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`false`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`undefined`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`TypeError`</input>
+    
 
 
 

@@ -20,10 +20,22 @@ const name = 'Lydia';
 name.giveLydiaPizza();
 ```
 
-- A: `"Just give Lydia pizza already!"`
-- B: `TypeError: not a function`
-- C: `SyntaxError`
-- D: `undefined`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"Just give Lydia pizza already!"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`TypeError: not a function`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`SyntaxError`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`undefined`</input>
+    
 
 
 

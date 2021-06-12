@@ -18,10 +18,22 @@ console.log(delete name);
 console.log(delete age);
 ```
 
-- A: `false`, `true`
-- B: `"Lydia"`, `21`
-- C: `true`, `true`
-- D: `undefined`, `undefined`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`false`, `true`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"Lydia"`, `21`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`true`, `true`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`undefined`, `undefined`</input>
+    
 
 
 

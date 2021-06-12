@@ -19,10 +19,22 @@ const data = getData();
 console.log(data);
 ```
 
-- A: `"I made it!"`
-- B: `Promise {<resolved>: "I made it!"}`
-- C: `Promise {<pending>}`
-- D: `undefined`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"I made it!"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`Promise {<resolved>: "I made it!"}`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Promise {<pending>}`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`undefined`</input>
+    
 
 
 

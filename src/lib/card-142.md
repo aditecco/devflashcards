@@ -19,10 +19,22 @@ const person = {
 [...person] // ["Lydia Hallie", 21]
 ```
 
-- A: Nothing, object are iterable by default
-- B: `*[Symbol.iterator]() { for (let x in this) yield* this[x] }`
-- C: `*[Symbol.iterator]() { yield* Object.values(this) }`
-- D: `*[Symbol.iterator]() { for (let x in this) yield this }`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">Nothing, object are iterable by default</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`*[Symbol.iterator]() { for (let x in this) yield* this[x] }`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`*[Symbol.iterator]() { yield* Object.values(this) }`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`*[Symbol.iterator]() { for (let x in this) yield this }`</input>
+    
 
 
 

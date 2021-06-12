@@ -17,10 +17,22 @@ const spookyItems = ['👻', '🎃', '🕸'];
 console.log(spookyItems);
 ```
 
-- A: `["👻", "🎃", "🕸"]`
-- B: `["👻", "🎃", "🕸", "💀"]`
-- C: `["👻", "🎃", "🕸", { item: "💀" }]`
-- D: `["👻", "🎃", "🕸", "[object Object]"]`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`["👻", "🎃", "🕸"]`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`["👻", "🎃", "🕸", "💀"]`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`["👻", "🎃", "🕸", { item: "💀" }]`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`["👻", "🎃", "🕸", "[object Object]"]`</input>
+    
 
 
 

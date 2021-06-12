@@ -24,10 +24,22 @@ myMap.get(myFunc);
 myMap.get(() => 'greeting');
 ```
 
-- A: 1
-- B: 2
-- C: 2 and 3
-- D: All of them
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">1</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">2</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">2 and 3</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">All of them</input>
+    
 
 
 

@@ -23,10 +23,22 @@ console.log(num1);
 console.log(num2);
 ```
 
-- A: `10`, `10`
-- B: `10`, `11`
-- C: `11`, `11`
-- D: `11`, `12`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`10`, `10`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`10`, `11`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`11`, `11`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`11`, `12`</input>
+    
 
 
 

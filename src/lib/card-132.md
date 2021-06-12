@@ -20,10 +20,22 @@ export default function sum(x) {
 import * as sum from './sum';
 ```
 
-- A: `sum(4)`
-- B: `sum.sum(4)`
-- C: `sum.default(4)`
-- D: Default aren't imported with `*`, only named exports
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`sum(4)`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`sum.sum(4)`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`sum.default(4)`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">Default aren't imported with `*`, only named exports</input>
+    
 
 
 

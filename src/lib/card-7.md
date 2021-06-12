@@ -16,9 +16,18 @@ greetign = {}; // Typo!
 console.log(greetign);
 ```
 
-- A: `{}`
-- B: `ReferenceError: greetign is not defined`
-- C: `undefined`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`{}`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`ReferenceError: greetign is not defined`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`undefined`</input>
+    
 
 
 

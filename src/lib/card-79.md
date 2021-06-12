@@ -18,10 +18,22 @@ function sayHi(name) {
 console.log(sayHi());
 ```
 
-- A: `Hi there,`
-- B: `Hi there, undefined`
-- C: `Hi there, null`
-- D: `ReferenceError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`Hi there,`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`Hi there, undefined`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Hi there, null`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`ReferenceError`</input>
+    
 
 
 

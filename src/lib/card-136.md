@@ -21,10 +21,22 @@ myFunc();
 myFunc(3);
 ```
 
-- A: `2` `4` and `3` `6`
-- B: `2` `NaN` and `3` `NaN`
-- C: `2` `Error` and `3` `6`
-- D: `2` `4` and `3` `Error`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`2` `4` and `3` `6`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`2` `NaN` and `3` `NaN`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`2` `Error` and `3` `6`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`2` `4` and `3` `Error`</input>
+    
 
 
 

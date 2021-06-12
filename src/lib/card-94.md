@@ -27,10 +27,22 @@ const member = new Person();
 console.log(member.name);
 ```
 
-- A: `"Lydia"`
-- B: `"Sarah"`
-- C: `Error: cannot redeclare Person`
-- D: `SyntaxError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"Lydia"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"Sarah"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Error: cannot redeclare Person`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`SyntaxError`</input>
+    
 
 
 

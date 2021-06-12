@@ -20,10 +20,22 @@ foo();
 baz();
 ```
 
-- A: `First` `Second` `Third`
-- B: `First` `Third` `Second`
-- C: `Second` `First` `Third`
-- D: `Second` `Third` `First`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`First` `Second` `Third`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`First` `Third` `Second`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Second` `First` `Third`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`Second` `Third` `First`</input>
+    
 
 
 

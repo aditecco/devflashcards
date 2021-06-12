@@ -30,10 +30,22 @@ delete Dog.prototype.bark;
 pet.bark();
 ```
 
-- A: `"Woof I am Mara"`, `TypeError`
-- B: `"Woof I am Mara"`, `"Woof I am Mara"`
-- C: `"Woof I am Mara"`, `undefined`
-- D: `TypeError`, `TypeError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"Woof I am Mara"`, `TypeError`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"Woof I am Mara"`, `"Woof I am Mara"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`"Woof I am Mara"`, `undefined`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`TypeError`, `TypeError`</input>
+    
 
 
 

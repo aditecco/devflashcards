@@ -28,10 +28,22 @@ addHobby('baking', person.hobbies);
 console.log(person.hobbies);
 ```
 
-- A: `["coding"]`
-- B: `["coding", "dancing"]`
-- C: `["coding", "dancing", "baking"]`
-- D: `["coding", "running", "dancing", "baking"]`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`["coding"]`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`["coding", "dancing"]`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`["coding", "dancing", "baking"]`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`["coding", "running", "dancing", "baking"]`</input>
+    
 
 
 

@@ -30,10 +30,22 @@ console.log(addFunction(10));
 console.log(addFunction(5 * 2));
 ```
 
-- A: `Calculated! 20` `Calculated! 20` `Calculated! 20`
-- B: `Calculated! 20` `From cache! 20` `Calculated! 20`
-- C: `Calculated! 20` `From cache! 20` `From cache! 20`
-- D: `Calculated! 20` `From cache! 20` `Error`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`Calculated! 20` `Calculated! 20` `Calculated! 20`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`Calculated! 20` `From cache! 20` `Calculated! 20`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`Calculated! 20` `From cache! 20` `From cache! 20`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`Calculated! 20` `From cache! 20` `Error`</input>
+    
 
 
 

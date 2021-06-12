@@ -14,8 +14,14 @@ answer: A
 console.log('❤️' === '❤️');
 ```
 
-- A: `true`
-- B: `false`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`true`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`false`</input>
+    
 
 
 

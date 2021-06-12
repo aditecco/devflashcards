@@ -19,11 +19,26 @@ c.greeting = 'Hello';
 console.log(d.greeting);
 ```
 
-- A: `Hello`
-- B: `Hey!`
-- C: `undefined`
-- D: `ReferenceError`
-- E: `TypeError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`Hello`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`Hey!`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`undefined`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`ReferenceError`</input>
+    
+
+    <label for="option-E">Option E</label>
+    <input type="radio" name="answer-option" id="option-E" value="E">`TypeError`</input>
+    
 
 
 

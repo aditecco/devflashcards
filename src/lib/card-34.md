@@ -14,10 +14,22 @@ answer: B
 console.log(typeof typeof 1);
 ```
 
-- A: `"number"`
-- B: `"string"`
-- C: `"object"`
-- D: `"undefined"`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"number"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"string"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`"object"`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`"undefined"`</input>
+    
 
 
 

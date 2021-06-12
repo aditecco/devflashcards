@@ -20,10 +20,22 @@ function getAge() {
 getAge();
 ```
 
-- A: `21`
-- B: `undefined`
-- C: `ReferenceError`
-- D: `TypeError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`21`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`undefined`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`ReferenceError`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`TypeError`</input>
+    
 
 
 

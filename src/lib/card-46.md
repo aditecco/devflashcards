@@ -14,10 +14,22 @@ answer: B
 console.log(3 + 4 + '5');
 ```
 
-- A: `"345"`
-- B: `"75"`
-- C: `12`
-- D: `"12"`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`"345"`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`"75"`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`12`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`"12"`</input>
+    
 
 
 

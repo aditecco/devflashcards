@@ -22,10 +22,22 @@ user.updateEmail("new@email.com")
 console.log(user.email)
 ```
 
-- A: `my@email.com`
-- B: `new@email.com`
-- C: `undefined`
-- D: `ReferenceError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`my@email.com`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`new@email.com`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`undefined`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`ReferenceError`</input>
+    
 
 
 

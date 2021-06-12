@@ -16,10 +16,22 @@ function getName(name) {
 }
 ```
 
-- A: `!!name`
-- B: `name`
-- C: `new Boolean(name)`
-- D: `name.length`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`!!name`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`name`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`new Boolean(name)`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`name.length`</input>
+    
 
 
 

@@ -16,10 +16,22 @@ numbers[10] = 11;
 console.log(numbers);
 ```
 
-- A: `[1, 2, 3, 7 x null, 11]`
-- B: `[1, 2, 3, 11]`
-- C: `[1, 2, 3, 7 x empty, 11]`
-- D: `SyntaxError`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`[1, 2, 3, 7 x null, 11]`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`[1, 2, 3, 11]`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`[1, 2, 3, 7 x empty, 11]`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`SyntaxError`</input>
+    
 
 
 

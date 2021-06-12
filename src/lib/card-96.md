@@ -21,10 +21,22 @@ console.log(getList(list))
 console.log(getUser(user))
 ```
 
-- A: `[1, [2, 3, 4]]` and `undefined`
-- B: `[1, [2, 3, 4]]` and `{ name: "Lydia", age: 21 }`
-- C: `[1, 2, 3, 4]` and `{ name: "Lydia", age: 21 }`
-- D: `Error` and `{ name: "Lydia", age: 21 }`
+
+    <label for="option-A">Option A</label>
+    <input type="radio" name="answer-option" id="option-A" value="A">`[1, [2, 3, 4]]` and `undefined`</input>
+    
+
+    <label for="option-B">Option B</label>
+    <input type="radio" name="answer-option" id="option-B" value="B">`[1, [2, 3, 4]]` and `{ name: "Lydia", age: 21 }`</input>
+    
+
+    <label for="option-C">Option C</label>
+    <input type="radio" name="answer-option" id="option-C" value="C">`[1, 2, 3, 4]` and `{ name: "Lydia", age: 21 }`</input>
+    
+
+    <label for="option-D">Option D</label>
+    <input type="radio" name="answer-option" id="option-D" value="D">`Error` and `{ name: "Lydia", age: 21 }`</input>
+    
 
 
 
