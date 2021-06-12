@@ -27,20 +27,20 @@ console.log(two.next().value);
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`a` and `a`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`a` and `a`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`a` and `undefined`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`a` and `undefined`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`['a', 'b', 'c']` and `a`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`['a', 'b', 'c']` and `a`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`a` and `['a', 'b', 'c']`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`a` and `['a', 'b', 'c']`</input>
     
 
 

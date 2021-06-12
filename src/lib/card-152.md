@@ -26,20 +26,20 @@ console.log(member)
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`{ email: "my@email.com", address: null }`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`{ email: "my@email.com", address: null }`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`{ email: "my@email.com" }`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`{ email: "my@email.com" }`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`{ email: "my@email.com", address: {} }`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`{ email: "my@email.com", address: {} }`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`{ email: "my@email.com", address: undefined }`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`{ email: "my@email.com", address: undefined }`</input>
     
 
 

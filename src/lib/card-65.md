@@ -22,20 +22,20 @@ export const sum = (a, b) => a + b;
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`running index.js`, `running sum.js`, `3`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`running index.js`, `running sum.js`, `3`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`running sum.js`, `running index.js`, `3`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`running sum.js`, `running index.js`, `3`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`running sum.js`, `3`, `running index.js`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`running sum.js`, `3`, `running index.js`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`running index.js`, `undefined`, `running sum.js`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`running index.js`, `undefined`, `running sum.js`</input>
     
 
 

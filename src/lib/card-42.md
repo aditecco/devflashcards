@@ -23,20 +23,20 @@ console.log(gen.next().value);
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`[0, 10], [10, 20]`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`[0, 10], [10, 20]`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`20, 20`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`20, 20`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`10, 20`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`10, 20`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`0, 10 and 10, 20`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`0, 10 and 10, 20`</input>
     
 
 

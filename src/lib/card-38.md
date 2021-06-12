@@ -20,20 +20,20 @@ answer: C
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`[0, 1, 2, 3, 1, 2]`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`[0, 1, 2, 3, 1, 2]`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`[6, 1, 2]`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`[6, 1, 2]`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`[1, 2, 0, 1, 2, 3]`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`[1, 2, 0, 1, 2, 3]`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`[1, 2, 6]`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`[1, 2, 6]`</input>
     
 
 

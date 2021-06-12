@@ -26,20 +26,20 @@ async function* range(start, end) {
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`Promise {1}` `Promise {2}` `Promise {3}`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`Promise {1}` `Promise {2}` `Promise {3}`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`Promise {<pending>}` `Promise {<pending>}` `Promise {<pending>}`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`Promise {<pending>}` `Promise {<pending>}` `Promise {<pending>}`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`1` `2` `3`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`1` `2` `3`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`undefined` `undefined` `undefined`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`undefined` `undefined` `undefined`</input>
     
 
 

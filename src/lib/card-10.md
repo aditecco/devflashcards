@@ -24,20 +24,20 @@ console.log(sarah);
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`Person {firstName: "Lydia", lastName: "Hallie"}` and `undefined`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`Person {firstName: "Lydia", lastName: "Hallie"}` and `undefined`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`Person {firstName: "Lydia", lastName: "Hallie"}` and `Person {firstName: "Sarah", lastName: "Smith"}`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`Person {firstName: "Lydia", lastName: "Hallie"}` and `Person {firstName: "Sarah", lastName: "Smith"}`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`Person {firstName: "Lydia", lastName: "Hallie"}` and `{}`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`Person {firstName: "Lydia", lastName: "Hallie"}` and `{}`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`Person {firstName: "Lydia", lastName: "Hallie"}` and `ReferenceError`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`Person {firstName: "Lydia", lastName: "Hallie"}` and `ReferenceError`</input>
     
 
 

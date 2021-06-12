@@ -20,20 +20,20 @@ console.log(Object.keys(info));
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`{Symbol('a'): 'b'}` and `["{Symbol('a')"]`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`{Symbol('a'): 'b'}` and `["{Symbol('a')"]`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`{}` and `[]`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`{}` and `[]`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`{ a: "b" }` and `["a"]`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`{ a: "b" }` and `["a"]`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`{Symbol('a'): 'b'}` and `[]`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`{Symbol('a'): 'b'}` and `[]`</input>
     
 
 

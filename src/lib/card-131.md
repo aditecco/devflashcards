@@ -31,20 +31,20 @@ funcTwo();
 ```
 
 
-    <label for="option-A">Option A</label>
-    <input type="radio" name="answer-option" id="option-A" value="A">`Promise! Last line! Promise! Last line! Last line! Promise!`</input>
+<label for="option-A">Option A</label>
+<input type="radio" name="answer-option" id="option-A" value="A">`Promise! Last line! Promise! Last line! Last line! Promise!`</input>
     
 
-    <label for="option-B">Option B</label>
-    <input type="radio" name="answer-option" id="option-B" value="B">`Last line! Timeout! Promise! Last line! Timeout! Promise!`</input>
+<label for="option-B">Option B</label>
+<input type="radio" name="answer-option" id="option-B" value="B">`Last line! Timeout! Promise! Last line! Timeout! Promise!`</input>
     
 
-    <label for="option-C">Option C</label>
-    <input type="radio" name="answer-option" id="option-C" value="C">`Promise! Last line! Last line! Promise! Timeout! Timeout!`</input>
+<label for="option-C">Option C</label>
+<input type="radio" name="answer-option" id="option-C" value="C">`Promise! Last line! Last line! Promise! Timeout! Timeout!`</input>
     
 
-    <label for="option-D">Option D</label>
-    <input type="radio" name="answer-option" id="option-D" value="D">`Last line! Promise! Promise! Last line! Timeout! Timeout!`</input>
+<label for="option-D">Option D</label>
+<input type="radio" name="answer-option" id="option-D" value="D">`Last line! Promise! Promise! Last line! Timeout! Timeout!`</input>
     
 
 
