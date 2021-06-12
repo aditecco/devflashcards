@@ -21,20 +21,16 @@ export default IndexPage;
 
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: frontmatter___order }) {
+    allMarkdownRemark {
       edges {
         node {
           id
           html
-          headings {
-            depth
-            value
-          }
           frontmatter {
             order
             timestamp
-            topic
             deck
+            topic
             contentSource
             title
             answer
