@@ -1,4 +1,15 @@
-###### 43. What does this return?
+
+---
+order: 41
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What does this return?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 [...'Lydia'];
@@ -9,12 +20,12 @@
 - C: `[[], "Lydia"]`
 - D: `[["L", "y", "d", "i", "a"]]`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 A string is an iterable. The spread operator maps every character of an iterable to one element.
 
-</p>
-</details>
+
+

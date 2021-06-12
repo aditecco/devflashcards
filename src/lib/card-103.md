@@ -1,4 +1,15 @@
-###### 105. What's its value?
+
+---
+order: 103
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's its value?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 function compareMembers(person1, person2 = person) {
@@ -19,10 +30,10 @@ compareMembers(person);
 - C: `ReferenceError`
 - D: `SyntaxError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 Objects are passed by reference. When we check objects for strict equality (`===`), we're comparing their references.
 
@@ -32,5 +43,5 @@ This means that both values have a reference to the same spot in memory, thus th
 
 The code block in the `else` statement gets run, and `They are the same!` gets logged.
 
-</p>
-</details>
+
+

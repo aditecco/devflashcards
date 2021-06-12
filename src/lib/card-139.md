@@ -1,4 +1,15 @@
-###### 141. What's the output?
+
+---
+order: 139
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const person = {
@@ -23,10 +34,10 @@ console.log(person.hobbies);
 - C: `["coding", "dancing", "baking"]`
 - D: `["coding", "running", "dancing", "baking"]`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The `addHobby` function receives two arguments, `hobby` and `hobbies` with the default value of the `hobbies` array on the `person` object.
 
@@ -38,5 +49,5 @@ Last, we invoke the `addHobby` function, and pass `"baking"` as the value for `h
 
 After pushing `dancing` and `baking`, the value of `person.hobbies` is `["coding", "dancing", "baking"]`
 
-</p>
-</details>
+
+

@@ -1,4 +1,15 @@
-###### 149. What's the output?
+
+---
+order: 147
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const fruit = ['🍌', '🍊', '🍎']
@@ -15,14 +26,14 @@ console.log(fruit)
 - C: `['🍇', '🍊', '🍎']`
 - D: `['🍇', '🍌', '🍊', '🍎']`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 First, we invoke the `slice` method on the fruit array. The slice method does not modify the original array, but returns the value that it sliced off the array: the banana emoji.
 Then, we invoke the `splice` method on the fruit array. The splice method does modify the original array, which means that the fruit array now consists of `['🍊', '🍎']`.
 At last, we invoke the `unshift` method on the `fruit` array, which modifies the original array by adding the provided value, ‘🍇’ in this case,  as the first element in the array.  The fruit array now consists of `['🍇', '🍊', '🍎']`.
 
-</p>
-</details>
+
+

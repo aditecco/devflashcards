@@ -1,4 +1,15 @@
-###### 6. What's the output?
+
+---
+order: 4
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 let c = { greeting: 'Hey!' };
@@ -15,10 +26,10 @@ console.log(d.greeting);
 - D: `ReferenceError`
 - E: `TypeError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 In JavaScript, all objects interact by _reference_ when setting them equal to each other.
 
@@ -28,5 +39,5 @@ First, variable `c` holds a value to an object. Later, we assign `d` with the sa
 
 When you change one object, you change all of them.
 
-</p>
-</details>
+
+

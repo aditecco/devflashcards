@@ -1,4 +1,15 @@
-###### 76. What's the output?
+
+---
+order: 74
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 const { name: myName } = { name: 'Lydia' };
@@ -11,10 +22,10 @@ console.log(name);
 - C: `undefined`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 When we unpack the property `name` from the object on the right-hand side, we assign its value `"Lydia"` to a variable with the name `myName`.
 
@@ -22,5 +33,5 @@ With `{ name: myName }`, we tell JavaScript that we want to create a new variabl
 
 Since we try to log `name`, a variable that is not defined, a ReferenceError gets thrown.
 
-</p>
-</details>
+
+

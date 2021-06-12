@@ -1,4 +1,15 @@
-###### 113. What's the output?
+
+---
+order: 111
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 console.log(`${(x => x)('I love')} to program`);
@@ -9,12 +20,12 @@ console.log(`${(x => x)('I love')} to program`);
 - C: `${(x => x)('I love') to program`
 - D: `TypeError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 Expressions within template literals are evaluated first. This means that the string will contain the returned value of the expression, the immediately invoked function `(x => x)('I love')` in this case. We pass the value `'I love'` as an argument to the `x => x` arrow function. `x` is equal to `'I love'`, which gets returned. This results in `I love to program`.
 
-</p>
-</details>
+
+

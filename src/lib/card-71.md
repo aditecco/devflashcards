@@ -1,4 +1,15 @@
-###### 73. What's the output?
+
+---
+order: 71
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 async function getData() {
@@ -14,10 +25,10 @@ console.log(data);
 - C: `Promise {<pending>}`
 - D: `undefined`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 An async function always returns a promise. The `await` still has to wait for the promise to resolve: a pending promise gets returned when we call `getData()` in order to set `data` equal to it.
 
@@ -27,5 +38,5 @@ If we wanted to get access to the resolved value `"I made it"`, we could have us
 
 This would've logged `"I made it!"`
 
-</p>
-</details>
+
+

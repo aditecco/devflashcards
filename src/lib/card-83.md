@@ -1,4 +1,15 @@
-###### 85. What kind of information would get logged?
+
+---
+order: 83
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What kind of information would get logged?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 fetch('https://www.website.com/api/user/1')
@@ -11,12 +22,12 @@ fetch('https://www.website.com/api/user/1')
 - C: The result of the callback in the previous `.then()`.
 - D: It would always be undefined.
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The value of `res` in the second `.then` is equal to the returned value of the previous `.then`. You can keep chaining `.then`s like this, where the value is passed to the next handler.
 
-</p>
-</details>
+
+

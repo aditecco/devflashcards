@@ -1,4 +1,15 @@
-###### 5. Which one is true?
+
+---
+order: 3
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: Which one is true?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 const bird = {
@@ -16,10 +27,10 @@ const mouse = {
 - C: `mouse[bird["size"]]` is not valid
 - D: All of them are valid
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 In JavaScript, all object keys are strings (unless it's a Symbol). Even though we might not _type_ them as strings, they are always converted into strings under the hood.
 
@@ -29,5 +40,5 @@ JavaScript interprets (or unboxes) statements. When we use bracket notation, it 
 
 However, with dot notation, this doesn't happen. `mouse` does not have a key called `bird`, which means that `mouse.bird` is `undefined`. Then, we ask for the `size` using dot notation: `mouse.bird.size`. Since `mouse.bird` is `undefined`, we're actually asking `undefined.size`. This isn't valid, and will throw an error similar to `Cannot read property "size" of undefined`.
 
-</p>
-</details>
+
+

@@ -1,4 +1,15 @@
-###### 95. What's the output?
+
+---
+order: 93
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 function nums(a, b) {
@@ -17,10 +28,10 @@ console.log(nums(1, 2));
 - C: `undefined` and `undefined`
 - D: `SyntaxError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 In JavaScript, we don't _have_ to write the semicolon (`;`) explicitly, however the JavaScript engine still adds them after statements. This is called **Automatic Semicolon Insertion**. A statement can for example be variables, or keywords like `throw`, `return`, `break`, etc.
 
@@ -33,5 +44,5 @@ a + b;
 
 This means that `a + b` is never reached, since a function stops running after the `return` keyword. If no value gets returned, like here, the function returns `undefined`. Note that there is no automatic insertion after `if/else` statements!
 
-</p>
-</details>
+
+

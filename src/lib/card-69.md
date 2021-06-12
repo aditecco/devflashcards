@@ -1,4 +1,15 @@
-###### 71. How can we log the values that are commented out after the console.log statement?
+
+---
+order: 69
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: How can we log the values that are commented out after the console.log statement?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 function* startGame() {
@@ -19,10 +30,10 @@ console.log(/* 2 */); // JavaScript loves you back ❤️
 - C: `game.next().value` and `game.next("Yes").value`
 - D: `game.next.value()` and `game.next.value("Yes")`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 A generator function "pauses" its execution when it sees the `yield` keyword. First, we have to let the function yield the string "Do you love JavaScript?", which can be done by calling `game.next().value`.
 
@@ -30,5 +41,5 @@ Every line is executed, until it finds the first `yield` keyword. There is a `yi
 
 When we call `game.next("Yes").value`, the previous `yield` is replaced with the value of the parameters passed to the `next()` function, `"Yes"` in this case. The value of the variable `answer` is now equal to `"Yes"`. The condition of the if-statement returns `false`, and `JavaScript loves you back ❤️` gets logged.
 
-</p>
-</details>
+
+

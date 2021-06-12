@@ -1,4 +1,15 @@
-###### 98. What's the output?
+
+---
+order: 96
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 const getList = ([x, ...y]) => [x, y]
@@ -16,10 +27,10 @@ console.log(getUser(user))
 - C: `[1, 2, 3, 4]` and `{ name: "Lydia", age: 21 }`
 - D: `Error` and `{ name: "Lydia", age: 21 }`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 The `getList` function receives an array as its argument. Between the parentheses of the `getList` function, we destructure this array right away. You could see this as:
 
@@ -33,5 +44,5 @@ The `getUser` function receives an object. With arrow functions, we don't _have_
 
 Since no value gets returned in this case, the function returns `undefined`.
 
-</p>
-</details>
+
+

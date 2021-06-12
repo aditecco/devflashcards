@@ -1,4 +1,15 @@
-###### 64. What's the output?
+
+---
+order: 62
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const value = { number: 10 };
@@ -18,10 +29,10 @@ multiply(value);
 - C: `20`, `20`, `20`, `40`
 - D: `NaN`, `NaN`, `20`, `40`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 In ES6, we can initialize parameters with a default value. The value of the parameter will be the default value, if no other value has been passed to the function, or if the value of the parameter is `"undefined"`. In this case, we spread the properties of the `value` object into a new object, so `x` has the default value of `{ number: 10 }`.
 
@@ -31,5 +42,5 @@ The third time we invoke multiply, we do pass an argument: the object called `va
 
 The fourth time, we pass the `value` object again. `x.number` was previously modified to `20`, so `x.number *= 2` logs `40`.
 
-</p>
-</details>
+
+

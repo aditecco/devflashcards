@@ -1,4 +1,15 @@
-###### 122. What's the output?
+
+---
+order: 120
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const name = 'Lydia Hallie';
@@ -12,14 +23,14 @@ console.log(!typeof name === 'string');
 - C: `false` `false`
 - D: `true` `true`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 `typeof name` returns `"string"`. The string `"string"` is a truthy value, so `!typeof name` returns the boolean value `false`. `false === "object"` and `false === "string"` both return`false`.
 
 (If we wanted to check whether the type was (un)equal to a certain type, we should've written `!==` instead of `!typeof`)
 
-</p>
-</details>
+
+

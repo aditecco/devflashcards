@@ -1,4 +1,15 @@
-###### 59. What's the output?
+
+---
+order: 57
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -12,10 +23,10 @@ console.log(y);
 - C: `1`
 - D: `[1]`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 We can unpack values from arrays or properties from objects through destructuring. For example:
 
@@ -35,5 +46,5 @@ The value of `a` is now `1`, and the value of `b` is now `2`. What we actually d
 
 This means that the value of `y` is equal to the first value in the array, which is the number `1`. When we log `y`, `1` is returned.
 
-</p>
-</details>
+
+

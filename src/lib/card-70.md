@@ -1,4 +1,15 @@
-###### 72. What's the output?
+
+---
+order: 70
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 console.log(String.raw`Hello\nworld`);
@@ -9,10 +20,10 @@ console.log(String.raw`Hello\nworld`);
 - C: `Hello\nworld`
 - D: `Hello\n` <br /> &nbsp; &nbsp; &nbsp;`world`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 `String.raw` returns a string where the escapes (`\n`, `\v`, `\t` etc.) are ignored! Backslashes can be an issue since you could end up with something like:
 
@@ -28,5 +39,5 @@ With `String.raw`, it would simply ignore the escape and print:
 
 In this case, the string is `Hello\nworld`, which gets logged.
 
-</p>
-</details>
+
+

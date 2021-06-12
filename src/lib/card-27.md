@@ -1,4 +1,15 @@
-###### 29. What's the output?
+
+---
+order: 27
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 const a = {};
@@ -16,10 +27,10 @@ console.log(a[b]);
 - C: `undefined`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 Object keys are automatically converted into strings. We are trying to set an object as a key to object `a`, with the value of `123`.
 
@@ -27,5 +38,5 @@ However, when we stringify an object, it becomes `"[object Object]"`. So what we
 
 Then, we log `a[b]`, which is actually `a["[object Object]"]`. We just set that to `456`, so it returns `456`.
 
-</p>
-</details>
+
+

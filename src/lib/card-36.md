@@ -1,4 +1,15 @@
-###### 38. What's the output?
+
+---
+order: 36
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 (() => {
@@ -19,10 +30,10 @@
 - C: `1` `1` `2`
 - D: `1` `undefined` `undefined`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 The `catch` block receives the argument `x`. This is not the same `x` as the variable when we pass arguments. This variable `x` is block-scoped.
 
@@ -30,5 +41,5 @@ Later, we set this block-scoped variable equal to `1`, and set the value of the 
 
 Outside of the `catch` block, `x` is still `undefined`, and `y` is `2`. When we want to `console.log(x)` outside of the `catch` block, it returns `undefined`, and `y` returns `2`.
 
-</p>
-</details>
+
+

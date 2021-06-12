@@ -1,4 +1,15 @@
-###### 8. What's the output?
+
+---
+order: 6
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 class Chameleon {
@@ -21,12 +32,12 @@ console.log(freddie.colorChange('orange'));
 - C: `green`
 - D: `TypeError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 The `colorChange` function is static. Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children. Since `freddie` is a child, the function is not passed down, and not available on the `freddie` instance: a `TypeError` is thrown.
 
-</p>
-</details>
+
+

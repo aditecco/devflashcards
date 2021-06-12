@@ -1,4 +1,15 @@
-###### 112. What's the output?
+
+---
+order: 110
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 function* generatorOne() {
@@ -21,10 +32,10 @@ console.log(two.next().value);
 - C: `['a', 'b', 'c']` and `a`
 - D: `a` and `['a', 'b', 'c']`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 With the `yield` keyword, we `yield` values in a generator function. With the `yield*` keyword, we can yield values from another generator function, or iterable object (for example an array).
 
@@ -44,5 +55,5 @@ console.log(two.next().value); // 'c'
 console.log(two.next().value); // undefined
 ```
 
-</p>
-</details>
+
+

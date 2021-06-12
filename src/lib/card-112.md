@@ -1,4 +1,15 @@
-###### 114. What will happen?
+
+---
+order: 112
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What will happen?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 let config = {
@@ -15,10 +26,10 @@ config = null;
 - C: The `setInterval` callback will still be called every second
 - D: We never invoked `config.alert()`, config is `null`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 Normally when we set objects equal to `null`, those objects get _garbage collected_ as there is no reference anymore to that object. However, since the callback function within `setInterval` is an arrow function (thus bound to the `config` object), the callback function still holds a reference to the `config` object. 
 As long as there is a reference, the object won't get garbage collected. 
@@ -26,5 +37,5 @@ Since this is an interval, setting `config` to `null` or `delete`-ing `config.al
 It should be cleared with `clearInterval(config.alert)` to remove it from memory.
 Since it was not cleared, the `setInterval` callback function will still get invoked every 1000ms (1s).
 
-</p>
-</details>
+
+

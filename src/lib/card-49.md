@@ -1,4 +1,15 @@
-###### 51. What's the output?
+
+---
+order: 49
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 function getInfo(member, year) {
@@ -19,10 +30,10 @@ console.log(person, birthYear);
 - C: `{ name: "Lydia" }, "1998"`
 - D: `{ name: "Sarah" }, "1997"`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 Arguments are passed by _value_, unless their value is an object, then they're passed by _reference_. `birthYear` is passed by value, since it's a string, not an object. When we pass arguments by value, a _copy_ of that value is created (see question 46).
 
@@ -30,5 +41,5 @@ The variable `birthYear` has a reference to the value `"1997"`. The argument `ye
 
 The value of `person` is an object. The argument `member` has a (copied) reference to the _same_ object. When we modify a property of the object `member` has a reference to, the value of `person` will also be modified, since they both have a reference to the same object. `person`'s `name` property is now equal to the value `"Lydia"`
 
-</p>
-</details>
+
+

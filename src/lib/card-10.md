@@ -1,4 +1,15 @@
-###### 12. What's the output?
+
+---
+order: 10
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 function Person(firstName, lastName) {
@@ -18,14 +29,14 @@ console.log(sarah);
 - C: `Person {firstName: "Lydia", lastName: "Hallie"}` and `{}`
 - D: `Person {firstName: "Lydia", lastName: "Hallie"}` and `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 For `sarah`, we didn't use the `new` keyword. When using `new`, `this` refers to the new empty object we create. However, if you don't add `new`, `this` refers to the **global object**!
 
 We said that `this.firstName` equals `"Sarah"` and `this.lastName` equals `"Smith"`. What we actually did, is defining `global.firstName = 'Sarah'` and `global.lastName = 'Smith'`. `sarah` itself is left `undefined`, since we don't return a value from the `Person` function.
 
-</p>
-</details>
+
+

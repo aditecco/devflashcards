@@ -1,4 +1,15 @@
-###### 106. What's its value?
+
+---
+order: 104
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's its value?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 const colorConfig = {
@@ -19,10 +30,10 @@ console.log(colorConfig.colors[1]);
 - C: `undefined`
 - D: `TypeError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 In JavaScript, we have two ways to access properties on an object: bracket notation, or dot notation. In this example, we use dot notation (`colorConfig.colors`) instead of bracket notation (`colorConfig["colors"]`).
 
@@ -30,5 +41,5 @@ With dot notation, JavaScript tries to find the property on the object with that
 
 JavaScript interprets (or unboxes) statements. When we use bracket notation, it sees the first opening bracket `[` and keeps going until it finds the closing bracket `]`. Only then, it will evaluate the statement. If we would've used `colorConfig[colors[1]]`, it would have returned the value of the `red` property on the `colorConfig` object.
 
-</p>
-</details>
+
+

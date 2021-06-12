@@ -1,4 +1,15 @@
-###### 102. What's the value of output?
+
+---
+order: 100
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the value of output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 const myPromise = () => Promise.resolve('I have resolved!');
@@ -22,10 +33,10 @@ secondFunction();
 - C: `I have resolved!`, `second` and `second`, `I have resolved!`
 - D: `second`, `I have resolved!` and `I have resolved!`, `second`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 With a promise, we basically say _I want to execute this function, but I'll put it aside for now while it's running since this might take a while. Only when a certain value is resolved (or rejected), and when the call stack is empty, I want to use this value._
 
@@ -37,5 +48,5 @@ With the await keyword in `secondFunction`, we literally pause the execution of 
 
 This means that it waited for the `myPromise` to resolve with the value `I have resolved`, and only once that happened, we moved to the next line: `second` got logged.
 
-</p>
-</details>
+
+

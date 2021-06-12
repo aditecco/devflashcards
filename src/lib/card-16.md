@@ -1,4 +1,15 @@
-###### 18. What's the output?
+
+---
+order: 16
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 function checkAge(data) {
@@ -18,10 +29,10 @@ checkAge({ age: 18 });
 - B: `You are still an adult.`
 - C: `Hmm.. You don't have an age I guess`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 When testing equality, primitives are compared by their _value_, while objects are compared by their _reference_. JavaScript checks if the objects have a reference to the same location in memory.
 
@@ -29,5 +40,5 @@ The two objects that we are comparing don't have that: the object we passed as a
 
 This is why both `{ age: 18 } === { age: 18 }` and `{ age: 18 } == { age: 18 }` return `false`.
 
-</p>
-</details>
+
+

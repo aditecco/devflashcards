@@ -1,4 +1,15 @@
-###### 150. What's the output?
+
+---
+order: 148
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 const animals = {};
@@ -16,10 +27,10 @@ console.log(animals[dog])
 - C: `undefined`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 Object keys are converted to strings. 
 
@@ -29,5 +40,5 @@ Since the value of  `dog` is an object,  `animals[dog]` actually means that we‚Ä
 
 Logging `animals[dog]`, or actually `animals["object Object"]` since converting the `dog` object to a string results `"object Object"`, returns the `{ emoji: "üêà", name: "Sara" }`.
 
-</p>
-</details>
+
+

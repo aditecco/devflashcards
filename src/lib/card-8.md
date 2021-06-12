@@ -1,4 +1,15 @@
-###### 10. What happens when we do this?
+
+---
+order: 8
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What happens when we do this?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 function bark() {
@@ -13,14 +24,14 @@ bark.animal = 'dog';
 - C: `"Woof"` gets logged.
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 This is possible in JavaScript, because functions are objects! (Everything besides primitive types are objects)
 
 A function is a special type of object. The code you write yourself isn't the actual function. The function is an object with properties. This property is invocable.
 
-</p>
-</details>
+
+

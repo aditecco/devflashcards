@@ -1,4 +1,15 @@
-###### 35. Which of these values are falsy?
+
+---
+order: 33
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: Which of these values are falsy?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 0;
@@ -14,10 +25,10 @@ undefined;
 - C: `0`, `''`, `new Boolean(false)`, `undefined`
 - D: All of them are falsy
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 There are 8 falsy values:
 
@@ -32,5 +43,5 @@ There are 8 falsy values:
 
 Function constructors, like `new Number` and `new Boolean` are truthy.
 
-</p>
-</details>
+
+

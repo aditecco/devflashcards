@@ -1,4 +1,15 @@
-###### 46. What's the output?
+
+---
+order: 44
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 let person = { name: 'Lydia' };
@@ -13,10 +24,10 @@ console.log(members);
 - C: `[{}]`
 - D: `[{ name: "Lydia" }]`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 First, we declare a variable `person` with the value of an object that has a `name` property.
 
@@ -32,5 +43,5 @@ Then, we set the variable `person` equal to `null`.
 
 We are only modifying the value of the `person` variable, and not the first element in the array, since that element has a different (copied) reference to the object. The first element in `members` still holds its reference to the original object. When we log the `members` array, the first element still holds the value of the object, which gets logged.
 
-</p>
-</details>
+
+

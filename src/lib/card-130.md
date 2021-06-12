@@ -1,4 +1,15 @@
-###### 132. What's the output?
+
+---
+order: 130
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 class Counter {
@@ -26,10 +37,10 @@ console.log(counterOne.count);
 - C: `2`
 - D: `3`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 `counterOne` is an instance of the `Counter` class. The counter class contains a `count` property on its constructor, and an `increment` method. First, we invoked the `increment` method twice by calling `counterOne.increment()`. Currently, `counterOne.count` is `2`.
 
@@ -41,5 +52,5 @@ We invoke the `counterTwo.increment()`, which sets the `count` to `3`. Then, we 
 
 <img src="https://i.imgur.com/BNBHXmc.png" width="400">
 
-</p>
-</details>
+
+

@@ -1,4 +1,15 @@
-###### 126. What's the output?
+
+---
+order: 124
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 function getFine(speed, amount) {
@@ -23,12 +34,12 @@ console.log(getFine(130, 300))
 - C: The driver drove undefined and has to pay undefined
 - D: The driver drove 130.00 and has to pay 300.00
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 With the `Intl.NumberFormat` method, we can format numeric values to any locale. We format the numeric value `130` to the `en-US` locale as a `unit` in `mile-per-hour`, which results in `130 mph`. The numeric value `300` to the `en-US` locale as a `currency` in `USD` results in `$300.00`.
 
-</p>
-</details>
+
+

@@ -1,4 +1,15 @@
-###### 69. What's the output?
+
+---
+order: 67
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const name = 'Lydia Hallie';
@@ -11,14 +22,14 @@ console.log(name.padStart(2));
 - C: `" Lydia Hallie"`, `"Lydia Hallie"` (`"[1x whitespace]Lydia Hallie"`, `"Lydia Hallie"`)
 - D: `"Lydia Hallie"`, `"Lyd"`,
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 With the `padStart` method, we can add padding to the beginning of a string. The value passed to this method is the _total_ length of the string together with the padding. The string `"Lydia Hallie"` has a length of `12`. `name.padStart(13)` inserts 1 space at the start of the string, because 12 + 1 is 13.
 
 If the argument passed to the `padStart` method is smaller than the length of the array, no padding will be added.
 
-</p>
-</details>
+
+

@@ -1,4 +1,15 @@
-###### 3. What's the output?
+
+---
+order: 1
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 const shape = {
@@ -18,10 +29,10 @@ console.log(shape.perimeter());
 - C: `20` and `63`
 - D: `NaN` and `63`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 Note that the value of `diameter` is a regular function, whereas the value of `perimeter` is an arrow function.
 
@@ -29,5 +40,5 @@ With arrow functions, the `this` keyword refers to its current surrounding scope
 
 There is no value `radius` on that object, which returns `NaN`.
 
-</p>
-</details>
+
+

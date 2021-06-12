@@ -1,4 +1,15 @@
-###### 110. What does this method do?
+
+---
+order: 108
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What does this method do?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 JSON.parse();
@@ -9,10 +20,10 @@ JSON.parse();
 - C: Parses any JavaScript value to JSON
 - D: Parses JSON to a JavaScript object only
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 With the `JSON.parse()` method, we can parse JSON string to a JavaScript value.
 
@@ -30,5 +41,5 @@ const jsonArray = JSON.stringify({ name: 'Lydia' }); // '{"name":"Lydia"}'
 JSON.parse(jsonArray); // { name: 'Lydia' }
 ```
 
-</p>
-</details>
+
+

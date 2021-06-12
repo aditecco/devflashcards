@@ -1,4 +1,15 @@
-###### 62. What's the output?
+
+---
+order: 60
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 const settings = {
@@ -16,10 +27,10 @@ console.log(data);
 - C: `"["level", "health"]"`
 - D: `"{"username": "lydiahallie", "level":19, "health":90}"`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 The second argument of `JSON.stringify` is the _replacer_. The replacer can either be a function or an array, and lets you control what and how the values should be stringified.
 
@@ -27,5 +38,5 @@ If the replacer is an _array_, only the property names included in the array wil
 
 If the replacer is a _function_, this function gets called on every property in the object you're stringifying. The value returned from this function will be the value of the property when it's added to the JSON string. If the value is `undefined`, this property is excluded from the JSON string.
 
-</p>
-</details>
+
+

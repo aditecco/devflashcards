@@ -1,4 +1,15 @@
-###### 135. What's the output?
+
+---
+order: 133
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const handler = {
@@ -17,10 +28,10 @@ person.name;
 - C: `Added a new property!` `Accessed a property!`
 - D: Nothing gets logged
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 With a Proxy object, we can add custom behavior to an object that we pass to it as the second argument. In this case, we pass the `handler` object which contained two properties: `set` and `get`. `set` gets invoked whenever we _set_ property values, `get` gets invoked whenever we _get_ (access) property values.
 
@@ -30,5 +41,5 @@ First, we added a new property `name` to the proxy object (`person.name = "Lydia
 
 Then, we access a property value on the proxy object, the `get` property on the handler object got invoked. `"Accessed a property!"` gets logged.
 
-</p>
-</details>
+
+

@@ -1,4 +1,15 @@
-###### 11. What's the output?
+
+---
+order: 9
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 function Person(firstName, lastName) {
@@ -19,10 +30,10 @@ console.log(member.getFullName());
 - C: `Lydia Hallie`
 - D: `undefined` `undefined`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 In JavaScript, functions are objects, and therefore, the method `getFullName` gets added to the constructor function object itself. For that reason, we can call `Person.getFullName()`, but `member.getFullName` throws a `TypeError`. 
 
@@ -34,5 +45,5 @@ Person.prototype.getFullName = function() {
 };
 ```
 
-</p>
-</details>
+
+

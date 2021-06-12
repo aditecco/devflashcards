@@ -1,4 +1,15 @@
-###### 31. What is the event.target when clicking the button?
+
+---
+order: 29
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What is the event.target when clicking the button?
+answer: Answer: C
+---
+
+  
 
 ```html
 <div onclick="console.log('first div')">
@@ -15,12 +26,12 @@
 - C: `button`
 - D: An array of all nested elements.
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The deepest nested element that caused the event is the target of the event. You can stop bubbling by `event.stopPropagation`
 
-</p>
-</details>
+
+

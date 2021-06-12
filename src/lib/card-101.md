@@ -1,4 +1,15 @@
-###### 103. What's the value of output?
+
+---
+order: 101
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the value of output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const set = new Set();
@@ -17,10 +28,10 @@ for (let item of set) {
 - C: `3`, `Lydia2`, `[object Object]2`
 - D: `"12"`, `Lydia2`, `[object Object]2`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The `+` operator is not only used for adding numerical values, but we can also use it to concatenate strings. Whenever the JavaScript engine sees that one or more values are not a number, it coerces the number into a string.
 
@@ -30,5 +41,5 @@ However, the second one is a string `"Lydia"`. `"Lydia"` is a string and `2` is 
 
 `{ name: "Lydia" }` is an object. Neither a number nor an object is a string, so it stringifies both. Whenever we stringify a regular object, it becomes `"[object Object]"`. `"[object Object]"` concatenated with `"2"` becomes `"[object Object]2"`.
 
-</p>
-</details>
+
+

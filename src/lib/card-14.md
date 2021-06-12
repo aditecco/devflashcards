@@ -1,4 +1,15 @@
-###### 16. What's the output?
+
+---
+order: 14
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 let number = 0;
@@ -12,10 +23,10 @@ console.log(number);
 - C: `0` `2` `2`
 - D: `0` `1` `2`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The **postfix** unary operator `++`:
 
@@ -29,5 +40,5 @@ The **prefix** unary operator `++`:
 
 This returns `0 2 2`.
 
-</p>
-</details>
+
+

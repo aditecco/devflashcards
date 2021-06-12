@@ -1,4 +1,15 @@
-###### 116. What's the output?
+
+---
+order: 114
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const person = {
@@ -23,10 +34,10 @@ console.log(person);
 - C: `{name: "Lydia", age: 22}`
 - D: `{name: "Lydia", age: 23}`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 Both the `changeAge` and `changeAgeAndName` functions have a default parameter, namely a _newly_ created object `{ ...person }`. This object has copies of all the key/values in the `person` object.
 
@@ -34,5 +45,5 @@ First, we invoke the `changeAge` function and pass the `person` object as its ar
 
 Then, we invoke the `changeAgeAndName` function, however we don't pass a parameter. Instead, the value of `x` is equal to a _new_ object: `{ ...person }`. Since it's a new object, it doesn't affect the values of the properties on the `person` object. `person` is still equal to `{ name: "Lydia", age: 22 }`.
 
-</p>
-</details>
+
+

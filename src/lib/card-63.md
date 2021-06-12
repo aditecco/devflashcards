@@ -1,4 +1,15 @@
-###### 65. What's the output?
+
+---
+order: 63
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 [1, 2, 3, 4].reduce((x, y) => console.log(x, y));
@@ -9,10 +20,10 @@
 - C: `1` `undefined` and `2` `undefined` and `3` `undefined` and `4` `undefined`
 - D: `1` `2` and `undefined` `3` and `undefined` `4`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 The first argument that the `reduce` method receives is the _accumulator_, `x` in this case. The second argument is the _current value_, `y`. With the reduce method, we execute a callback function on every element in the array, which could ultimately result in one single value.
 
@@ -26,6 +37,6 @@ If you don't return a value from a function, it returns `undefined`. On the next
 
 On the fourth call, we again don't return from the callback function. The accumulator is again `undefined`, and the current value is `4`. `undefined` and `4` get logged.
 
-</p>
-</details>
+
+
   

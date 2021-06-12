@@ -1,4 +1,15 @@
-###### 79. What is the output?
+
+---
+order: 77
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What is the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 const myLifeSummedUp = ['☕', '💻', '🍷', '🍫'];
@@ -17,10 +28,10 @@ for (let item of myLifeSummedUp) {
 - C: `"☕"` `"💻"` `"🍷"` `"🍫"` and `0` `1` `2` `3`
 - D: `0` `1` `2` `3` and `{0: "☕", 1: "💻", 2: "🍷", 3: "🍫"}`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 With a _for-in_ loop, we can iterate over **enumerable** properties. In an array, the enumerable properties are the "keys" of array elements, which are actually their indexes. You could see an array as:
 
@@ -30,5 +41,5 @@ Where the keys are the enumerable properties. `0` `1` `2` `3` get logged.
 
 With a _for-of_ loop, we can iterate over **iterables**. An array is an iterable. When we iterate over the array, the variable "item" is equal to the element it's currently iterating over, `"☕"` `"💻"` `"🍷"` `"🍫"` get logged.
 
-</p>
-</details>
+
+

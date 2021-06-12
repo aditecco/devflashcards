@@ -1,4 +1,15 @@
-###### 90. What's the output?
+
+---
+order: 88
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 class Person {
@@ -16,10 +27,10 @@ console.log(typeof member);
 - C: `"object"`
 - D: `"string"`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 Classes are syntactical sugar for function constructors. The equivalent of the `Person` class as a function constructor would be:
 
@@ -31,5 +42,5 @@ function Person() {
 
 Calling a function constructor with `new` results in the creation of an instance of `Person`, `typeof` keyword returns `"object"` for an instance. `typeof member` returns `"object"`.
 
-</p>
-</details>
+
+

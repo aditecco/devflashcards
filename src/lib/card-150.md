@@ -1,4 +1,15 @@
-###### 152. What's the output?
+
+---
+order: 150
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 const promise1 = Promise.resolve('First')
@@ -22,12 +33,12 @@ runPromises()
 - C: `[['First', 'Second']]`
 - D: `'Third'`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 The `Promise.all` method runs the passed promises in parallel. If one promise fails, the `Promise.all` method _rejects_ with the value of the rejected promise. In this case, `promise3` rejected with the value `"Third"`. We’re catching the rejected value in the chained `catch` method on the `runPromises` invocation to catch any errors  within the `runPromises` function. Only `"Third"` gets logged, since `promise3` rejected with this value.
 
-</p>
-</details>
+
+

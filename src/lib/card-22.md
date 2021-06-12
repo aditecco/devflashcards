@@ -1,4 +1,15 @@
-###### 24. What's the output?
+
+---
+order: 22
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const obj = { 1: 'a', 2: 'b', 3: 'c' };
@@ -15,14 +26,14 @@ set.has(1);
 - C: `true` `true` `false` `true`
 - D: `true` `true` `true` `true`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 All object keys (excluding Symbols) are strings under the hood, even if you don't type it yourself as a string. This is why `obj.hasOwnProperty('1')` also returns true.
 
 It doesn't work that way for a set. There is no `'1'` in our set: `set.has('1')` returns `false`. It has the numeric type `1`, `set.has(1)` returns `true`.
 
-</p>
-</details>
+
+

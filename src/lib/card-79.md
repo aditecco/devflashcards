@@ -1,4 +1,15 @@
-###### 81. What is the output?
+
+---
+order: 79
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What is the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 function sayHi(name) {
@@ -13,10 +24,10 @@ console.log(sayHi());
 - C: `Hi there, null`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 By default, arguments have the value of `undefined`, unless a value has been passed to the function. In this case, we didn't pass a value for the `name` argument. `name` is equal to `undefined` which gets logged.
 
@@ -26,5 +37,5 @@ In ES6, we can overwrite this default `undefined` value with default parameters.
 
 In this case, if we didn't pass a value or if we passed `undefined`, `name` would always be equal to the string `Lydia`
 
-</p>
-</details>
+
+

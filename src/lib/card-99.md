@@ -1,4 +1,15 @@
-###### 101. What's the value of output?
+
+---
+order: 99
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the value of output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const one = false || {} || null;
@@ -13,10 +24,10 @@ console.log(one, two, three);
 - C: `{}` `""` `[]`
 - D: `null` `null` `true`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 With the `||` operator, we can return the first truthy operand. If all values are falsy, the last operand gets returned.
 
@@ -26,5 +37,5 @@ With the `||` operator, we can return the first truthy operand. If all values ar
 
 `([] || 0 || "")`: the empty array`[]` is a truthy value. This is the first truthy value, which gets returned. `three` is equal to `[]`.
 
-</p>
-</details>
+
+

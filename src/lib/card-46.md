@@ -1,4 +1,15 @@
-###### 48. What's the output?
+
+---
+order: 46
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 console.log(3 + 4 + '5');
@@ -9,10 +20,10 @@ console.log(3 + 4 + '5');
 - C: `12`
 - D: `"12"`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 Operator associativity is the order in which the compiler evaluates the expressions, either left-to-right or right-to-left. This only happens if all operators have the _same_ precedence. We only have one type of operator: `+`. For addition, the associativity is left-to-right.
 
@@ -20,5 +31,5 @@ Operator associativity is the order in which the compiler evaluates the expressi
 
 `7 + '5'` results in `"75"` because of coercion. JavaScript converts the number `7` into a string, see question 15. We can concatenate two strings using the `+`operator. `"7" + "5"` results in `"75"`.
 
-</p>
-</details>
+
+

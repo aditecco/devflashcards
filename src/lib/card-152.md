@@ -1,4 +1,15 @@
-###### 154. What's the output?
+
+---
+order: 152
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const createMember = ({ email, address = {}}) => {
@@ -20,12 +31,12 @@ console.log(member)
 - C: `{ email: "my@email.com", address: {} }`
 - D: `{ email: "my@email.com", address: undefined }`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The default value of `address` is an empty object `{}`. When we set the variable `member` equal to the object returned by the `createMember` function, we didn't pass a value for address, which means that the value of address is the default empty object `{}`. An empty object is a truthy value, which means that the condition of the `address ? address : null` conditional returns `true`. The value of address is the empty object `{}`.
 
-</p>
-</details>
+
+

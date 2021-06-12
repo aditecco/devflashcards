@@ -1,4 +1,15 @@
-###### 146. What's the output?
+
+---
+order: 144
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 function getFruit(fruits) {
@@ -15,10 +26,10 @@ getFruit([['🍍'], ['🍊', '🍌']])
 - C: `[]`, `[]`, 🍌
 - D: `undefined`, `undefined`, 🍌
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 The `?` allows us to optionally access deeper nested properties within objects. We're trying to log the item on index `1` within the subarray that's on index `1` of the `fruits` array. If the subarray on index `1` in the `fruits` array doesn't exist, it'll simply return `undefined`. If the subarray on index `1` in the `fruits` array exists, but this subarray doesn't have an item on its `1` index, it'll also return `undefined`. 
 
@@ -28,5 +39,5 @@ Then, we're invoking the `getFruits` function without passing a value as an argu
 
 Lastly, we're trying to log the second item in the `['🍊', '🍌']` subarray of `['🍍'], ['🍊', '🍌']`. The item on index `1` within this subarray is `🍌`, which gets logged.
 
-</p>
-</details>
+
+

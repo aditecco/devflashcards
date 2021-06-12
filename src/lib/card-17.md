@@ -1,4 +1,15 @@
-###### 19. What's the output?
+
+---
+order: 17
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 function getAge(...args) {
@@ -13,12 +24,12 @@ getAge(21);
 - C: `"object"`
 - D: `"NaN"`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The rest parameter (`...args`) lets us "collect" all remaining arguments into an array. An array is an object, so `typeof args` returns `"object"`
 
-</p>
-</details>
+
+

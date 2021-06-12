@@ -1,4 +1,15 @@
-###### 78. What is the output?
+
+---
+order: 76
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What is the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const add = () => {
@@ -25,10 +36,10 @@ console.log(addFunction(5 * 2));
 - C: `Calculated! 20` `From cache! 20` `From cache! 20`
 - D: `Calculated! 20` `From cache! 20` `Error`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The `add` function is a _memoized_ function. With memoization, we can cache the results of a function in order to speed up its execution. In this case, we create a `cache` object that stores the previously returned values.
 
@@ -40,5 +51,5 @@ The second time, the `cache` object contains the value that gets returned for `1
 
 The third time, we pass `5 * 2` to the function which gets evaluated to `10`. The `cache` object contains the value that gets returned for `10`. The condition of the if-statement `num in cache` returns `true`, and `'From cache! 20'` gets logged.
 
-</p>
-</details>
+
+

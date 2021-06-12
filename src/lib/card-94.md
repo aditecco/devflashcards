@@ -1,4 +1,15 @@
-###### 96. What's the output?
+
+---
+order: 94
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 class Person {
@@ -22,12 +33,12 @@ console.log(member.name);
 - C: `Error: cannot redeclare Person`
 - D: `SyntaxError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 We can set classes equal to other classes/function constructors. In this case, we set `Person` equal to `AnotherPerson`. The name on this constructor is `Sarah`, so the name property on the new `Person` instance `member` is `"Sarah"`.
 
-</p>
-</details>
+
+

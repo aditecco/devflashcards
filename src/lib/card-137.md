@@ -1,4 +1,15 @@
-###### 139. What's the output?
+
+---
+order: 137
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 class Counter {
@@ -24,12 +35,12 @@ console.log(counter.#number)
 - C: `undefined`
 - D: `SyntaxError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 In ES2020, we can add private variables in classes by using the `#`. We cannot access these variables outside of the class. When we try to log `counter.#number`, a SyntaxError gets thrown: we cannot acccess it outside the `Counter` class!
 
-</p>
-</details>
+
+

@@ -1,4 +1,15 @@
-###### 119. What's the output?
+
+---
+order: 117
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 const person = {
@@ -24,10 +35,10 @@ console.log(member.getLastName?.());
 - C: `Mara` `null` `Lydia Hallie` `null`
 - D: `null` `ReferenceError` `null` `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 With the optional chaining operator `?.`, we no longer have to explicitly check whether the deeper nested values are valid or not. If we're trying to access a property on an `undefined` or `null` value (_nullish_), the expression short-circuits and returns `undefined`.
 
@@ -36,5 +47,5 @@ With the optional chaining operator `?.`, we no longer have to explicitly check 
 `person.getFullName?.()`: `person` has a property named `getFullName`: `person.getFullName()` is not nullish and can get invoked, which returns `Lydia Hallie`.
 `member.getLastName?.()`: `member` is not defined: `member.getLastName()` is nullish. The expression returns `undefined`.
 
-</p>
-</details>
+
+

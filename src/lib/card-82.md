@@ -1,4 +1,15 @@
-###### 84. What is the output?
+
+---
+order: 82
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What is the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 function checkAge(age) {
@@ -19,12 +30,12 @@ console.log(checkAge(21));
 - C: `ReferenceError`
 - D: `undefined`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 Variables with the `const` and `let` keyword are _block-scoped_. A block is anything between curly brackets (`{ }`). In this case, the curly brackets of the if/else statements. You cannot reference a variable outside of the block it's declared in, a ReferenceError gets thrown.
 
-</p>
-</details>
+
+

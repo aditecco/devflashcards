@@ -1,4 +1,15 @@
-###### 134. How can we invoke `sum` in `sum.js` from `index.js?`
+
+---
+order: 132
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: How can we invoke `sum` in `sum.js` from `index.js?`
+answer: Answer: C
+---
+
+  
 
 ```javascript
 // sum.js
@@ -15,10 +26,10 @@ import * as sum from './sum';
 - C: `sum.default(4)`
 - D: Default aren't imported with `*`, only named exports
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 With the asterisk `*`, we import all exported values from that file, both default and named. If we had the following file:
 
@@ -51,5 +62,5 @@ For the `sum` example, it means that the imported value `sum` looks like this:
 
 We can invoke this function, by calling `sum.default`
 
-</p>
-</details>
+
+

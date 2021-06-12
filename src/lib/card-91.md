@@ -1,4 +1,15 @@
-###### 93. What's the output?
+
+---
+order: 91
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 const person = {
@@ -16,10 +27,10 @@ for (const [x, y] of Object.entries(person)) {
 - C: `["name", "age"]` and `undefined`
 - D: `Error`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 `Object.entries(person)` returns an array of nested arrays, containing the keys and objects:
 
@@ -30,5 +41,5 @@ Using the `for-of` loop, we can iterate over each element in the array, the suba
 The first subarray is `[ "name", "Lydia" ]`, with `x` equal to `"name"`, and `y` equal to `"Lydia"`, which get logged.
 The second subarray is `[ "age", 21 ]`, with `x` equal to `"age"`, and `y` equal to `21`, which get logged.
 
-</p>
-</details>
+
+

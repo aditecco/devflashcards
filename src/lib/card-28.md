@@ -1,4 +1,15 @@
-###### 30. What's the output?
+
+---
+order: 28
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 const foo = () => console.log('First');
@@ -15,10 +26,10 @@ baz();
 - C: `Second` `First` `Third`
 - D: `Second` `Third` `First`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 We have a `setTimeout` function and invoked it first. Yet, it was logged last.
 
@@ -46,5 +57,5 @@ This is where an event loop starts to work. An **event loop** looks at the stack
 
 `bar` gets invoked, `"Second"` gets logged, and it's popped off the stack.
 
-</p>
-</details>
+
+

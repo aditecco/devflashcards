@@ -1,4 +1,15 @@
-###### 67. What's the output?
+
+---
+order: 65
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 // index.js
@@ -16,14 +27,14 @@ export const sum = (a, b) => a + b;
 - C: `running sum.js`, `3`, `running index.js`
 - D: `running index.js`, `undefined`, `running sum.js`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 With the `import` keyword, all imported modules are _pre-parsed_. This means that the imported modules get run _first_, the code in the file which imports the module gets executed _after_.
 
 This is a difference between `require()` in CommonJS and `import`! With `require()`, you can load dependencies on demand while the code is being run. If we would have used `require` instead of `import`, `running index.js`, `running sum.js`, `3` would have been logged to the console.
 
-</p>
-</details>
+
+

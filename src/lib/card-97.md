@@ -1,4 +1,15 @@
-###### 99. What's the output?
+
+---
+order: 97
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: C
+---
+
+  
 
 ```javascript
 const name = 'Lydia';
@@ -11,10 +22,10 @@ console.log(name());
 - C: `TypeError`
 - D: `undefined`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: C
+
+
+
 
 The variable `name` holds the value of a string, which is not a function, thus cannot invoke.
 
@@ -23,5 +34,5 @@ TypeErrors get thrown when a value is not of the expected type. JavaScript expec
 SyntaxErrors get thrown when you've written something that isn't valid JavaScript, for example when you've written the word `return` as `retrun`.
 ReferenceErrors get thrown when JavaScript isn't able to find a reference to a value that you're trying to access.
 
-</p>
-</details>
+
+

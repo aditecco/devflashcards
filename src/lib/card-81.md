@@ -1,4 +1,15 @@
-###### 83. What is the output?
+
+---
+order: 81
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What is the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 const person = {
@@ -17,10 +28,10 @@ console.log(person);
 - C: `{ name: "Lydia", age: 21, city: undefined }`
 - D: `"Amsterdam"`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 We set the variable `city` equal to the value of the property called `city` on the `person` object. There is no property on this object called `city`, so the variable `city` has the value of `undefined`.
 
@@ -30,5 +41,5 @@ Then, we set `city` equal to the string `"Amsterdam"`. This doesn't change the p
 
 When logging the `person` object, the unmodified object gets returned.
 
-</p>
-</details>
+
+

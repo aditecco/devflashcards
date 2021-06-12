@@ -1,4 +1,15 @@
-###### 36. What's the output?
+
+---
+order: 34
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 console.log(typeof typeof 1);
@@ -9,13 +20,13 @@ console.log(typeof typeof 1);
 - C: `"object"`
 - D: `"undefined"`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 `typeof 1` returns `"number"`.
 `typeof "number"` returns `"string"`
 
-</p>
-</details>
+
+

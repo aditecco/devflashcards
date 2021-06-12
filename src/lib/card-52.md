@@ -1,4 +1,15 @@
-###### 54. What's the output?
+
+---
+order: 52
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: A
+---
+
+  
 
 ```javascript
 (() => {
@@ -14,10 +25,10 @@ console.log(typeof y);
 - C: `"object", "number"`
 - D: `"number", "undefined"`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: A
+
+
+
 
 `let x = (y = 10);` is actually shorthand for:
 
@@ -32,5 +43,5 @@ Then, we declare a variable `x` with the value of `y`, which is `10`. Variables 
 
 However, we created a global variable `y` when setting `y` equal to `10`. This value is accessible anywhere in our code. `y` is defined, and holds a value of type `"number"`. `console.log(typeof y)` returns `"number"`.
 
-</p>
-</details>
+
+

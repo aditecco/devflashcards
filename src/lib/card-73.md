@@ -1,4 +1,15 @@
-###### 75. What's the output?
+
+---
+order: 73
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 const box = { x: 10, y: 20 };
@@ -16,10 +27,10 @@ console.log(shape);
 - C: `{ x: 100 }`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 `Object.freeze` makes it impossible to add, remove, or modify properties of an object (unless the property's value is another object).
 
@@ -27,5 +38,5 @@ When we create the variable `shape` and set it equal to the frozen object `box`,
 
 Since `shape` is frozen, and since the value of `x` is not an object, we cannot modify the property `x`. `x` is still equal to `10`, and `{ x: 10, y: 20 }` gets logged.
 
-</p>
-</details>
+
+

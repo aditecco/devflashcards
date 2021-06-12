@@ -1,4 +1,15 @@
-###### 92. What's the output?
+
+---
+order: 90
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: D
+---
+
+  
 
 ```javascript
 function giveLydiaPizza() {
@@ -17,12 +28,12 @@ console.log(giveLydiaChocolate.prototype);
 - C: `{ constructor: ...}` `{}`
 - D: `{ constructor: ...}` `undefined`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: D
+
+
+
 
 Regular functions, such as the `giveLydiaPizza` function, have a `prototype` property, which is an object (prototype object) with a `constructor` property. Arrow functions however, such as the `giveLydiaChocolate` function, do not have this `prototype` property. `undefined` gets returned when trying to access the `prototype` property using `giveLydiaChocolate.prototype`.
 
-</p>
-</details>
+
+

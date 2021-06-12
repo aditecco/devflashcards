@@ -1,4 +1,15 @@
-###### 23. What's the output?
+
+---
+order: 21
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: What's the output?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 var num = 8;
@@ -12,14 +23,14 @@ console.log(num);
 - C: `SyntaxError`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 With the `var` keyword, you can declare multiple variables with the same name. The variable will then hold the latest value.
 
 You cannot do this with `let` or `const` since they're block-scoped.
 
-</p>
-</details>
+
+

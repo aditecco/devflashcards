@@ -1,4 +1,15 @@
-###### 66. With which constructor can we successfully extend the `Dog` class?
+
+---
+order: 64
+timestamp: 6/12/2021
+topic: programming
+deck: Javascript Questions by Lydia Hallie
+contentSource: https://github.com/lydiahallie/javascript-questions
+title: With which constructor can we successfully extend the `Dog` class?
+answer: Answer: B
+---
+
+  
 
 ```javascript
 class Dog {
@@ -36,10 +47,10 @@ class Labrador extends Dog {
 - C: 3
 - D: 4
 
-<details><summary><b>Answer</b></summary>
-<p>
 
-#### Answer: B
+
+
+
 
 In a derived class, you cannot access the `this` keyword before calling `super`. If you try to do that, it will throw a ReferenceError: 1 and 4 would throw a reference error.
 
@@ -47,5 +58,5 @@ With the `super` keyword, we call that parent class's constructor with the given
 
 The `Labrador` class receives two arguments, `name` since it extends `Dog`, and `size` as an extra property on the `Labrador` class. They both need to be passed to the constructor function on `Labrador`, which is done correctly using constructor 2.
 
-</p>
-</details>
+
+
