@@ -10,7 +10,7 @@ import { css } from "@emotion/react";
 import {
   accent,
   archivo,
-  font,
+  $font,
   fontAlt,
   margin,
   padding,
@@ -59,7 +59,7 @@ export default function InfoSheet({
           overflow: hidden;
           padding: 0.75rem 1rem;
           line-height: 1.6rem;
-          color: ${font};
+          color: ${$font};
 
           a {
             text-decoration: none;
