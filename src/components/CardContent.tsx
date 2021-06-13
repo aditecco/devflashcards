@@ -33,6 +33,8 @@ export default function CardContent({
           color: #cbcbcb;
           text-transform: uppercase;
           border-bottom: 1px solid #cbcbcb85;
+          display: flex;
+          justify-content: space-between;
         }
 
         .card-content-title {
@@ -46,10 +48,6 @@ export default function CardContent({
         }
 
         .card-content-main {
-          label {
-            display: none;
-          }
-
           p {
             text-align: center;
           }
@@ -72,6 +70,17 @@ export default function CardContent({
 
           //  overrides
           .gatsby-highlight {
+            // this would be the
+            // <p> containing a
+            // single option block.
+            + p {
+              margin-top: 2rem;
+            }
+
+            ~ p:last-child {
+              margin-bottom: 3rem;
+            }
+
             code {
               font-size: small;
             }

@@ -10,6 +10,7 @@ import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import CardContent from "./CardContent";
 import { _Card, CardNode } from "../types";
+import { truncate } from "../utils";
 
 type OwnProps = {
   card: _Card;
@@ -45,7 +46,11 @@ export default function CardWithFlip({
           <Card {...cardProps}>
             <CardContent>
               <div className="card-content-meta">
-                {topic} &middot; {timestamp} &middot; {order}
+                <span>{truncate(deck)}</span>
+                &middot;
+                <span>{timestamp}</span>
+                &middot;
+                <span>#{order + 1}</span>
               </div>
 
               <header className="card-content-title">
