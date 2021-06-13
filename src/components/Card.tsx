@@ -29,7 +29,7 @@ export default function Card({
       css={css`
         background-color: white;
         border-radius: ${CARD_RADIUS};
-        box-shadow: ${noShadow ? "" : "0 10px 10px 2px rgba(0, 0, 0, 0.25)"};
+        box-shadow: ${noShadow ? "" : "0 10px 20px 2px rgba(0,0,0,0.15)"};
         width: ${CARD_WIDTH};
         height: ${CARD_HEIGHT};
         font-family: ${baseFontStack};

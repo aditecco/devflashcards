@@ -77,6 +77,10 @@ export default function CardWithFlip({
                     display: none;
                   }
 
+                  p {
+                    text-align: center;
+                  }
+
                   .option-container {
                     padding: 0.25rem 0.5rem;
 
@@ -89,8 +93,20 @@ export default function CardWithFlip({
                     }
 
                     input[type="radio"] {
-                      margin-right: 1rem;
+                      margin-right: 0.8rem;
                     }
+                  }
+
+                  //  overrides
+                  .gatsby-highlight {
+                    code {
+                      font-size: small;
+                    }
+                  }
+
+                  pre[class*="language-"] {
+                    padding-top: 2rem;
+                    padding-bottom: 2rem;
                   }
                 }
 
@@ -99,7 +115,7 @@ export default function CardWithFlip({
               `}
             >
               <div className="card-content-meta">
-                {order} &middot; {topic} &middot; {timestamp}
+                {topic} &middot; {timestamp} &middot; {order}
               </div>
 
               <header className="card-content-title">
