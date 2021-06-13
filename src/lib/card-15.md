@@ -24,7 +24,7 @@ getPersonInfo`${person} is ${age} years old`;
 ```
 
 
-<label for="option-A">Option A</label>
+<label for="option-A">A </label>
 <span class="option-container">
   <input
     type="radio"
@@ -35,7 +35,7 @@ getPersonInfo`${person} is ${age} years old`;
 </span>
     
 
-<label for="option-B">Option B</label>
+<label for="option-B">B </label>
 <span class="option-container">
   <input
     type="radio"
@@ -46,7 +46,7 @@ getPersonInfo`${person} is ${age} years old`;
 </span>
     
 
-<label for="option-C">Option C</label>
+<label for="option-C">C </label>
 <span class="option-container">
   <input
     type="radio"

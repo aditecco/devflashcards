@@ -21,7 +21,7 @@ for (let i = 0; i < 3; i++) {
 ```
 
 
-<label for="option-A">Option A</label>
+<label for="option-A">A </label>
 <span class="option-container">
   <input
     type="radio"
@@ -32,7 +32,7 @@ for (let i = 0; i < 3; i++) {
 </span>
     
 
-<label for="option-B">Option B</label>
+<label for="option-B">B </label>
 <span class="option-container">
   <input
     type="radio"
@@ -43,7 +43,7 @@ for (let i = 0; i < 3; i++) {
 </span>
     
 
-<label for="option-C">Option C</label>
+<label for="option-C">C </label>
 <span class="option-container">
   <input
     type="radio"

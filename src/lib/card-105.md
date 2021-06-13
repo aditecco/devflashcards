@@ -15,7 +15,7 @@ console.log('❤️' === '❤️');
 ```
 
 
-<label for="option-A">Option A</label>
+<label for="option-A">A </label>
 <span class="option-container">
   <input
     type="radio"
@@ -26,7 +26,7 @@ console.log('❤️' === '❤️');
 </span>
     
 
-<label for="option-B">Option B</label>
+<label for="option-B">B </label>
 <span class="option-container">
   <input
     type="radio"

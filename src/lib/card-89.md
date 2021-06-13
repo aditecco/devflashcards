@@ -17,7 +17,7 @@ console.log(newList.push(5));
 ```
 
 
-<label for="option-A">Option A</label>
+<label for="option-A">A </label>
 <span class="option-container">
   <input
     type="radio"
@@ -28,7 +28,7 @@ console.log(newList.push(5));
 </span>
     
 
-<label for="option-B">Option B</label>
+<label for="option-B">B </label>
 <span class="option-container">
   <input
     type="radio"
@@ -39,7 +39,7 @@ console.log(newList.push(5));
 </span>
     
 
-<label for="option-C">Option C</label>
+<label for="option-C">C </label>
 <span class="option-container">
   <input
     type="radio"
@@ -50,7 +50,7 @@ console.log(newList.push(5));
 </span>
     
 
-<label for="option-D">Option D</label>
+<label for="option-D">D </label>
 <span class="option-container">
   <input
     type="radio"
