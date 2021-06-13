@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider, Global, css } from "@emotion/react";
-import theme from "./src/theme/theme";
+import theme from "./src/theme";
 // fonts
 import "@fontsource/material-icons/index.css";
 // 3rd party CSS

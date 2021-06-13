@@ -8,10 +8,15 @@ export default {
   fontSizes: {},
   colors: {
     accent: {
-      "01": "",
+      "1": "",
     },
+    stroke: {},
     background: {
-      "01": "",
+      yellow: {
+        "1": "#fffde7",
+        "2": "#efebe9",
+      },
+      "1": "",
     },
   },
   fonts: {},
