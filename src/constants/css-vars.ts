@@ -57,7 +57,7 @@ export const CARD_WIDTH = "320px;";
 export const CARD_MAX_WIDTH = "340px;";
 export const CARD_RATIO =
   Number(CARD_WIDTH.match(/\d*/)) / Number(CARD_HEIGHT.match(/\d*/));
-export const CARD_RADIUS = "12px";
+export const CARD_RADIUS = "10px";
 export const mediaHeight = "400px;";
 
 // FX

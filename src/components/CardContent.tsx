@@ -87,7 +87,30 @@ export default function CardContent({
         }
 
         &.card-content--back {
-          color: rebeccapurple;
+          .card-content-title {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #cbcbcb85;
+          }
+
+          .card-content-main {
+            padding: 0.5rem 1.5rem 1rem;
+            line-height: 1.9;
+            font-size: 0.9rem;
+
+            p {
+              text-align: left;
+            }
+
+            code {
+              color: ${$font};
+              background-color: ${$backgroundLight};
+              font-size: small;
+              padding: 2px 6px;
+              border: 1px solid #e3e3e3;
+            }
+          }
         }
       `}
     >
