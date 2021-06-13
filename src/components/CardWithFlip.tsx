@@ -11,6 +11,7 @@ import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import { css } from "@emotion/react";
 import { rem } from "../lib/css-functions";
+import { $backgroundLight, $font, $fontPrimary } from "../constants/css-vars";
 
 type OwnProps = {
   card: unknown;
@@ -49,7 +50,7 @@ export default function CardWithFlip({
               css={css`
                 overflow-y: auto;
 
-                > *:not(.card-content-html) {
+                > *:not(.card-content-main) {
                   padding: 0 1rem;
                 }
 
@@ -62,14 +63,35 @@ export default function CardWithFlip({
                 }
 
                 .card-content-title {
-                  font-weight: normal;
-                  font-size: ${rem(18)};
                   padding: ${rem(24)} 1rem 0.5rem;
-                  margin: 0;
+
+                  h4 {
+                    font-weight: normal;
+                    font-size: ${rem(18)};
+                    margin: 0;
+                  }
                 }
 
-                .card-content-body {
-                  overflow-y: auto;
+                .card-content-main {
+                  label {
+                    display: none;
+                  }
+
+                  .option-container {
+                    padding: 0.25rem 0.5rem;
+
+                    code {
+                      color: ${$font};
+                      background-color: ${$backgroundLight};
+                      font-size: small;
+                      padding: 2px 6px;
+                      border: 1px solid #e3e3e3;
+                    }
+
+                    input[type="radio"] {
+                      margin-right: 1rem;
+                    }
+                  }
                 }
 
                 .card-content-options {
@@ -85,7 +107,7 @@ export default function CardWithFlip({
               </header>
 
               <main
-                className={"card-content-body"}
+                className={"card-content-main"}
                 dangerouslySetInnerHTML={{ __html: questionBlock }}
               />
             </div>
@@ -117,8 +139,8 @@ export default function CardWithFlip({
                 <h4>Answer: {answer}</h4>
               </header>
 
-              <div
-                className={"card-content-body"}
+              <main
+                className={"card-content-main"}
                 dangerouslySetInnerHTML={{ __html: answerBlock }}
                 style={{
                   padding: "2rem 1.5rem",
