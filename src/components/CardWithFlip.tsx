@@ -9,9 +9,10 @@ import Card, { CardProps } from "./Card";
 import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import CardContent from "./CardContent";
+import { _Card, CardNode } from "../types";
 
 type OwnProps = {
-  card: unknown;
+  card: _Card;
   style?: CSSProperties;
 } & Omit<CardProps, "style">;
 
@@ -32,7 +33,7 @@ export default function CardWithFlip({
       title,
       answer,
     },
-  } = card ?? {};
+  } = card;
 
   const questionBlock = html.split(/SPLIT_MARKER/).shift();
   const answerBlock = html.split(/SPLIT_MARKER/).pop();

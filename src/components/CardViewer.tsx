@@ -8,9 +8,10 @@ import CardWithFlip from "./CardWithFlip";
 import { css } from "@emotion/react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
+import { CardNode } from "../types";
 
 type OwnProps = {
-  cards: unknown[];
+  cards: CardNode[];
 };
 
 export default function CardViewer({
@@ -21,7 +22,7 @@ export default function CardViewer({
   );
   const containerRef = useRef(null);
 
-  function createStackingOrderMap(items) {
+  function createStackingOrderMap(items: CardNode[]) {
     const zIndexes = items.map((_, i) => i).reverse();
 
     return items.reduce((acc, _, i) => {

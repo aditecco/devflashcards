@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import CardViewer from "../components/CardViewer";
+import { CardNode } from "../types";
 
 const IndexPage = ({ data }) => {
   const {
@@ -9,7 +10,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <CardViewer cards={cards} />
+      <CardViewer cards={cards as CardNode[]} />
     </>
   );
 };
