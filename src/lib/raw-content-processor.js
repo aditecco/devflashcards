@@ -61,9 +61,14 @@ fs.readFile(PATH, (err, data) => {
     function replacer(match, dash, key, value) {
       return `
 <label for="${"option-" + key}">Option ${key}</label>
-<input type="radio" name="answer-option" id="${
-        "option-" + key
-      }" value="${key}">${value}</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="${"option-" + key}" value="${key}"
+  />
+  ${value}
+</span>
     `;
     }
 
