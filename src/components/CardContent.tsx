@@ -8,6 +8,7 @@ import { css } from "@emotion/react";
 import { rem } from "../lib/css-functions";
 import { $backgroundLight, $font } from "../constants/css-vars";
 import classNames from "classnames";
+import theme from "../theme";
 
 type OwnProps = {
   back?: boolean;
@@ -57,10 +58,11 @@ export default function CardContent({
 
             code {
               color: ${$font};
-              background-color: ${$backgroundLight};
               font-size: small;
               padding: 2px 6px;
-              border: 1px solid #e3e3e3;
+              // TODO extract from theme
+              background-color: ${theme.colors.background.yellow["1"]};
+              border: 1px solid ${theme.colors.background.yellow["2"]};
             }
 
             input[type="radio"] {
@@ -95,12 +97,25 @@ export default function CardContent({
         .card-content-options {
         }
 
+        // different styles for
+        // the back of the card
         &.card-content--back {
           .card-content-title {
             padding-left: 1.5rem;
             padding-right: 1.5rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid #cbcbcb85;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+              padding: 0.5rem 1rem;
+              border-radius: 4px;
+              background: none;
+              border: 2px solid whitesmoke;
+              cursor: pointer;
+            }
           }
 
           .card-content-main {
@@ -114,10 +129,12 @@ export default function CardContent({
 
             code {
               color: ${$font};
-              background-color: ${$backgroundLight};
               font-size: small;
               padding: 2px 6px;
+              background-color: ${$backgroundLight};
               border: 1px solid #e3e3e3;
+              // background-color: ${theme.colors.background.yellow["1"]};
+              // border: 1px solid ${theme.colors.background.yellow["2"]};
             }
           }
         }

@@ -88,6 +88,14 @@ export default function CardWithFlip({
             <CardContent back>
               <header className="card-content-title">
                 <h4>Answer: {answer}</h4>
+
+                <button
+                  className="card-controls-button"
+                  type="button"
+                  onClick={() => setFlipped((f) => !f)}
+                >
+                  Flip back
+                </button>
               </header>
 
               <main
@@ -98,14 +106,6 @@ export default function CardWithFlip({
 
             <CardFooter>
               <CardControls>
-                <button
-                  className="card-controls-button"
-                  type="button"
-                  onClick={() => setFlipped((f) => !f)}
-                >
-                  Flip
-                </button>
-
                 <button className="card-controls-button" type="button">
                   Hard
                 </button>
