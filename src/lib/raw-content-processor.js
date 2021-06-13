@@ -60,7 +60,7 @@ fs.readFile(PATH, (err, data) => {
 
     function replacer(match, dash, key, value) {
       return `
-<label for="${"option-" + key}">${key}: </label>
+<label for="${"option-" + key}">${key} </label>
 <span class="option-container">
   <input
     type="radio"
