@@ -1,6 +1,6 @@
 ---
 order: 62
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -25,19 +25,47 @@ multiply(value);
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">`20`, `40`, `80`, `160`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  `20`, `40`, `80`, `160`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">`20`, `40`, `20`, `40`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  `20`, `40`, `20`, `40`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`20`, `20`, `20`, `40`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `20`, `20`, `20`, `40`
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">`NaN`, `NaN`, `20`, `40`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  `NaN`, `NaN`, `20`, `40`
+</span>
     
 
 

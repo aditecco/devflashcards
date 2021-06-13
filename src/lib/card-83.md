@@ -1,6 +1,6 @@
 ---
 order: 83
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -18,19 +18,47 @@ fetch('https://www.website.com/api/user/1')
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">The result of the `fetch` method.</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  The result of the `fetch` method.
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">The result of the second invocation of the `fetch` method.</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  The result of the second invocation of the `fetch` method.
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">The result of the callback in the previous `.then()`.</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  The result of the callback in the previous `.then()`.
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">It would always be undefined.</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  It would always be undefined.
+</span>
     
 
 

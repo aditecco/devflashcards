@@ -1,6 +1,6 @@
 ---
 order: 29
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -22,19 +22,47 @@ answer: C
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">Outer `div`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  Outer `div`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">Inner `div`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  Inner `div`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`button`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `button`
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">An array of all nested elements.</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  An array of all nested elements.
+</span>
     
 
 

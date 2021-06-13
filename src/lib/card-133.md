@@ -1,6 +1,6 @@
 ---
 order: 133
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -24,19 +24,47 @@ person.name;
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">`Added a new property!`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  `Added a new property!`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">`Accessed a property!`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  `Accessed a property!`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`Added a new property!` `Accessed a property!`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `Added a new property!` `Accessed a property!`
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">Nothing gets logged</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  Nothing gets logged
+</span>
     
 
 

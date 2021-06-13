@@ -1,6 +1,6 @@
 ---
 order: 80
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -30,19 +30,47 @@ setTimeout(() => {
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">`"🥑"` and `"😍"`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  `"🥑"` and `"😍"`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">`"🥑"` and `"😎"`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  `"🥑"` and `"😎"`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`"😍"` and `"😎"`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `"😍"` and `"😎"`
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">`"😎"` and `"😎"`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  `"😎"` and `"😎"`
+</span>
     
 
 

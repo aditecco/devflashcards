@@ -1,6 +1,6 @@
 ---
 order: 98
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -19,19 +19,47 @@ You should${'' && `n't`} see a therapist after so much JavaScript lol`;
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">`possible! You should see a therapist after so much JavaScript lol`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  `possible! You should see a therapist after so much JavaScript lol`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">`Impossible! You should see a therapist after so much JavaScript lol`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  `Impossible! You should see a therapist after so much JavaScript lol`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`possible! You shouldn't see a therapist after so much JavaScript lol`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `possible! You shouldn't see a therapist after so much JavaScript lol`
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">`Impossible! You shouldn't see a therapist after so much JavaScript lol`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  `Impossible! You shouldn't see a therapist after so much JavaScript lol`
+</span>
     
 
 

@@ -1,6 +1,6 @@
 ---
 order: 117
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -31,19 +31,47 @@ console.log(member.getLastName?.());
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">`undefined` `undefined` `undefined` `undefined`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  `undefined` `undefined` `undefined` `undefined`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">`Mara` `undefined` `Lydia Hallie` `ReferenceError`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  `Mara` `undefined` `Lydia Hallie` `ReferenceError`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`Mara` `null` `Lydia Hallie` `null`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `Mara` `null` `Lydia Hallie` `null`
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">`null` `ReferenceError` `null` `ReferenceError`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  `null` `ReferenceError` `null` `ReferenceError`
+</span>
     
 
 

@@ -1,6 +1,6 @@
 ---
 order: 100
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -29,19 +29,47 @@ secondFunction();
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">`I have resolved!`, `second` and `I have resolved!`, `second`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  `I have resolved!`, `second` and `I have resolved!`, `second`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">`second`, `I have resolved!` and `second`, `I have resolved!`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  `second`, `I have resolved!` and `second`, `I have resolved!`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`I have resolved!`, `second` and `second`, `I have resolved!`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `I have resolved!`, `second` and `second`, `I have resolved!`
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">`second`, `I have resolved!` and `I have resolved!`, `second`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  `second`, `I have resolved!` and `I have resolved!`, `second`
+</span>
     
 
 

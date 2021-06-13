@@ -1,6 +1,6 @@
 ---
 order: 15
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -25,15 +25,36 @@ getPersonInfo`${person} is ${age} years old`;
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">`"Lydia"` `21` `["", " is ", " years old"]`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  `"Lydia"` `21` `["", " is ", " years old"]`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">`["", " is ", " years old"]` `"Lydia"` `21`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  `["", " is ", " years old"]` `"Lydia"` `21`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`"Lydia"` `["", " is ", " years old"]` `21`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `"Lydia"` `["", " is ", " years old"]` `21`
+</span>
     
 
 

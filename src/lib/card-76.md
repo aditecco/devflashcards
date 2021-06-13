@@ -1,6 +1,6 @@
 ---
 order: 76
-timestamp: 6/12/2021
+timestamp: 6/13/2021
 topic: programming
 deck: Javascript Questions by Lydia Hallie
 contentSource: https://github.com/lydiahallie/javascript-questions
@@ -32,19 +32,47 @@ console.log(addFunction(5 * 2));
 
 
 <label for="option-A">Option A</label>
-<input type="radio" name="answer-option" id="option-A" value="A">`Calculated! 20` `Calculated! 20` `Calculated! 20`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-A" value="A"
+  />
+  `Calculated! 20` `Calculated! 20` `Calculated! 20`
+</span>
     
 
 <label for="option-B">Option B</label>
-<input type="radio" name="answer-option" id="option-B" value="B">`Calculated! 20` `From cache! 20` `Calculated! 20`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-B" value="B"
+  />
+  `Calculated! 20` `From cache! 20` `Calculated! 20`
+</span>
     
 
 <label for="option-C">Option C</label>
-<input type="radio" name="answer-option" id="option-C" value="C">`Calculated! 20` `From cache! 20` `From cache! 20`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-C" value="C"
+  />
+  `Calculated! 20` `From cache! 20` `From cache! 20`
+</span>
     
 
 <label for="option-D">Option D</label>
-<input type="radio" name="answer-option" id="option-D" value="D">`Calculated! 20` `From cache! 20` `Error`</input>
+<span class="option-container">
+  <input
+    type="radio"
+    name="answer-option"
+    id="option-D" value="D"
+  />
+  `Calculated! 20` `From cache! 20` `Error`
+</span>
     
 
 
