@@ -49,12 +49,23 @@ export default function CardContent({
         }
 
         .card-content-main {
-          p {
-            text-align: center;
+          label {
+            font-family: serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #aaa;
+            text-transform: lowercase;
+
+            &::after {
+              content: ")";
+            }
           }
 
+          // the generated container that
+          // hosts the list of answer options.
           .option-container {
             padding: 0.25rem 0.5rem;
+            line-height: 1.8;
 
             code {
               color: ${$font};
@@ -66,21 +77,32 @@ export default function CardContent({
             }
 
             input[type="radio"] {
-              margin-right: 0.8rem;
+              margin-right: 0.5rem;
             }
           }
 
           //  overrides
           .gatsby-highlight {
             // this would be the
-            // <p> containing a
+            // <p>s containing a
             // single option block.
-            + p {
-              margin-top: 2rem;
+            ~ p {
+              margin: 0;
+              padding: 2rem 1rem;
+              //border-top: 1px solid #cbcbcb;
+              display: block;
+            }
+
+            ~ p:nth-of-type(even) {
+              background: #f7f7f7;
             }
 
             ~ p:last-child {
-              margin-bottom: 3rem;
+              margin: 0 0 3rem;
+            }
+
+            + p {
+              //border: 0;
             }
 
             code {
