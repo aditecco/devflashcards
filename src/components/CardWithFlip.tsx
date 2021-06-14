@@ -9,7 +9,7 @@ import Card, { CardProps } from "./Card";
 import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import CardContent from "./CardContent";
-import { _Card, CardNode } from "../types";
+import { _Card } from "../types";
 import { truncate } from "../utils";
 
 type OwnProps = {

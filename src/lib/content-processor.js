@@ -1,5 +1,5 @@
 /* ---------------------------------
-raw-content-processor
+content-processor
 --------------------------------- */
 
 const fs = require("fs");
