@@ -10,7 +10,7 @@ import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import CardContent from "./CardContent";
 import { _Card } from "../types";
-import { truncate } from "../utils";
+import { basicSanitizer, truncate } from "../utils";
 
 type OwnProps = {
   card: _Card;
@@ -59,7 +59,9 @@ export default function CardWithFlip({
 
               <main
                 className={"card-content-main"}
-                dangerouslySetInnerHTML={{ __html: questionBlock }}
+                dangerouslySetInnerHTML={{
+                  __html: basicSanitizer(questionBlock),
+                }}
               />
             </CardContent>
 
