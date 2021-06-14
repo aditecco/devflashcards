@@ -18,7 +18,10 @@
 - [x] Create POC
 - [x] Implement Card layout
 - [x] Find data source
-- [ ] Implement answer options as form with radio buttons (when submitting the form, the card flips)
+- [ ] define all colors (move to theme)
+- [ ] define fonts
+- [x] Implement answer options as form with radio buttons
+  - [ ] when submitting the form, the card flips
 - [ ] Implement basic viewer layout
 - [ ] Implement theme provider & theme assets
 - [x] Implement card structure & fit content to card
