@@ -88,7 +88,7 @@ export default function CardContent({
             // single option block.
             ~ p {
               margin: 0;
-              padding: 2rem 1rem;
+              padding: 1.5rem 1rem;
               //border-top: 1px solid #cbcbcb;
               display: block;
             }
