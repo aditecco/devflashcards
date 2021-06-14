@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "generate": "./src/lib/content-processor.js"
   },
   "dependencies": {
     "@babel/preset-react": "^7.13.13",
