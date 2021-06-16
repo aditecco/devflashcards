@@ -1,8 +1,12 @@
 import React from "react";
 import { ThemeProvider, Global, css } from "@emotion/react";
 import theme from "./src/theme";
+
 // fonts
 import "@fontsource/material-icons/index.css";
+import "@fontsource/open-sans/index.css";
+import "@fontsource/lato/index.css";
+
 // 3rd party CSS
 import "normalize.css/normalize.css";
 import "prismjs/themes/prism-tomorrow.css";
