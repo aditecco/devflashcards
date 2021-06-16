@@ -2,13 +2,17 @@
 theme
 --------------------------------- */
 
+import { baseFontStack } from "../constants/css-vars";
+import { Theme } from "@emotion/react";
+
 export default {
   // based on: https://system-ui.com/theme
   space: {},
   fontSizes: {},
+  accent: "red",
   colors: {
     accent: {
-      "1": "",
+      "1": "#5E7CE2",
     },
     stroke: {},
     background: {
@@ -19,7 +23,10 @@ export default {
       "1": "",
     },
   },
-  fonts: {},
+  fonts: {
+    openSans: `'Open Sans', ${baseFontStack}`,
+    lato: `Lato, ${baseFontStack}`,
+  },
   fontWeights: {},
   lineHeights: {},
   letterSpacings: {},
