@@ -3,7 +3,10 @@ theme
 --------------------------------- */
 
 import { baseFontStack } from "../constants/css-vars";
+import chroma from "chroma-js";
 import { Theme } from "@emotion/react";
+
+const ACCENT_PRIMARY = "#5E7CE2";
 
 export default {
   // based on: https://system-ui.com/theme
@@ -12,10 +15,16 @@ export default {
   accent: "red",
   colors: {
     accent: {
-      "1": "#5E7CE2",
+      "1": ACCENT_PRIMARY,
     },
-    stroke: {},
+    stroke: {
+      "1": chroma(ACCENT_PRIMARY).alpha(0.6).hex(),
+    },
     background: {
+      blue: {
+        "1": "#E3F2FD",
+        "2": chroma("#E3F2FD").alpha(0.6).hex(),
+      },
       yellow: {
         "1": "#fffde7",
         "2": "#efebe9",
