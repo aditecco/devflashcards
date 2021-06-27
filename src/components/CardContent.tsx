@@ -4,11 +4,10 @@ CardContent
 
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
 import { rem } from "../lib/css-functions";
 import { $backgroundLight, $font } from "../constants/css-vars";
 import classNames from "classnames";
-import theme from "../theme";
 
 type OwnProps = {
   back?: boolean;
@@ -18,6 +17,8 @@ export default function CardContent({
   children,
   back,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
+  const theme = useTheme();
+
   return (
     <div
       className={classNames(["card-content", back && "card-content--back"])}
@@ -39,11 +40,12 @@ export default function CardContent({
         }
 
         .card-content-title {
-          padding: ${rem(24)} 1rem 0.5rem;
+          padding: ${rem(22)} 1rem;
+          border-left: 4px solid ${theme.colors.accent["1"]};
 
           h4 {
             font-weight: normal;
-            font-size: ${rem(18)};
+            font-size: ${rem(20)};
             margin: 0;
           }
         }
@@ -71,9 +73,8 @@ export default function CardContent({
               color: ${$font};
               font-size: small;
               padding: 2px 6px;
-              // TODO extract from theme
-              background-color: ${theme.colors.background.yellow["1"]};
-              border: 1px solid ${theme.colors.background.yellow["2"]};
+              background-color: ${theme.colors.background.blue["1"]};
+              border: 1px solid ${theme.colors.stroke["1"]};
             }
 
             input[type="radio"] {
@@ -94,7 +95,7 @@ export default function CardContent({
             }
 
             ~ p:nth-of-type(even) {
-              background: #f7f7f7;
+              background: ${theme.colors.background.blue["2"]};
             }
 
             ~ p:last-child {
@@ -113,6 +114,7 @@ export default function CardContent({
           pre[class*="language-"] {
             padding-top: 2rem;
             padding-bottom: 2rem;
+            margin: 0;
           }
         }
 
