@@ -4,21 +4,25 @@ theme
 
 import { baseFontStack } from "../constants/css-vars";
 import chroma from "chroma-js";
-import { Theme } from "@emotion/react";
+import { _Theme } from "../types";
 
 const ACCENT_PRIMARY = "#5E7CE2";
 
-export default {
+const theme: _Theme = {
   // based on: https://system-ui.com/theme
   space: {},
   fontSizes: {},
-  accent: "red",
   colors: {
     accent: {
       "1": ACCENT_PRIMARY,
     },
     stroke: {
-      "1": chroma(ACCENT_PRIMARY).alpha(0.6).hex(),
+      [1]: chroma(ACCENT_PRIMARY).alpha(0.6).hex(),
+      [2]: chroma("#555").alpha(0.15).hex(),
+    },
+    typography: {
+      [1]: "#4A4A4A",
+      [2]: "#9B9B9B",
     },
     background: {
       blue: {
@@ -35,6 +39,7 @@ export default {
   fonts: {
     openSans: `'Open Sans', ${baseFontStack}`,
     lato: `Lato, ${baseFontStack}`,
+    latoItalic: `'Lato Italic', ${baseFontStack}`,
   },
   fontWeights: {},
   lineHeights: {},
@@ -48,3 +53,5 @@ export default {
   zIndices: {},
   transitions: {},
 };
+
+export default theme;
