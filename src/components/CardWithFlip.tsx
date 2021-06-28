@@ -46,11 +46,10 @@ export default function CardWithFlip({
           <Card {...cardProps}>
             <CardContent>
               <div className="card-content-meta">
-                <span>{truncate(deck)}</span>
-                &middot;
-                <span>{timestamp}</span>
-                &middot;
-                <span>#{order + 1}</span>
+                <span className={"card-content-meta-item"}>
+                  {truncate(deck)}
+                </span>
+                <span className={"card-content-meta-item"}>#{order + 1}</span>
               </div>
 
               <header className="card-content-title">

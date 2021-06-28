@@ -30,13 +30,23 @@ export default function CardContent({
         }
 
         .card-content-meta {
-          padding: 1rem;
+          padding: 0 1rem;
           font-size: small;
-          color: #cbcbcb;
           text-transform: uppercase;
-          border-bottom: 1px solid #cbcbcb85;
+          border-bottom: 1px solid ${theme?.colors?.stroke?.[2]};
           display: flex;
           justify-content: space-between;
+          font-family: ${theme?.fonts?.lato};
+          color: ${theme?.colors?.typography?.[2]};
+        }
+
+        .card-content-meta-item {
+          padding: 0.8rem 0;
+        }
+
+        .card-content-meta-item:last-child {
+          border-left: 1px solid ${theme?.colors?.stroke?.[2]};
+          padding-left: 1rem;
         }
 
         .card-content-title {
@@ -52,10 +62,11 @@ export default function CardContent({
 
         .card-content-main {
           label {
-            font-family: serif;
             font-style: italic;
+            font-family: ${theme?.fonts?.lato};
             font-size: 1.1rem;
-            color: #aaa;
+            letter-spacing: -1px;
+            color: ${theme?.colors?.typography?.[1]};
             text-transform: lowercase;
 
             &::after {
@@ -68,11 +79,15 @@ export default function CardContent({
           .option-container {
             padding: 0.25rem 0.5rem;
             line-height: 1.8;
+            font-family: ${theme?.fonts?.lato};
+            color: ${theme?.colors?.typography?.[1]};
+            font-size: 1rem;
 
             code {
               color: ${$font};
               font-size: small;
               padding: 2px 6px;
+              margin: 0 4px;
               background-color: ${theme?.colors?.background?.blue?.["1"]};
               border: 1px solid ${theme?.colors?.stroke?.["1"]};
             }
@@ -128,7 +143,7 @@ export default function CardContent({
             padding-left: 1.5rem;
             padding-right: 1.5rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid #cbcbcb85;
+            border-bottom: 1px solid ${theme?.colors?.stroke?.[2]};
             display: flex;
             justify-content: space-between;
             align-items: center;
