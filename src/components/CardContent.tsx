@@ -41,7 +41,7 @@ export default function CardContent({
 
         .card-content-title {
           padding: ${rem(22)} 1rem;
-          border-left: 4px solid ${theme.colors.accent["1"]};
+          border-left: 4px solid ${theme?.colors?.accent?.["1"]};
 
           h4 {
             font-weight: normal;
@@ -73,8 +73,8 @@ export default function CardContent({
               color: ${$font};
               font-size: small;
               padding: 2px 6px;
-              background-color: ${theme.colors.background.blue["1"]};
-              border: 1px solid ${theme.colors.stroke["1"]};
+              background-color: ${theme?.colors?.background?.blue?.["1"]};
+              border: 1px solid ${theme?.colors?.stroke?.["1"]};
             }
 
             input[type="radio"] {
@@ -95,7 +95,7 @@ export default function CardContent({
             }
 
             ~ p:nth-of-type(even) {
-              background: ${theme.colors.background.blue["2"]};
+              background: ${theme?.colors?.background?.blue?.["2"]};
             }
 
             ~ p:last-child {
@@ -157,8 +157,8 @@ export default function CardContent({
               padding: 2px 6px;
               background-color: ${$backgroundLight};
               border: 1px solid #e3e3e3;
-              // background-color: ${theme.colors.background.yellow["1"]};
-              // border: 1px solid ${theme.colors.background.yellow["2"]};
+              // background-color: ${theme?.colors?.background?.yellow?.["1"]};
+              // border: 1px solid ${theme?.colors?.background?.yellow?.["2"]};
             }
           }
         }

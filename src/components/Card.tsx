@@ -3,15 +3,9 @@ Card
 --------------------------------- */
 
 import * as React from "react";
-import {
-  baseFontStack,
-  CARD_HEIGHT,
-  CARD_WIDTH,
-  CARD_MAX_WIDTH,
-  CARD_RADIUS,
-} from "../constants/css-vars";
-import { css, useTheme } from "@emotion/react";
 import { CSSProperties, PropsWithChildren, ReactElement } from "react";
+import { CARD_HEIGHT, CARD_RADIUS, CARD_WIDTH } from "../constants/css-vars";
+import { css, useTheme } from "@emotion/react";
 
 export type CardProps = {
   noShadow?: boolean;
@@ -34,7 +28,7 @@ export default function Card({
         box-shadow: ${noShadow ? "" : "0 10px 20px 2px rgba(0,0,0,0.15)"};
         width: ${CARD_WIDTH};
         height: ${CARD_HEIGHT};
-        font-family: ${theme.fonts.openSans};
+        font-family: ${theme?.fonts?.openSans};
         font-weight: 400;
 
         .card-body {
