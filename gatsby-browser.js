@@ -1,3 +1,7 @@
+/* ---------------------------------
+gatsby-browser
+--------------------------------- */
+
 import React from "react";
 import { ThemeProvider, Global, css } from "@emotion/react";
 import theme from "./src/theme";
