@@ -34,8 +34,7 @@ export default function Card({
         box-shadow: ${noShadow ? "" : "0 10px 20px 2px rgba(0,0,0,0.15)"};
         width: ${CARD_WIDTH};
         height: ${CARD_HEIGHT};
-        font-family: ${theme?.fonts?.openSans ??
-        `'Open Sans', ${baseFontStack}`}; // TODO
+        font-family: ${theme.fonts.openSans};
         font-weight: 400;
 
         .card-body {
