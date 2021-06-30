@@ -144,6 +144,7 @@ export default function CardContent({
             padding-right: 1.5rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid ${theme?.colors?.stroke?.[2]};
+            border-left: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -154,6 +155,19 @@ export default function CardContent({
               background: none;
               border: 2px solid whitesmoke;
               cursor: pointer;
+              display: flex;
+              align-items: center;
+
+              > .material-icons {
+                margin-right: 6px;
+                font-size: 1.25rem;
+              }
+            }
+
+            &-answer-wrapper {
+              color: ${theme.colors.accent[1]};
+              border-bottom: 1px solid ${theme.colors.accent[1]};
+              padding: 0 2px;
             }
           }
 
@@ -170,10 +184,9 @@ export default function CardContent({
               color: ${$font};
               font-size: small;
               padding: 2px 6px;
-              background-color: ${$backgroundLight};
-              border: 1px solid #e3e3e3;
-              // background-color: ${theme?.colors?.background?.yellow?.["1"]};
-              // border: 1px solid ${theme?.colors?.background?.yellow?.["2"]};
+              margin: 0 4px;
+              background-color: ${theme?.colors?.background?.blue?.["1"]};
+              border: 1px solid ${theme?.colors?.stroke?.["1"]};
             }
           }
         }

@@ -18,6 +18,7 @@ export default function CardFooter({
       css={css`
         border-bottom-right-radius: ${radius};
         border-bottom-left-radius: ${radius};
+        box-shadow: 0 -8px 8px -10px rgba(0, 0, 0, 0.25);
       `}
     >
       {children}

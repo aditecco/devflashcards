@@ -11,6 +11,7 @@ import CardFooter from "./CardFooter";
 import CardContent from "./CardContent";
 import { _Card } from "../types";
 import { basicSanitizer, truncate } from "../utils";
+import MaterialIcon from "./MaterialIcon";
 
 type OwnProps = {
   card: _Card;
@@ -47,7 +48,7 @@ export default function CardWithFlip({
             <CardContent>
               <div className="card-content-meta">
                 <span className={"card-content-meta-item"}>
-                  {truncate(deck)}
+                  {truncate(deck, 30)}
                 </span>
                 <span className={"card-content-meta-item"}>#{order + 1}</span>
               </div>
@@ -88,14 +89,20 @@ export default function CardWithFlip({
           <Card>
             <CardContent back>
               <header className="card-content-title">
-                <h4>Answer: {answer}</h4>
+                <h4>
+                  Answer:{" "}
+                  <span className="card-content-title-answer-wrapper">
+                    {answer}
+                  </span>
+                </h4>
 
                 <button
                   className="card-controls-button"
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
                 >
-                  Flip back
+                  <MaterialIcon icon={"arrow_back"} />
+                  back
                 </button>
               </header>
 

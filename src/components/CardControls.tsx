@@ -7,7 +7,7 @@ CardControls
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { flex } from "../lib/css-functions";
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
 import {
   $small,
   $strokeLight,
@@ -20,6 +20,8 @@ interface OwnProps {}
 export default function CardControls({
   children,
 }: PropsWithChildren<OwnProps>): ReactElement {
+  const theme = useTheme();
+
   return (
     <div
       className="CardControls"
@@ -46,6 +48,10 @@ export default function CardControls({
           &:hover {
             background-color: ${$success};
           }
+        }
+
+        > button:last-child {
+          color: ${theme.colors.accent[1]};
         }
       `}
     >
