@@ -5,9 +5,10 @@ MaterialIcon
 import * as React from "react";
 import { ReactElement } from "react";
 import classNames from "classnames";
+import { MaterialIcons } from "../types/material-icons";
 
 interface OwnProps {
-  icon: string;
+  icon: MaterialIcons;
   className?: string;
 }
 
