@@ -17,6 +17,7 @@ export const firaSans = "'Fira Sans', sans-serif";
 export const workSans = "'Work Sans', sans-serif";
 export const montserrat = "'Montserrat', sans-serif";
 export const material = "'Material Icons'";
+// "Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 export const baseFontStack =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
