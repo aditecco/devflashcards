@@ -165,9 +165,16 @@ export default function CardContent({
             }
 
             &-answer-wrapper {
+              display: inline-block;
               color: ${theme.colors.accent[1]};
-              border-bottom: 1px solid ${theme.colors.accent[1]};
               padding: 0 2px;
+              width: 30px;
+              height: 30px;
+              border: 2px solid ${theme.colors.accent[1]};
+              border-radius: 50%;
+              text-align: center;
+              margin-left: 2px;
+              letter-spacing: 1px;
             }
           }
 
