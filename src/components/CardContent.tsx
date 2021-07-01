@@ -105,8 +105,10 @@ export default function CardContent({
             ~ p {
               margin: 0;
               padding: 1.5rem 1rem;
-              //border-top: 1px solid #cbcbcb;
-              display: block;
+              // keep stuff aligned
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
             }
 
             ~ p:nth-of-type(even) {
@@ -123,6 +125,7 @@ export default function CardContent({
 
             code {
               font-size: small;
+              white-space: pre-wrap;
             }
           }
 
@@ -153,13 +156,20 @@ export default function CardContent({
               padding: 0.5rem 1rem;
               border-radius: 4px;
               background: none;
-              border: 2px solid whitesmoke;
+              border: 2px solid ${theme.colors.utility.white};
               cursor: pointer;
               display: flex;
               align-items: center;
+              color: ${theme.colors.typography[3]};
+
+              &:hover {
+                color: ${theme.colors.utility.black};
+                border: 2px solid ${theme.colors.utility.black};
+              }
 
               > .material-icons {
                 margin-right: 6px;
+                margin-top: 2px;
                 font-size: 1.25rem;
               }
             }

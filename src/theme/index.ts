@@ -16,6 +16,12 @@ const theme: _Theme = {
     accent: {
       "1": ACCENT_PRIMARY,
     },
+    utility: {
+      black: "#000",
+      white: "whitesmoke",
+      red: "indianred",
+      yellow: "#fffde7",
+    },
     stroke: {
       [1]: chroma(ACCENT_PRIMARY).alpha(0.6).hex(),
       [2]: chroma("#555").alpha(0.15).hex(),
@@ -23,6 +29,7 @@ const theme: _Theme = {
     typography: {
       [1]: "#4A4A4A",
       [2]: "#9B9B9B",
+      [3]: chroma("#4A4A4A").alpha(0.5).hex(),
     },
     background: {
       blue: {
