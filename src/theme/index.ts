@@ -18,7 +18,8 @@ const theme: _Theme = {
     },
     utility: {
       black: "#000",
-      white: "whitesmoke",
+      white: "#fff",
+      offWhite: "whitesmoke",
       red: "indianred",
       yellow: "#fffde7",
     },
@@ -56,7 +57,9 @@ const theme: _Theme = {
   borderWidths: {},
   borderStyles: {},
   radii: {},
-  shadows: {},
+  shadows: {
+    [1]: `0 2px 8px rgba(0,0,0,.25)`,
+  },
   zIndices: {},
   transitions: {},
 };
