@@ -156,7 +156,7 @@ export default function CardContent({
               padding: 0.5rem 1rem;
               border-radius: 4px;
               background: none;
-              border: 2px solid ${theme.colors.utility.white};
+              border: 2px solid ${theme.colors.utility.offWhite};
               cursor: pointer;
               display: flex;
               align-items: center;

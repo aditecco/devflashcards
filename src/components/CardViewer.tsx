@@ -7,7 +7,7 @@ import { PropsWithChildren, ReactElement, useRef, useState } from "react";
 import CardWithFlip from "./CardWithFlip";
 import { css } from "@emotion/react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
+import { $navbarHeight, CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
 import { CardNode } from "../types";
 
 type OwnProps = {
@@ -49,7 +49,7 @@ export default function CardViewer({
       ref={containerRef}
       css={css`
         background: radial-gradient(at center, white, whitesmoke);
-        height: 100vh;
+        height: calc(100vh - ${$navbarHeight});
         display: flex;
         justify-content: center;
         align-items: center;
