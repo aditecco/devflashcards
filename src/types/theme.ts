@@ -2,26 +2,28 @@
 Theme types, WIP
 --------------------------------- */
 
-import { Theme } from "@emotion/react";
+import "@emotion/react";
 
 type ThemeColorDefinition = {};
 
 type ThemeFontDefinition = {};
 
-export interface _Theme extends Theme {
-  space: Record<string, unknown>;
-  fontSizes: Record<string, unknown>;
-  colors: Record<string, unknown>;
-  fonts: Record<string, unknown>;
-  fontWeights: Record<string, unknown>;
-  lineHeights: Record<string, unknown>;
-  letterSpacings: Record<string, unknown>;
-  sizes: Record<string, unknown>;
-  borders: Record<string, unknown>;
-  borderWidths: Record<string, unknown>;
-  borderStyles: Record<string, unknown>;
-  radii: Record<string, unknown>;
-  shadows: Record<string, unknown>;
-  zIndices: Record<string, unknown>;
-  transitions: Record<string, unknown>;
+declare module "@emotion/react" {
+  export interface Theme {
+    space: Record<string, string>;
+    fontSizes: Record<string, string>;
+    colors: Record<string, string>;
+    fonts: Record<string, string>;
+    fontWeights: Record<string, string>;
+    lineHeights: Record<string, string>;
+    letterSpacings: Record<string, string>;
+    sizes: Record<string, string>;
+    borders: Record<string, string>;
+    borderWidths: Record<string, string>;
+    borderStyles: Record<string, string>;
+    radii: Record<string, string>;
+    shadows: Record<string, string>;
+    zIndices: Record<string, string>;
+    transitions: Record<string, string>;
+  }
 }

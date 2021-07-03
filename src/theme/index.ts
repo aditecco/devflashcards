@@ -4,11 +4,11 @@ theme
 
 import { baseFontStack } from "../constants/css-vars";
 import chroma from "chroma-js";
-import { _Theme } from "../types";
+import { Theme } from "@emotion/react";
 
 const ACCENT_PRIMARY = "#5E7CE2";
 
-const theme: _Theme = {
+const theme: Theme = {
   // based on: https://system-ui.com/theme
   space: {},
   fontSizes: {},
@@ -21,7 +21,7 @@ const theme: _Theme = {
       white: "#fff",
       offWhite: "whitesmoke",
       red: "indianred",
-      yellow: "#fffde7",
+      paleYellow: "#fffde7",
     },
     stroke: {
       [1]: chroma(ACCENT_PRIMARY).alpha(0.6).hex(),
