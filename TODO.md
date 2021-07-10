@@ -15,15 +15,17 @@
 
 ### TODO
 
+- [ ] define all colors (move to theme)
+- [ ] define fonts
+- [ ] Create custom scrollbar
+- [x] Implement answer options as form with radio buttons
+  - [ ] when submitting the form, the card flips
+- [ ] Fix theme TS issues
 - [x] Create POC
 - [x] Implement Card layout
 - [x] Find data source
-- [ ] define all colors (move to theme)
-- [ ] define fonts
-- [x] Implement answer options as form with radio buttons
-  - [ ] when submitting the form, the card flips
-- [ ] Implement basic viewer layout
-- [ ] Implement theme provider & theme assets
+- [x] Implement basic viewer layout
+- [x] Implement theme provider & theme assets
 - [x] Implement card structure & fit content to card
 - [x] Implement data source import
 - [x] Implement card deck animations

@@ -6,6 +6,7 @@ import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css, useTheme } from "@emotion/react";
 import { rem } from "../lib/css-functions";
+import MaterialIcon from "./MaterialIcon";
 
 type OwnProps = {};
 
@@ -31,10 +32,19 @@ export default function Navbar({}: PropsWithChildren<OwnProps>): ReactElement | 
           font-size: inherit;
           margin: 0;
           font-weight: normal;
+          display: flex;
+          align-items: center;
+
+          .navbar-logotype {
+            margin-left: 0.5rem;
+          }
         }
       `}
     >
-      <h1>DevFlashcards</h1>
+      <h1>
+        <MaterialIcon icon={"graphic_eq"} />
+        <span className="navbar-logotype">DevFlashcards</span>
+      </h1>
     </nav>
   );
 }

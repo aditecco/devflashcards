@@ -4,6 +4,7 @@ Theme types, WIP
 
 import "@emotion/react";
 
+// TODO define types
 type ThemeColorDefinition = {};
 
 type ThemeFontDefinition = {};
