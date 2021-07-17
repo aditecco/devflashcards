@@ -2,6 +2,8 @@
 types
 --------------------------------- */
 
+import { SuperMemoGrade } from "supermemo";
+
 export type CardFrontmatter = {
   order?: number;
   timestamp?: string;
@@ -23,3 +25,17 @@ export type _Card = {
 };
 
 export type CardNode = GraphQLnode<_Card>;
+
+export type SuperMemoDefaults = {
+  interval: number;
+  repetition: number;
+  efactor: number;
+  dueDate: string;
+};
+
+export type Flashcard = CardNode & SuperMemoDefaults;
+
+export type SupermemoProcessor = (
+  flashcard: Flashcard,
+  grade: SuperMemoGrade
+) => Flashcard;
