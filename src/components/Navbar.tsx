@@ -21,8 +21,7 @@ export default function Navbar({}: PropsWithChildren<OwnProps>): ReactElement | 
         top: 0;
         left: 0;
         right: 0;
-        padding: ${rem(24)} 1rem;
-        font-size: ${rem(18)};
+        padding: 0.9rem 1rem;
         color: ${theme.colors.typography[1]};
         box-shadow: ${theme.shadows[1]};
         z-index: 1;
@@ -36,7 +35,7 @@ export default function Navbar({}: PropsWithChildren<OwnProps>): ReactElement | 
           align-items: center;
 
           .navbar-logotype {
-            margin-left: 0.5rem;
+            margin-left: 0.4rem;
           }
         }
       `}
