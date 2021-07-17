@@ -1,8 +1,9 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import CardViewer from "../components/CardViewer";
-import { CardNode } from "../types";
 import Layout from "../components/Layout";
+import ReviewEngine from "../components/ReviewEngine";
+import { CardNode, Flashcard, SupermemoProcessor } from "../types";
 
 const IndexPage = ({ data }) => {
   const {
@@ -12,7 +13,11 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Layout>
-        <CardViewer cards={cards as CardNode[]} />
+        <ReviewEngine cards={cards as CardNode[]}>
+          {(flashcards: Flashcard[], onCardReview: SupermemoProcessor) => (
+            <CardViewer cards={flashcards} onCardReview={onCardReview} />
+          )}
+        </ReviewEngine>
       </Layout>
     </>
   );
