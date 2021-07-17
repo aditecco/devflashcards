@@ -8,14 +8,16 @@ import CardWithFlip from "./CardWithFlip";
 import { css } from "@emotion/react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { $navbarHeight, CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
-import { CardNode } from "../types";
+import { CardNode, Flashcard, SupermemoProcessor } from "../types";
 
 type OwnProps = {
-  cards: CardNode[];
+  cards: Flashcard[];
+  onCardReview: SupermemoProcessor;
 };
 
 export default function CardViewer({
   cards,
+  onCardReview,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const [cardStackingOrder, setCardStackingOrder] = useState(
     createStackingOrderMap(cards)
@@ -93,8 +95,9 @@ export default function CardViewer({
               }}
             >
               <CardWithFlip
-                card={card?.node}
+                card={card}
                 noShadow={i !== 0}
+                onCardReview={onCardReview} // TODO avoid drilling
                 // style={{
                 //   ...(i !== cards.length - 1 ? { boxShadow: "none" } : {}),
                 // }}

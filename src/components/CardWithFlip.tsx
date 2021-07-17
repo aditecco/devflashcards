@@ -9,33 +9,37 @@ import Card, { CardProps } from "./Card";
 import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import CardContent from "./CardContent";
-import { _Card } from "../types";
+import { _Card, Flashcard, SupermemoProcessor } from "../types";
 import { basicSanitizer, truncate } from "../utils";
 import MaterialIcon from "./MaterialIcon";
 
 type OwnProps = {
-  card: _Card;
+  card: Flashcard;
+  onCardReview: SupermemoProcessor;
   style?: CSSProperties;
 } & Omit<CardProps, "style">;
 
 export default function CardWithFlip({
   card,
   style,
+  onCardReview,
   ...cardProps
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const {
-    id,
-    html,
-    frontmatter: {
-      order,
-      timestamp,
-      topic,
-      deck,
-      contentSource,
-      title,
-      answer,
+    node: {
+      id,
+      html,
+      frontmatter: {
+        order,
+        timestamp,
+        topic,
+        deck,
+        contentSource,
+        title,
+        answer,
+      },
     },
-  } = card;
+  } = card ?? {};
 
   const questionBlock = html.split(/SPLIT_MARKER/).shift();
   const answerBlock = html.split(/SPLIT_MARKER/).pop();
@@ -67,7 +71,11 @@ export default function CardWithFlip({
 
             <CardFooter>
               <CardControls>
-                <button className="card-controls-button" type="button">
+                <button
+                  className="card-controls-button"
+                  type="button"
+                  onClick={() => onCardReview(card, 0)}
+                >
                   Pass
                 </button>
 
@@ -122,7 +130,11 @@ export default function CardWithFlip({
                   Good
                 </button>
 
-                <button className="card-controls-button" type="button">
+                <button
+                  className="card-controls-button"
+                  type="button"
+                  onClick={() => onCardReview(card, 5)}
+                >
                   Easy
                 </button>
               </CardControls>
