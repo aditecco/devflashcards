@@ -84,7 +84,7 @@ export default function CardWithFlip({
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
                 >
-                  Submit
+                  Check answer
                 </button>
               </CardControls>
             </CardFooter>
@@ -122,20 +122,51 @@ export default function CardWithFlip({
 
             <CardFooter>
               <CardControls>
-                <button className="card-controls-button" type="button">
-                  Hard
-                </button>
-
-                <button className="card-controls-button" type="button">
-                  Good
+                <button
+                  className="card-controls-button"
+                  type="button"
+                  onClick={() => onCardReview(card, 5)}
+                  title={"Perfect response."}
+                >
+                  5
                 </button>
 
                 <button
                   className="card-controls-button"
                   type="button"
-                  onClick={() => onCardReview(card, 5)}
+                  onClick={() => onCardReview(card, 4)}
+                  title={"Correct response after a hesitation."}
                 >
-                  Easy
+                  4
+                </button>
+
+                <button
+                  className="card-controls-button"
+                  type="button"
+                  onClick={() => onCardReview(card, 3)}
+                  title={"Correct response recalled with serious difficulty."}
+                >
+                  3
+                </button>
+
+                <button
+                  className="card-controls-button"
+                  type="button"
+                  onClick={() => onCardReview(card, 2)}
+                  title={
+                    "Incorrect response; where the correct one seemed easy to recall."
+                  }
+                >
+                  2
+                </button>
+
+                <button
+                  className="card-controls-button"
+                  type="button"
+                  onClick={() => onCardReview(card, 1)}
+                  title={"Incorrect response; the correct one remembered."}
+                >
+                  1
                 </button>
               </CardControls>
             </CardFooter>
