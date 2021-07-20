@@ -136,6 +136,14 @@ export default function CardContent({
           }
         }
 
+        .card-content-debug-info {
+          display: block;
+          padding: 1rem 1rem 2rem;
+          font-size: small;
+          text-align: center;
+          color: ${theme?.colors?.typography?.["2"]};
+        }
+
         .card-content-options {
         }
 

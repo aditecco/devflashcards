@@ -67,6 +67,10 @@ export default function CardWithFlip({
                   __html: basicSanitizer(questionBlock),
                 }}
               />
+
+              <span className="card-content-debug-info">
+                ID: {id?.slice?.(-5)}
+              </span>
             </CardContent>
 
             <CardFooter>
