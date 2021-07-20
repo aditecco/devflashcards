@@ -142,6 +142,7 @@ export default function CardContent({
           font-size: small;
           text-align: center;
           color: ${theme?.colors?.typography?.["2"]};
+          border-top: 1px dashed ${theme?.colors?.typography?.["2"]};
         }
 
         .card-content-options {
