@@ -47,9 +47,8 @@ export default function CardViewer({
   // console.log("x", x);
 
   return (
-    <motion.div
+    <div
       className="card-viewer"
-      ref={containerRef}
       css={css`
         background: radial-gradient(at center, white, whitesmoke);
         height: calc(100vh - ${$navbarHeight});
@@ -63,7 +62,6 @@ export default function CardViewer({
           height: ${CARD_HEIGHT};
         }
       `}
-      // style={{ background }}
     >
       <motion.div className="card-container" ref={containerRef}>
         {cards?.map?.((card, i) => {
@@ -107,6 +105,6 @@ export default function CardViewer({
           );
         })}
       </motion.div>
-    </motion.div>
+    </div>
   );
 }
