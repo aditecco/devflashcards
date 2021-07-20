@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import ReviewEngine from "../components/ReviewEngine";
 import { CardNode, Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
+import SessionInfo from "../components/SessionInfo";
 
 const IndexPage = ({ data }) => {
   const {
@@ -12,16 +13,19 @@ const IndexPage = ({ data }) => {
   } = data ?? {};
 
   return (
-    <>
-      <Layout>
-        <ReviewEngine cards={cards as CardNode[]}>
-          {(
-            flashcards: Flashcard[],
-            onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
-          ) => <CardViewer cards={flashcards} onCardReview={onCardReview} />}
-        </ReviewEngine>
-      </Layout>
-    </>
+    <Layout>
+      <ReviewEngine cards={cards as CardNode[]}>
+        {(
+          flashcards: Flashcard[],
+          onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
+        ) => (
+          <>
+            <SessionInfo cards={flashcards} />
+            <CardViewer cards={flashcards} onCardReview={onCardReview} />
+          </>
+        )}
+      </ReviewEngine>
+    </Layout>
   );
 };
 
