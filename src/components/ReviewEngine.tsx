@@ -3,19 +3,21 @@ ReviewEngine
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement } from "react";
+import { PropsWithChildren, ReactElement, useState } from "react";
 import { supermemo, SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
-import { CardNode, Flashcard, SupermemoProcessor } from "../types";
+import { CardNode, Flashcard } from "../types";
 
 type OwnProps = {
   cards: CardNode[];
 };
 
 export default function ReviewEngine({
-  cards,
+  cards: rawCards,
   children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
+  const [cards, setCards] = useState(rawCards?.map?.(initCard) ?? []);
+
   // Initializes cards with
   // supermemo's default values
   function initCard(card: CardNode): Flashcard {
@@ -35,13 +37,23 @@ export default function ReviewEngine({
 
     const dueDate = dayjs(Date.now()).add(interval, "day").toISOString();
 
-    console.log({ ...flashcard, interval, repetition, efactor, dueDate });
-
     return { ...flashcard, interval, repetition, efactor, dueDate };
+  }
+
+  // Replaces a card in the card pool when the user reviews it
+  // via the card buttons.
+  function reviewCard(flashcard: Flashcard, grade: SuperMemoGrade) {
+    const i = cards.findIndex((c) => c?.node?.id === flashcard?.node?.id);
+
+    setCards((cards) => [
+      ...cards.slice(0, i),
+      practice(flashcard, grade),
+      ...cards.slice(i + 1),
+    ]);
   }
 
   return (children as (
     c: Flashcard[],
-    cb: SupermemoProcessor
-  ) => React.ReactElement)(cards.map(initCard), practice);
+    cb: (flashcard: Flashcard, grade: SuperMemoGrade) => void
+  ) => React.ReactElement)(cards, reviewCard);
 }
