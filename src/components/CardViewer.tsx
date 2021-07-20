@@ -8,11 +8,12 @@ import CardWithFlip from "./CardWithFlip";
 import { css } from "@emotion/react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { $navbarHeight, CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
-import { CardNode, Flashcard, SupermemoProcessor } from "../types";
+import { Flashcard } from "../types";
+import { SuperMemoGrade } from "supermemo";
 
 type OwnProps = {
   cards: Flashcard[];
-  onCardReview: SupermemoProcessor;
+  onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void;
 };
 
 export default function CardViewer({
@@ -24,7 +25,7 @@ export default function CardViewer({
   );
   const containerRef = useRef(null);
 
-  function createStackingOrderMap(items: CardNode[]) {
+  function createStackingOrderMap(items: Flashcard[]) {
     const zIndexes = items.map((_, i) => i).reverse();
 
     return items.reduce((acc, _, i) => {

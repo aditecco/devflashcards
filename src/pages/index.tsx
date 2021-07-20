@@ -3,7 +3,8 @@ import { graphql } from "gatsby";
 import CardViewer from "../components/CardViewer";
 import Layout from "../components/Layout";
 import ReviewEngine from "../components/ReviewEngine";
-import { CardNode, Flashcard, SupermemoProcessor } from "../types";
+import { CardNode, Flashcard } from "../types";
+import { SuperMemoGrade } from "supermemo";
 
 const IndexPage = ({ data }) => {
   const {
@@ -14,9 +15,10 @@ const IndexPage = ({ data }) => {
     <>
       <Layout>
         <ReviewEngine cards={cards as CardNode[]}>
-          {(flashcards: Flashcard[], onCardReview: SupermemoProcessor) => (
-            <CardViewer cards={flashcards} onCardReview={onCardReview} />
-          )}
+          {(
+            flashcards: Flashcard[],
+            onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
+          ) => <CardViewer cards={flashcards} onCardReview={onCardReview} />}
         </ReviewEngine>
       </Layout>
     </>

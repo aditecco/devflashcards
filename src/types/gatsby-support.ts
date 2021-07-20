@@ -39,3 +39,5 @@ export type SupermemoProcessor = (
   flashcard: Flashcard,
   grade: SuperMemoGrade
 ) => Flashcard;
+
+export type ReturnVoid = () => void;
