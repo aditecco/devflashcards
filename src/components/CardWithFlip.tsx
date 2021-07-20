@@ -9,13 +9,14 @@ import Card, { CardProps } from "./Card";
 import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import CardContent from "./CardContent";
-import { _Card, Flashcard, SupermemoProcessor } from "../types";
+import { Flashcard } from "../types";
 import { basicSanitizer, truncate } from "../utils";
 import MaterialIcon from "./MaterialIcon";
+import { SuperMemoGrade } from "supermemo";
 
 type OwnProps = {
   card: Flashcard;
-  onCardReview: SupermemoProcessor;
+  onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void;
   style?: CSSProperties;
 } & Omit<CardProps, "style">;
 
@@ -69,7 +70,8 @@ export default function CardWithFlip({
               />
 
               <span className="card-content-debug-info">
-                ID: {id?.slice?.(-5)}
+                ID: {id?.slice?.(-5)} &middot; Due date:{" "}
+                {card?.dueDate.toLocaleLowerCase()}
               </span>
             </CardContent>
 
