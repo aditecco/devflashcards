@@ -11,6 +11,33 @@
   - ? [ ] user can expand the card to a page layout
   - ? [ ]for each card, there will be a matching page
 
+#### Flow
+
+- open HP
+- choose a deck
+- loading CardViewer home
+- if a client DB is present:
+  - load it
+  - end loading
+- else:
+  - cards are loaded from static data
+  - cards are enriched with algo data
+  - client DB is initialized with enriched cards
+  - end loading
+- present the stack of cards
+  - if the session is a new session
+    - start with the first card of the stack, by index
+  - else if the session is resumed
+    - start with the last active card in the previous session
+  - review & grade the card
+  - card is updated in DB & moved to one of 6 buckets (as in 6 grades)
+  - UI updates with the card swiped away (out of the viewport)
+  - if there are cards that are due today:
+    - show them next
+  - else, show the next card by index
+  - if a card has never been reviewed & graded
+    - then it's due today
+
 ---
 
 ### TODO
