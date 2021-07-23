@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
           onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
         ) => (
           <>
-            {/*<SessionInfo cards={flashcards} />*/}
+            <SessionInfo cards={flashcards} />
             <CardViewer cards={flashcards} onCardReview={onCardReview} />
           </>
         )}

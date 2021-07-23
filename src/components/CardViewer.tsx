@@ -6,7 +6,12 @@ import * as React from "react";
 import { PropsWithChildren, ReactElement, useRef, useState } from "react";
 import CardWithFlip from "./CardWithFlip";
 import { css } from "@emotion/react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import {
+  motion,
+  useDragControls,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
 import { $navbarHeight, CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
 import { Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
@@ -24,7 +29,9 @@ export default function CardViewer({
     createStackingOrderMap(cards)
   );
   const containerRef = useRef(null);
+  const dragControls = useDragControls();
 
+  // createStackingOrderMap
   function createStackingOrderMap(items: Flashcard[]) {
     const zIndexes = items.map((_, i) => i).reverse();
 
@@ -35,7 +42,7 @@ export default function CardViewer({
     }, {});
   }
 
-  console.log(cardStackingOrder);
+  console.log(cardStackingOrder); // TODO
 
   // const x = useMotionValue(0);
   // const background = useTransform(
@@ -45,6 +52,10 @@ export default function CardViewer({
   // );
 
   // console.log("x", x);
+
+  function startDrag(event) {
+    dragControls.start(event, { snapToCursor: true });
+  }
 
   return (
     <div
@@ -74,6 +85,7 @@ export default function CardViewer({
               // dragConstraints={containerRef}
               data-card={"card__" + (i + 1)}
               dragElastic={0.8}
+              dragControls={dragControls}
               onDragEnd={(_, info) => {
                 const dragMax = info.point.x;
 
@@ -91,12 +103,14 @@ export default function CardViewer({
                 position: "absolute",
                 inset: 0,
                 zIndex: cardStackingOrder[i],
+                cursor: "grab",
               }}
             >
               <CardWithFlip
                 card={card}
                 noShadow={i !== 0}
                 onCardReview={onCardReview} // TODO avoid drilling
+                onCardDrag={startDrag}
                 // style={{
                 //   ...(i !== cards.length - 1 ? { boxShadow: "none" } : {}),
                 // }}

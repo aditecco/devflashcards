@@ -17,6 +17,7 @@ import { SuperMemoGrade } from "supermemo";
 type OwnProps = {
   card: Flashcard;
   onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void;
+  onCardDrag: any;
   style?: CSSProperties;
 } & Omit<CardProps, "style">;
 
@@ -24,6 +25,7 @@ export default function CardWithFlip({
   card,
   style,
   onCardReview,
+  onCardDrag,
   ...cardProps
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const {
@@ -80,7 +82,10 @@ export default function CardWithFlip({
                 <button
                   className="card-controls-button"
                   type="button"
-                  onClick={() => onCardReview(card, 0)}
+                  onClick={(e) => {
+                    onCardDrag(e);
+                    onCardReview(card, 0);
+                  }}
                 >
                   Pass
                 </button>
