@@ -15,6 +15,7 @@ import {
 import { $navbarHeight, CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
 import { Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
+import {DRAG_TRIGGER} from "../constants/constants";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -32,7 +33,7 @@ export default function CardViewer({
   const dragControls = useDragControls();
 
   // createStackingOrderMap
-  function createStackingOrderMap(items: Flashcard[]) {
+  function createStackingOrderMap(items: Flashcard[]): Record<string, number> {
     const zIndexes = items.map((_, i) => i).reverse();
 
     return items.reduce((acc, _, i) => {
@@ -89,7 +90,7 @@ export default function CardViewer({
               onDragEnd={(_, info) => {
                 const dragMax = info.point.x;
 
-                if (dragMax > 200 || dragMax > -200) {
+                if (Math.abs(dragMax) > DRAG_TRIGGER) {
                   setCardStackingOrder((order) => {
                     return Object.values(order).reduce((acc, curr, j) => {
                       acc[j] = j === i ? 0 : curr + 1;
