@@ -37,8 +37,6 @@ export default function ReviewEngine({
     const x = dayjs(a.dueDate).unix();
     const y = dayjs(b.dueDate).unix();
 
-    console.log(x, y, x > y, x < y, x === y);
-
     if (x > y) {
       return 1;
     }
