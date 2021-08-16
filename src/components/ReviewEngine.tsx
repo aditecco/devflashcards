@@ -16,7 +16,9 @@ export default function ReviewEngine({
   cards: rawCards,
   children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
-  const [cards, setCards] = useState(rawCards?.map?.(initCard) ?? []);
+  const [cards, setCards] = useState(
+    rawCards?.map?.(initCard)?.sort?.(sortDates) ?? []
+  );
 
   // Initializes cards with
   // supermemo's default values
@@ -26,8 +28,26 @@ export default function ReviewEngine({
       interval: 0,
       repetition: 0,
       efactor: 2.5,
-      dueDate: dayjs(Date.now()).toISOString(),
+      dueDate: dayjs().toISOString(),
     };
+  }
+
+  //
+  function sortDates(a, b) {
+    const x = dayjs(a.dueDate).unix();
+    const y = dayjs(b.dueDate).unix();
+
+    console.log(x, y, x > y, x < y, x === y);
+
+    if (x > y) {
+      return 1;
+    }
+
+    if (x < y) {
+      return -1;
+    }
+
+    return 0;
   }
 
   // Passes cards through the algo and updates relevant values
@@ -35,7 +55,7 @@ export default function ReviewEngine({
   function practice(flashcard: Flashcard, grade: SuperMemoGrade): Flashcard {
     const { interval, repetition, efactor } = supermemo(flashcard, grade);
 
-    const dueDate = dayjs(Date.now()).add(interval, "day").toISOString();
+    const dueDate = dayjs(flashcard.dueDate).add(interval, "day").toISOString();
 
     return { ...flashcard, interval, repetition, efactor, dueDate };
   }
@@ -45,11 +65,13 @@ export default function ReviewEngine({
   function reviewCard(flashcard: Flashcard, grade: SuperMemoGrade) {
     const i = cards.findIndex((c) => c?.node?.id === flashcard?.node?.id);
 
-    setCards((cards) => [
-      ...cards.slice(0, i),
-      practice(flashcard, grade),
-      ...cards.slice(i + 1),
-    ]);
+    setCards((cards) =>
+      [
+        ...cards.slice(0, i),
+        practice(flashcard, grade),
+        ...cards.slice(i + 1),
+      ].sort(sortDates)
+    );
   }
 
   return (children as (
