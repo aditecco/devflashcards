@@ -18,8 +18,8 @@ export default function SessionInfo({
   return (
     <div css={css``}>
       <ul>
-        {cards?.map((c) => (
-          <li>
+        {cards?.map((c, i) => (
+          <li key={i}>
             {c.node.frontmatter.order} | {c.node.id.substr(-5)} |{" "}
             {dayjs(c.dueDate).toString()}
           </li>
