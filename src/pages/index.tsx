@@ -6,6 +6,7 @@ import ReviewEngine from "../components/ReviewEngine";
 import { CardNode, Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
 import SessionInfo from "../components/SessionInfo";
+import DebugInfo from "../components/DebugInfo";
 
 const IndexPage = ({ data }) => {
   const {
@@ -20,6 +21,7 @@ const IndexPage = ({ data }) => {
           onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
         ) => (
           <>
+            <DebugInfo cards={flashcards} />
             <SessionInfo cards={flashcards} />
             <CardViewer cards={flashcards} onCardReview={onCardReview} />
           </>
