@@ -15,16 +15,5 @@ type OwnProps = {
 export default function SessionInfo({
   cards,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
-  return (
-    <div css={css``}>
-      <ul>
-        {cards?.map((c, i) => (
-          <li key={i}>
-            {c.node.frontmatter.order} | {c.node.id.substr(-5)} |{" "}
-            {dayjs(c.dueDate).toString()}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  return <div css={css``}>SessionInfo</div>;
 }

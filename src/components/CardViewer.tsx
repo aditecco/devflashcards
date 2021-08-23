@@ -74,7 +74,7 @@ export default function CardViewer({
             >
               <CardWithFlip
                 card={card}
-                noShadow={i !== 0}
+                noShadow={!first}
                 onCardReview={onCardReview} // TODO avoid drilling
               />
             </motion.div>
