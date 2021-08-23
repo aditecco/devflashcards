@@ -50,6 +50,7 @@
     "supermemo": "^2.0.17"
   },
   "devDependencies": {
-    "babel-preset-gatsby": "^1.6.0"
+    "babel-preset-gatsby": "^1.6.0",
+    "prettier": "^2.3.2"
   }
 }
