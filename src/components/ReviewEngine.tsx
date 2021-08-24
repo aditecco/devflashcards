@@ -72,8 +72,10 @@ export default function ReviewEngine({
     );
   }
 
-  return (children as (
-    c: Flashcard[],
-    cb: (flashcard: Flashcard, grade: SuperMemoGrade) => void
-  ) => React.ReactElement)(cards, reviewCard);
+  return (
+    children as (
+      c: Flashcard[],
+      cb: (flashcard: Flashcard, grade: SuperMemoGrade) => void
+    ) => React.ReactElement
+  )(cards, reviewCard);
 }

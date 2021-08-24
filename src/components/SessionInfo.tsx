@@ -3,7 +3,7 @@ SessionInfo
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement } from "react";
+import { PropsWithChildren, ReactElement, useEffect, useState } from "react";
 import { Flashcard } from "../types";
 import dayjs from "dayjs";
 import { css, useTheme } from "@emotion/react";
@@ -16,6 +16,26 @@ export default function SessionInfo({
   cards,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const theme = useTheme();
+
+  const [currentDate, setCurrentDate] = useState(dayjs());
+
+  useEffect(() => {
+    cards?.length && setCurrentDate(dayjs());
+  }, [cards]);
+
+  // Get how many cards are due in the same date as `currentDate`
+  function computeTodaysCards(c: Flashcard) {
+    return (
+      dayjs(c.dueDate).format("DD/MM/YYYY") === currentDate.format("DD/MM/YYYY")
+    );
+  }
+
+  // Get how many cards are not due in the same date as `currentDate`
+  function computeNextUpCards(c: Flashcard) {
+    return (
+      dayjs(c.dueDate).format("DD/MM/YYYY") !== currentDate.format("DD/MM/YYYY")
+    );
+  }
 
   return (
     <div
@@ -30,6 +50,8 @@ export default function SessionInfo({
         }
 
         li {
+          padding: 1rem 1.5rem;
+
           &:first-child {
             padding-left: 1rem;
           }
@@ -37,8 +59,6 @@ export default function SessionInfo({
           &:last-child {
             padding-right: 1rem;
           }
-
-          padding: 1.25rem 1.5rem;
 
           + li {
             //padding-left: 1rem;
@@ -58,17 +78,20 @@ export default function SessionInfo({
       <ul>
         <li>
           <h6>Your session</h6>
-          <span>{dayjs().toString()}</span>
+          <span>{currentDate?.format("DD/MM/YYYY")}</span>
         </li>
 
         <li>
           <h6>Due today</h6>
           <span>
-            {
-              cards.filter((c) => dayjs(c.dueDate).unix() === dayjs().unix())
-                .length
-            }
+            {cards?.filter?.(computeTodaysCards)?.length ||
+              "No cards for today"}
           </span>
+        </li>
+
+        <li>
+          <h6>Next up</h6>
+          <span>{cards?.filter?.(computeNextUpCards)?.length || "-"}</span>
         </li>
 
         <li>
