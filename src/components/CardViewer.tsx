@@ -20,6 +20,7 @@ type OwnProps = {
 export default function CardViewer({
   cards,
   onCardReview,
+  children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const dragBoundaries = useRef(null);
 
@@ -29,14 +30,19 @@ export default function CardViewer({
       css={css`
         background: radial-gradient(at center, white, whitesmoke);
         height: calc(100vh - ${$navbarHeight});
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
 
         .card-container {
-          position: relative;
+          //position: relative;
+          position: absolute;
+          left: 50%;
+          top: 50%;
           width: ${CARD_WIDTH};
           height: ${CARD_HEIGHT};
+          transform: translate(-50%, -50%);
         }
 
         .card-wrapper {
@@ -81,6 +87,8 @@ export default function CardViewer({
           );
         })}
       </motion.div>
+
+      {children}
     </div>
   );
 }
