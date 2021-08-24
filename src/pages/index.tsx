@@ -7,6 +7,7 @@ import { CardNode, Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
 import SessionInfo from "../components/SessionInfo";
 import DebugInfo from "../components/DebugInfo";
+import CurrentTime from "../components/CurrentTime";
 
 const IndexPage = ({ data }) => {
   const {
@@ -15,20 +16,28 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <ReviewEngine cards={cards as CardNode[]}>
-        {(
-          flashcards: Flashcard[],
-          onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
-        ) => (
-          <>
-            <DebugInfo cards={flashcards} />
+      <CurrentTime
+        render={(time) => (
+          <ReviewEngine cards={cards as CardNode[]} currentDate={time}>
+            {(
+              flashcards: Flashcard[],
+              onCardReview: (
+                flashcard: Flashcard,
+                grade: SuperMemoGrade
+              ) => void,
+              date
+            ) => (
+              <>
+                <DebugInfo cards={flashcards} />
 
-            <CardViewer cards={flashcards} onCardReview={onCardReview}>
-              <SessionInfo cards={flashcards} />
-            </CardViewer>
-          </>
+                <CardViewer cards={flashcards} onCardReview={onCardReview}>
+                  <SessionInfo cards={flashcards} currentDate={date} />
+                </CardViewer>
+              </>
+            )}
+          </ReviewEngine>
         )}
-      </ReviewEngine>
+      />
     </Layout>
   );
 };
