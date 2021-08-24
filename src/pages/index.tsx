@@ -22,8 +22,10 @@ const IndexPage = ({ data }) => {
         ) => (
           <>
             <DebugInfo cards={flashcards} />
-            <SessionInfo cards={flashcards} />
-            <CardViewer cards={flashcards} onCardReview={onCardReview} />
+
+            <CardViewer cards={flashcards} onCardReview={onCardReview}>
+              <SessionInfo cards={flashcards} />
+            </CardViewer>
           </>
         )}
       </ReviewEngine>
