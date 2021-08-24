@@ -3,22 +3,26 @@ ReviewEngine
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement, useState } from "react";
+import { PropsWithChildren, ReactElement, useEffect, useState } from "react";
 import { supermemo, SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
 import { CardNode, Flashcard } from "../types";
 
 type OwnProps = {
   cards: CardNode[];
+  currentDate: dayjs.Dayjs;
 };
 
 export default function ReviewEngine({
   cards: rawCards,
+  currentDate,
   children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const [cards, setCards] = useState(
     rawCards?.map?.(initCard)?.sort?.(sortDates) ?? []
   );
+
+  useEffect(() => {}, [cards]);
 
   // Initializes cards with
   // supermemo's default values
@@ -75,7 +79,8 @@ export default function ReviewEngine({
   return (
     children as (
       c: Flashcard[],
-      cb: (flashcard: Flashcard, grade: SuperMemoGrade) => void
+      cb: (flashcard: Flashcard, grade: SuperMemoGrade) => void,
+      d: dayjs.Dayjs
     ) => React.ReactElement
-  )(cards, reviewCard);
+  )(cards, reviewCard, currentDate);
 }

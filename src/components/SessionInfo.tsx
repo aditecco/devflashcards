@@ -10,18 +10,14 @@ import { css, useTheme } from "@emotion/react";
 
 type OwnProps = {
   cards: Flashcard[];
+  currentDate: dayjs.Dayjs;
 };
 
 export default function SessionInfo({
   cards,
+  currentDate,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const theme = useTheme();
-
-  const [currentDate, setCurrentDate] = useState(dayjs());
-
-  useEffect(() => {
-    cards?.length && setCurrentDate(dayjs());
-  }, [cards]);
 
   // Get how many cards are due in the same date as `currentDate`
   function computeTodaysCards(c: Flashcard) {
@@ -77,8 +73,8 @@ export default function SessionInfo({
     >
       <ul>
         <li>
-          <h6>Your session</h6>
-          <span>{currentDate?.format("DD/MM/YYYY")}</span>
+          <h6>Current session</h6>
+          <span>{currentDate?.format("DD/MM/YYYY HH:mm:ss")}</span>
         </li>
 
         <li>
