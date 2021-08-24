@@ -19,9 +19,14 @@ export default function DebugInfo({
     <div
       css={css`
         position: fixed;
-        bottom: 25px;
-        left: 25px;
+        bottom: 10px;
+        left: 10px;
         font-size: small;
+        z-index: 1;
+
+        ul {
+          padding-left: 1rem;
+        }
       `}
     >
       <ul>
