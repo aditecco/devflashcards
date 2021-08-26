@@ -10,10 +10,12 @@ type OwnProps = {
   render: (t0: dayjs.Dayjs, t: dayjs.Dayjs) => ReactElement;
 };
 
+// Session start
+const INITIAL_TIME = dayjs();
+
 export default function CurrentTime({
   render,
 }: PropsWithChildren<OwnProps>): ReactElement {
-  const INITIAL_TIME = dayjs();
   const [currentDate, setCurrentDate] = useState(INITIAL_TIME);
 
   useEffect(() => {
