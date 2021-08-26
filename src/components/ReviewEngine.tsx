@@ -12,9 +12,9 @@ type OwnProps = {
   cards: CardNode[];
   currentDate: dayjs.Dayjs;
   render: (
-    c: Flashcard[],
-    cb: (flashcard: Flashcard, grade: SuperMemoGrade) => void,
-    d: dayjs.Dayjs
+    cards: Flashcard[],
+    onReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void,
+    date: dayjs.Dayjs
   ) => ReactElement;
 };
 

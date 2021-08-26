@@ -21,19 +21,12 @@ const IndexPage = ({ data }) => {
           <ReviewEngine
             cards={cards as CardNode[]}
             currentDate={time}
-            render={(
-              flashcards: Flashcard[],
-              onCardReview: (
-                flashcard: Flashcard,
-                grade: SuperMemoGrade
-              ) => void,
-              date
-            ) => (
+            render={(flashcards, onCardReview, currentDate) => (
               <>
                 <DebugInfo cards={flashcards} />
 
                 <CardViewer cards={flashcards} onCardReview={onCardReview}>
-                  <SessionInfo cards={flashcards} currentDate={date} />
+                  <SessionInfo cards={flashcards} currentDate={currentDate} />
                 </CardViewer>
               </>
             )}
