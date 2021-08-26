@@ -22,14 +22,14 @@ export default function DebugInfo({
     <div
       css={css`
         position: fixed;
-        ${visible ? "bottom: 20px; left: 20px" : "bottom: 0; left: 0"};
+        ${visible ? "top: 20px; right: 20px" : "top: 0; right: 0"};
         background: rgba(255, 255, 255, 0.9);
         padding: 1rem 1.5rem;
         box-shadow: ${visible ? "0 2px 20px 10px rgba(0, 0, 0, 0.25)" : "none"};
         border-radius: ${visible ? "6px" : "0"};
         font-size: small;
         transition: all 0.15s ease-in-out;
-        z-index: 1;
+        z-index: 99;
 
         ul {
           padding-left: 1rem;
@@ -44,8 +44,8 @@ export default function DebugInfo({
         <ul>
           {cards?.map((c, i) => (
             <li key={i}>
-              {c.node.frontmatter.order + 1} | {c.node.id.substr(-5)} |{" "}
-              {dayjs(c.dueDate).toString()}
+              {c.node.frontmatter.order + 1} | {c.node.id.substr(-3)} |{" "}
+              {dayjs(c.dueDate).format("DD/MM/YYYY HH:mm:ss")}
             </li>
           ))}
         </ul>
