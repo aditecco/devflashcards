@@ -13,6 +13,7 @@ import { Flashcard } from "../types";
 import { basicSanitizer, truncate } from "../utils";
 import MaterialIcon from "./MaterialIcon";
 import { SuperMemoGrade } from "supermemo";
+import dayjs from "dayjs";
 
 type OwnProps = {
   card: Flashcard;
@@ -70,8 +71,8 @@ export default function CardWithFlip({
               />
 
               <span className="card-content-debug-info">
-                ID: {id?.slice?.(-5)} &middot; Due date:{" "}
-                {card?.dueDate.toLocaleLowerCase()}
+                ID: {id?.slice?.(-3)} &middot; Due date:{" "}
+                {dayjs(card?.dueDate).format("DD/MM/YYYY HH:mm:ss")}
               </span>
             </CardContent>
 
