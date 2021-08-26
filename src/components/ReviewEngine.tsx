@@ -27,7 +27,28 @@ export default function ReviewEngine({
     rawCards?.map?.(initCard)?.sort?.(sortDates) ?? []
   );
 
-  useEffect(() => {}, [cards]);
+  useEffect(() => {
+    const matches = cards
+      ?.filter?.((c) => {
+        const cardTimestamp = dayjs(c.dueDate).unix();
+
+        return (
+          cardTimestamp > time.initial.unix() &&
+          cardTimestamp === time.current.unix()
+        );
+      })
+      ?.map?.((c) => c.node.id);
+
+    if (matches?.length) {
+      setCards(
+        cards.sort((a, b) => {
+          if (matches.includes(b.node.id)) {
+            return 1;
+          }
+        })
+      );
+    }
+  }, [time, cards]);
 
   // Initializes cards with
   // supermemo's default values
