@@ -42,6 +42,7 @@
 
 ### TODO
 
+- [ ] Remove styled components if not used
 - [ ] define all colors (move to theme)
 - [ ] define fonts
 - [ ] Create custom scrollbar
