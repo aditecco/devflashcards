@@ -13,8 +13,7 @@ type OwnProps = {
   time: { initial: dayjs.Dayjs; current: dayjs.Dayjs };
   render: (
     cards: Flashcard[],
-    onReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void,
-    date: dayjs.Dayjs
+    onReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
   ) => ReactElement;
 };
 
@@ -85,6 +84,11 @@ export default function ReviewEngine({
 
     const dueDate = dayjs(flashcard.dueDate).add(interval, "day").toISOString();
 
+    console.log(
+      "UNIX >>> ",
+      dayjs(flashcard.dueDate).add(interval, "day").unix()
+    );
+
     return { ...flashcard, interval, repetition, efactor, dueDate };
   }
 
@@ -102,5 +106,5 @@ export default function ReviewEngine({
     );
   }
 
-  return render(cards, reviewCard, time.current);
+  return render(cards, reviewCard);
 }
