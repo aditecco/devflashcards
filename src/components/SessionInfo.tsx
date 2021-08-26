@@ -38,7 +38,7 @@ export default function SessionInfo({
   return (
     <div
       css={css`
-        border-bottom: 1px solid ${theme?.colors?.stroke?.[2]};
+        border-top: 1px solid ${theme?.colors?.stroke?.[2]};
         overflow-x: auto;
 
         ul {
@@ -53,6 +53,7 @@ export default function SessionInfo({
 
           &:first-child {
             padding-left: 1rem;
+            min-width: 200px; // TODO
           }
 
           &:last-child {
