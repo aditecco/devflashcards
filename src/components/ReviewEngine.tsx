@@ -57,7 +57,7 @@ export default function ReviewEngine({
       interval: 0,
       repetition: 0,
       efactor: 2.5,
-      dueDate: dayjs().toISOString(),
+      dueDate: time.initial.toISOString(),
     };
   }
 
