@@ -11,13 +11,18 @@ import { CardNode, Flashcard } from "../types";
 type OwnProps = {
   cards: CardNode[];
   currentDate: dayjs.Dayjs;
+  render: (
+    c: Flashcard[],
+    cb: (flashcard: Flashcard, grade: SuperMemoGrade) => void,
+    d: dayjs.Dayjs
+  ) => ReactElement;
 };
 
 export default function ReviewEngine({
   cards: rawCards,
   currentDate,
-  children,
-}: PropsWithChildren<OwnProps>): ReactElement | null {
+  render,
+}: PropsWithChildren<OwnProps>): ReactElement {
   const [cards, setCards] = useState(
     rawCards?.map?.(initCard)?.sort?.(sortDates) ?? []
   );
@@ -76,11 +81,5 @@ export default function ReviewEngine({
     );
   }
 
-  return (
-    children as (
-      c: Flashcard[],
-      cb: (flashcard: Flashcard, grade: SuperMemoGrade) => void,
-      d: dayjs.Dayjs
-    ) => React.ReactElement
-  )(cards, reviewCard, currentDate);
+  return render(cards, reviewCard, currentDate);
 }

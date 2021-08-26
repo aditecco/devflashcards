@@ -12,7 +12,7 @@ type OwnProps = {
 
 export default function CurrentTime({
   render,
-}: PropsWithChildren<OwnProps>): ReactElement | null {
+}: PropsWithChildren<OwnProps>): ReactElement {
   const [currentDate, setCurrentDate] = useState(dayjs());
 
   useEffect(() => {
@@ -21,5 +21,5 @@ export default function CurrentTime({
     return () => clearInterval(timer);
   }, []);
 
-  return <React.Fragment>{render(currentDate)}</React.Fragment>;
+  return render(currentDate);
 }

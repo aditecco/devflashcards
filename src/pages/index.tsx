@@ -18,8 +18,10 @@ const IndexPage = ({ data }) => {
     <Layout>
       <CurrentTime
         render={(time) => (
-          <ReviewEngine cards={cards as CardNode[]} currentDate={time}>
-            {(
+          <ReviewEngine
+            cards={cards as CardNode[]}
+            currentDate={time}
+            render={(
               flashcards: Flashcard[],
               onCardReview: (
                 flashcard: Flashcard,
@@ -35,7 +37,7 @@ const IndexPage = ({ data }) => {
                 </CardViewer>
               </>
             )}
-          </ReviewEngine>
+          />
         )}
       />
     </Layout>
