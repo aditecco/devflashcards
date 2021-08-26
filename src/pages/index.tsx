@@ -3,8 +3,7 @@ import { graphql } from "gatsby";
 import CardViewer from "../components/CardViewer";
 import Layout from "../components/Layout";
 import ReviewEngine from "../components/ReviewEngine";
-import { CardNode, Flashcard } from "../types";
-import { SuperMemoGrade } from "supermemo";
+import { CardNode } from "../types";
 import SessionInfo from "../components/SessionInfo";
 import DebugInfo from "../components/DebugInfo";
 import CurrentTime from "../components/CurrentTime";
@@ -17,17 +16,17 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <CurrentTime
-        render={(time) => (
+        render={(initial, current) => (
           <ReviewEngine
             cards={cards as CardNode[]}
-            currentDate={time}
+            time={{ initial, current }}
             render={(flashcards, onCardReview, currentDate) => (
               <>
-                <DebugInfo cards={flashcards} />
-
                 <CardViewer cards={flashcards} onCardReview={onCardReview}>
                   <SessionInfo cards={flashcards} currentDate={currentDate} />
                 </CardViewer>
+
+                <DebugInfo cards={flashcards} />
               </>
             )}
           />

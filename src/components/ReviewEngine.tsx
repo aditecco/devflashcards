@@ -10,7 +10,7 @@ import { CardNode, Flashcard } from "../types";
 
 type OwnProps = {
   cards: CardNode[];
-  currentDate: dayjs.Dayjs;
+  time: { initial: dayjs.Dayjs; current: dayjs.Dayjs };
   render: (
     cards: Flashcard[],
     onReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void,
@@ -20,7 +20,7 @@ type OwnProps = {
 
 export default function ReviewEngine({
   cards: rawCards,
-  currentDate,
+  time,
   render,
 }: PropsWithChildren<OwnProps>): ReactElement {
   const [cards, setCards] = useState(
@@ -81,5 +81,5 @@ export default function ReviewEngine({
     );
   }
 
-  return render(cards, reviewCard, currentDate);
+  return render(cards, reviewCard, time.current);
 }
