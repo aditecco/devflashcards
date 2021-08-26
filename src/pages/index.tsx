@@ -1,3 +1,7 @@
+/* ---------------------------------
+Home
+--------------------------------- */
+
 import * as React from "react";
 import { graphql } from "gatsby";
 import CardViewer from "../components/CardViewer";
@@ -20,10 +24,10 @@ const IndexPage = ({ data }) => {
           <ReviewEngine
             cards={cards as CardNode[]}
             time={{ initial, current }}
-            render={(flashcards, onCardReview, currentDate) => (
+            render={(flashcards, onCardReview) => (
               <>
                 <CardViewer cards={flashcards} onCardReview={onCardReview}>
-                  <SessionInfo cards={flashcards} currentDate={currentDate} />
+                  <SessionInfo cards={flashcards} time={{ initial, current }} />
                 </CardViewer>
 
                 <DebugInfo cards={flashcards} />
