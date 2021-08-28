@@ -10,5 +10,6 @@ type OwnProps = {
 
 export const Container = styled.div<OwnProps>`
   max-width: ${(props) => (props?.mw ?? 900) + "px"};
+  width: 100%;
   margin: 0 auto;
 `;
