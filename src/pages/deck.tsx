@@ -25,14 +25,13 @@ export default function Deck({
   return (
     <Layout bare>
       <CurrentTime
-        render={(initial, current) => (
+        render={(time) => (
           <ReviewEngine
-            cards={cards as CardNode[]}
-            time={{ initial, current }}
+            {...{ cards, time }}
             render={(flashcards, onCardReview) => (
               <>
                 <CardViewer cards={flashcards} onCardReview={onCardReview}>
-                  <SessionInfo cards={flashcards} time={{ initial, current }} />
+                  <SessionInfo {...{ cards: flashcards, time }} />
                 </CardViewer>
 
                 <DebugInfo cards={flashcards} />
