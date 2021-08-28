@@ -2,16 +2,16 @@
   css-functions
 --------------------------------- */
 
-export function flex(
-  $flow: string,
-  $justify = "center",
-  $align = "center"
-): string {
+type FlexOptions = { flow?: string; justify?: string; align?: string };
+
+export function flex(options?: FlexOptions): string {
+  const { flow, justify, align } = options ?? {};
+
   return `
   display: flex;
-  flex-flow: ${$flow};
-  justify-content: ${$justify};
-  align-items: ${$align};
+  flex-flow: ${flow || "row nowrap"};
+  justify-content: ${justify || "center"};
+  align-items: ${align || "center"};
   `;
 }
 

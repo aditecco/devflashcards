@@ -27,7 +27,7 @@ export default function CardControls({
       className="CardControls"
       css={css`
         width: 100%;
-        ${flex("row nowrap")}
+        ${flex()}
 
         > button {
           flex: 1;
