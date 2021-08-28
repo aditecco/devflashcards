@@ -24,7 +24,7 @@ export default function Card({
       className={"card"}
       css={css`
         background-color: white;
-        border-radius: ${CARD_RADIUS};
+        border-radius: ${theme?.radii?.card};
         box-shadow: ${noShadow ? "" : "0 10px 20px 2px rgba(0,0,0,0.15)"};
         width: ${CARD_WIDTH};
         height: ${CARD_HEIGHT};

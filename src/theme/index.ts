@@ -56,7 +56,9 @@ const theme: Theme = {
   borders: {},
   borderWidths: {},
   borderStyles: {},
-  radii: {},
+  radii: {
+    card: "6px",
+  },
   shadows: {
     [1]: `0 2px 8px rgba(0,0,0,.25)`,
   },
