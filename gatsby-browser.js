@@ -16,6 +16,7 @@ import "@fontsource/lato/400-italic.css";
 import "normalize.css/normalize.css";
 import "prismjs/themes/prism-tomorrow.css";
 import { baseFontStack } from "./src/constants/css-vars";
+import { AnimatePresence } from "framer-motion";
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
@@ -48,7 +49,6 @@ export const wrapRootElement = ({ element }) => (
         }
       `}
     />
-
-    {element}
+    <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
   </ThemeProvider>
 );

@@ -7,6 +7,7 @@ import { PropsWithChildren, ReactElement } from "react";
 import Navbar from "./Navbar";
 import { css } from "@emotion/react";
 import { $navbarHeight } from "../constants/css-vars";
+import { motion } from "framer-motion";
 
 type OwnProps = {
   bare?: boolean;
@@ -17,8 +18,11 @@ export default function Layout({
   children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   return (
-    <div
+    <motion.div
       className={"layout"}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       css={css`
         display: flex;
         flex-direction: column;
@@ -35,6 +39,6 @@ export default function Layout({
       <main>{children}</main>
 
       {!bare && <footer>TODO create a footer</footer>}
-    </div>
+    </motion.div>
   );
 }
