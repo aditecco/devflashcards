@@ -8,6 +8,7 @@ import { Flashcard } from "../types";
 import dayjs from "dayjs";
 import { css, useTheme } from "@emotion/react";
 import { Container } from "./Container";
+import { SmallHeading } from "./SmallHeading";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -67,31 +68,23 @@ export default function SessionInfo({
             //padding-left: 1rem;
             border-left: 1px solid ${theme?.colors?.stroke?.[2]};
           }
-
-          h6 {
-            margin: 0 0 0.5rem;
-            font-size: 0.7rem;
-            font-weight: normal;
-            color: ${theme?.colors?.typography?.[2]};
-            text-transform: uppercase;
-          }
         }
       `}
     >
       <Container>
         <ul>
           {/*<li>*/}
-          {/*  <h6>Current session</h6>*/}
+          {/*  <SmallHeading>Current session</SmallHeading>*/}
           {/*  <span>{currentDate?.format("DD/MM/YYYY HH:mm:ss")}</span>*/}
           {/*</li>*/}
 
           <li>
-            <h6>Session start</h6>
+            <SmallHeading>Session start</SmallHeading>
             <span>{initDate?.format("DD/MM/YYYY HH:mm:ss")}</span>
           </li>
 
           <li>
-            <h6>Due today</h6>
+            <SmallHeading>Due today</SmallHeading>
             <span>
               {cards?.filter?.(computeTodaysCards)?.length ||
                 "No cards for today"}
@@ -99,22 +92,22 @@ export default function SessionInfo({
           </li>
 
           <li>
-            <h6>Up next</h6>
+            <SmallHeading>Up next</SmallHeading>
             <span>{cards?.filter?.(computeNextUpCards)?.length || "-"}</span>
           </li>
 
           <li>
-            <h6>Correct</h6>
+            <SmallHeading>Correct</SmallHeading>
             <span>-</span>
           </li>
 
           <li>
-            <h6>Incorrect</h6>
+            <SmallHeading>Incorrect</SmallHeading>
             <span>-</span>
           </li>
 
           <li>
-            <h6>Passed</h6>
+            <SmallHeading>Passed</SmallHeading>
             <span>-</span>
           </li>
         </ul>

@@ -14,6 +14,7 @@ import { basicSanitizer, truncate } from "../utils";
 import MaterialIcon from "./MaterialIcon";
 import { SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
+import { SmallHeading } from "./SmallHeading";
 
 type OwnProps = {
   card: Flashcard;
@@ -130,6 +131,11 @@ export default function CardWithFlip({
             </CardContent>
 
             <CardFooter>
+              <div className="card-footer-header">
+                <SmallHeading>Rate your answer</SmallHeading>
+                <MaterialIcon icon={"help_outline"} />
+              </div>
+
               <CardControls>
                 <button
                   className="card-controls-button"
