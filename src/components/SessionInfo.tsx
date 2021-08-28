@@ -50,6 +50,8 @@ export default function SessionInfo({
 
         li {
           padding: 1rem 1.5rem;
+          font-size: 0.9rem;
+          white-space: nowrap;
 
           &:first-child {
             padding-left: 1rem;

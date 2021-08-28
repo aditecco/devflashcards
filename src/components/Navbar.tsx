@@ -23,9 +23,10 @@ export default function Navbar({}: PropsWithChildren<OwnProps>): ReactElement | 
         right: 0;
         padding: 0.9rem 1rem;
         color: ${theme.colors.typography[1]};
-        box-shadow: ${theme.shadows[1]};
-        z-index: 1;
+        //box-shadow: ${theme.shadows[1]};
+        //z-index: 1;
         background-color: white;
+        border-bottom: 1px solid ${theme?.colors?.stroke?.[2]};
 
         h1 {
           font-size: inherit;
