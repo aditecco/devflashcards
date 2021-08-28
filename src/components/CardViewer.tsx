@@ -40,7 +40,7 @@ export default function CardViewer({
         .nav-controls {
           ${flex()};
           padding: 0 1rem;
-          margin-top: 1rem;
+          margin-top: 0.8rem;
         }
 
         .card-area {
