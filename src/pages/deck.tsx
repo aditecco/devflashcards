@@ -12,7 +12,6 @@ import SessionInfo from "../components/SessionInfo";
 import DebugInfo from "../components/DebugInfo";
 import CurrentTime from "../components/CurrentTime";
 import { graphql } from "gatsby";
-import Logo from "../components/Logo";
 
 type OwnProps = { data };
 
@@ -33,7 +32,6 @@ export default function Deck({
             render={(flashcards, onCardReview) => (
               <>
                 <CardViewer cards={flashcards} onCardReview={onCardReview}>
-                  {/*<Logo />*/}
                   <SessionInfo cards={flashcards} time={{ initial, current }} />
                 </CardViewer>
 
