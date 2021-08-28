@@ -2,7 +2,9 @@
 types
 --------------------------------- */
 
-import { SuperMemoGrade } from "supermemo";
+export type GraphQLnode<T> = {
+  node: T;
+};
 
 export type CardFrontmatter = {
   order?: number;
@@ -14,30 +16,10 @@ export type CardFrontmatter = {
   answer?: string;
 };
 
-export type GraphQLnode<T> = {
-  node: T;
-};
-
-export type _Card = {
+export type Card = {
   id?: string;
   html?: string;
   frontmatter?: CardFrontmatter;
 };
 
-export type CardNode = GraphQLnode<_Card>;
-
-export type SuperMemoDefaults = {
-  interval: number;
-  repetition: number;
-  efactor: number;
-  dueDate: string;
-};
-
-export type Flashcard = CardNode & SuperMemoDefaults;
-
-export type SupermemoProcessor = (
-  flashcard: Flashcard,
-  grade: SuperMemoGrade
-) => Flashcard;
-
-export type ReturnVoid = () => void;
+export type CardNode = GraphQLnode<Card>;
