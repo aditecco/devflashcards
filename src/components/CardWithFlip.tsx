@@ -82,7 +82,7 @@ export default function CardWithFlip({
                 <button
                   className="card-controls-button"
                   type="button"
-                  onClick={(e) => {
+                  onClick={() => {
                     onCardReview(card, 0);
                   }}
                 >
@@ -133,7 +133,8 @@ export default function CardWithFlip({
             <CardFooter>
               <div className="card-footer-header">
                 <SmallHeading>Rate your answer</SmallHeading>
-                <MaterialIcon icon={"help_outline"} />
+                {/* TODO on click, add popover with rating notes */}
+                <MaterialIcon icon={"help"} />
               </div>
 
               <CardControls>
@@ -141,7 +142,7 @@ export default function CardWithFlip({
                   className="card-controls-button"
                   type="button"
                   onClick={() => onCardReview(card, 5)}
-                  title={"Perfect response."}
+                  title={"Perfect response"}
                 >
                   5
                 </button>
@@ -150,7 +151,7 @@ export default function CardWithFlip({
                   className="card-controls-button"
                   type="button"
                   onClick={() => onCardReview(card, 4)}
-                  title={"Correct response after a hesitation."}
+                  title={"Correct response after a hesitation"}
                 >
                   4
                 </button>
@@ -159,7 +160,7 @@ export default function CardWithFlip({
                   className="card-controls-button"
                   type="button"
                   onClick={() => onCardReview(card, 3)}
-                  title={"Correct response recalled with serious difficulty."}
+                  title={"Correct response recalled with serious difficulty"}
                 >
                   3
                 </button>
@@ -169,7 +170,7 @@ export default function CardWithFlip({
                   type="button"
                   onClick={() => onCardReview(card, 2)}
                   title={
-                    "Incorrect response; where the correct one seemed easy to recall."
+                    "Incorrect response; where the correct one seemed easy to recall"
                   }
                 >
                   2
@@ -179,7 +180,7 @@ export default function CardWithFlip({
                   className="card-controls-button"
                   type="button"
                   onClick={() => onCardReview(card, 1)}
-                  title={"Incorrect response; the correct one remembered."}
+                  title={"Incorrect response; the correct one remembered"}
                 >
                   1
                 </button>
