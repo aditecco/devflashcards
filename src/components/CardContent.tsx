@@ -161,28 +161,6 @@ export default function CardContent({
             justify-content: space-between;
             align-items: center;
 
-            button {
-              padding: 0.5rem 1rem;
-              border-radius: 4px;
-              background: none;
-              border: 2px solid ${theme.colors.utility.offWhite};
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              color: ${theme.colors.typography[3]};
-
-              &:hover {
-                color: ${theme.colors.utility.black};
-                border: 2px solid ${theme.colors.utility.black};
-              }
-
-              > .material-icons {
-                margin-right: 6px;
-                margin-top: 2px;
-                font-size: 1.25rem;
-              }
-            }
-
             &-answer-wrapper {
               display: inline-block;
               color: ${theme.colors.accent[1]};

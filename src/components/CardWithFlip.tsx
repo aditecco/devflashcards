@@ -15,6 +15,7 @@ import MaterialIcon from "./MaterialIcon";
 import { SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
 import { SmallHeading } from "./SmallHeading";
+import { Button } from "./Button";
 
 type OwnProps = {
   card: Flashcard;
@@ -114,14 +115,14 @@ export default function CardWithFlip({
                   </span>
                 </h4>
 
-                <button
+                <Button
                   className="card-controls-button"
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
                 >
                   <MaterialIcon icon={"arrow_back"} />
                   back
-                </button>
+                </Button>
               </header>
 
               <main
