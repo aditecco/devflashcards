@@ -3,63 +3,17 @@ Home
 --------------------------------- */
 
 import * as React from "react";
-import { graphql } from "gatsby";
-import CardViewer from "../components/CardViewer";
 import Layout from "../components/Layout";
-import ReviewEngine from "../components/ReviewEngine";
-import { CardNode } from "../types";
-import SessionInfo from "../components/SessionInfo";
-import DebugInfo from "../components/DebugInfo";
-import CurrentTime from "../components/CurrentTime";
+import { Link } from "gatsby";
 
-const IndexPage = ({ data }) => {
-  const {
-    allMarkdownRemark: { edges: cards },
-  } = data ?? {};
-
+const Home = () => {
   return (
     <Layout>
-      <CurrentTime
-        render={(initial, current) => (
-          <ReviewEngine
-            cards={cards as CardNode[]}
-            time={{ initial, current }}
-            render={(flashcards, onCardReview) => (
-              <>
-                <CardViewer cards={flashcards} onCardReview={onCardReview}>
-                  <SessionInfo cards={flashcards} time={{ initial, current }} />
-                </CardViewer>
-
-                <DebugInfo cards={flashcards} />
-              </>
-            )}
-          />
-        )}
-      />
+      <div>TODO Choose a deck</div>
+      {/* TODO should be: deck/<deck name or ID>/ */}
+      <Link to={"/deck"}>Go to default deck</Link>
     </Layout>
   );
 };
 
-export default IndexPage;
-
-export const query = graphql`
-  {
-    allMarkdownRemark(sort: { fields: frontmatter___order }) {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            order
-            timestamp
-            deck
-            topic
-            contentSource
-            title
-            answer
-          }
-        }
-      }
-    }
-  }
-`;
+export default Home;
