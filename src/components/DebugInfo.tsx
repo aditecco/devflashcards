@@ -47,7 +47,7 @@ export default function DebugInfo({
         <ul>
           {cards?.map((c, i) => (
             <li key={i}>
-              {c.node.frontmatter.order + 1} | {c.node.id.substr(-3)} |{" "}
+              {c?.frontmatter?.order + 1} | {c?.id?.substr?.(-3)} |{" "}
               {dayjs(c.dueDate).format("DD/MM/YYYY HH:mm:ss")}
             </li>
           ))}

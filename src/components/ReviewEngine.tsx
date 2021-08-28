@@ -12,7 +12,7 @@ type OwnProps = {
   cards: CardNode[];
   time: TimeObject;
   render: (
-    cards: Flashcard[],
+    flashcards: Flashcard[],
     onReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
   ) => ReactElement;
 };
@@ -23,7 +23,7 @@ export default function ReviewEngine({
   render,
 }: PropsWithChildren<OwnProps>): ReactElement {
   const [cards, setCards] = useState(
-    rawCards?.map?.(initCard)?.sort?.(sortDates) ?? []
+    rawCards?.map?.(initCards)?.sort?.(sortDates) ?? []
   );
 
   useEffect(() => {
@@ -36,12 +36,12 @@ export default function ReviewEngine({
           cardTimestamp === time.current.unix()
         );
       })
-      ?.map?.((c) => c.node.id);
+      ?.map?.((c) => c.id);
 
     if (matches?.length) {
       setCards(
         cards.sort((a, b) => {
-          if (matches.includes(b.node.id)) {
+          if (matches.includes(b.id)) {
             return 1;
           }
         })
@@ -51,9 +51,9 @@ export default function ReviewEngine({
 
   // Initializes cards with
   // supermemo's default values
-  function initCard(card: CardNode): Flashcard {
+  function initCards(card: CardNode): Flashcard {
     return {
-      ...card,
+      ...card?.node,
       interval: 0,
       repetition: 0,
       efactor: 2.5,
@@ -95,7 +95,7 @@ export default function ReviewEngine({
   // Replaces a card in the card pool when the user reviews it
   // via the card buttons.
   function reviewCard(flashcard: Flashcard, grade: SuperMemoGrade) {
-    const i = cards.findIndex((c) => c?.node?.id === flashcard?.node?.id);
+    const i = cards.findIndex((c) => c?.id === flashcard?.id);
 
     setCards((cards) =>
       [
