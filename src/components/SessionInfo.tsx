@@ -7,6 +7,7 @@ import { PropsWithChildren, ReactElement, useEffect, useState } from "react";
 import { Flashcard } from "../types";
 import dayjs from "dayjs";
 import { css, useTheme } from "@emotion/react";
+import { Container } from "./Container";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -77,45 +78,47 @@ export default function SessionInfo({
         }
       `}
     >
-      <ul>
-        {/*<li>*/}
-        {/*  <h6>Current session</h6>*/}
-        {/*  <span>{currentDate?.format("DD/MM/YYYY HH:mm:ss")}</span>*/}
-        {/*</li>*/}
+      <Container>
+        <ul>
+          {/*<li>*/}
+          {/*  <h6>Current session</h6>*/}
+          {/*  <span>{currentDate?.format("DD/MM/YYYY HH:mm:ss")}</span>*/}
+          {/*</li>*/}
 
-        <li>
-          <h6>Session start</h6>
-          <span>{initDate?.format("DD/MM/YYYY HH:mm:ss")}</span>
-        </li>
+          <li>
+            <h6>Session start</h6>
+            <span>{initDate?.format("DD/MM/YYYY HH:mm:ss")}</span>
+          </li>
 
-        <li>
-          <h6>Due today</h6>
-          <span>
-            {cards?.filter?.(computeTodaysCards)?.length ||
-              "No cards for today"}
-          </span>
-        </li>
+          <li>
+            <h6>Due today</h6>
+            <span>
+              {cards?.filter?.(computeTodaysCards)?.length ||
+                "No cards for today"}
+            </span>
+          </li>
 
-        <li>
-          <h6>Next up</h6>
-          <span>{cards?.filter?.(computeNextUpCards)?.length || "-"}</span>
-        </li>
+          <li>
+            <h6>Up next</h6>
+            <span>{cards?.filter?.(computeNextUpCards)?.length || "-"}</span>
+          </li>
 
-        <li>
-          <h6>Correct</h6>
-          <span></span>
-        </li>
+          <li>
+            <h6>Correct</h6>
+            <span>-</span>
+          </li>
 
-        <li>
-          <h6>Incorrect</h6>
-          <span></span>
-        </li>
+          <li>
+            <h6>Incorrect</h6>
+            <span>-</span>
+          </li>
 
-        <li>
-          <h6>Passed</h6>
-          <span></span>
-        </li>
-      </ul>
+          <li>
+            <h6>Passed</h6>
+            <span>-</span>
+          </li>
+        </ul>
+      </Container>
     </div>
   );
 }

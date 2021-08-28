@@ -5,8 +5,8 @@ Navbar
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css, useTheme } from "@emotion/react";
-import { rem } from "../lib/css-functions";
 import MaterialIcon from "./MaterialIcon";
+import { Container } from "./Container";
 
 type OwnProps = {};
 
@@ -41,10 +41,12 @@ export default function Navbar({}: PropsWithChildren<OwnProps>): ReactElement | 
         }
       `}
     >
-      <h1>
-        <MaterialIcon icon={"graphic_eq"} />
-        <span className="navbar-logotype">DevFlashcards</span>
-      </h1>
+      <Container>
+        <h1>
+          <MaterialIcon icon={"graphic_eq"} />
+          <span className="navbar-logotype">DevFlashcards</span>
+        </h1>
+      </Container>
     </nav>
   );
 }
