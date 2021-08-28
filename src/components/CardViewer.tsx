@@ -12,9 +12,10 @@ import { Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
 import { DRAG_TRIGGER } from "../constants/constants";
 import { flex } from "../lib/css-functions";
-import { Link } from "gatsby";
+import { navigate } from "gatsby";
 import MaterialIcon from "./MaterialIcon";
 import { Container } from "./Container";
+import { Button } from "./Button";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -38,6 +39,11 @@ export default function CardViewer({
         height: 100vh;
         position: relative;
 
+        .nav-controls {
+          padding: 0 1rem;
+          margin-top: 1rem;
+        }
+
         .card-area {
           ${flex()};
           flex-grow: 1;
@@ -55,10 +61,10 @@ export default function CardViewer({
         }
       `}
     >
-      <Container>
-        <Link to={"/"}>
+      <Container className={"nav-controls"}>
+        <Button onClick={() => navigate("/")}>
           <MaterialIcon icon={"arrow_back"} /> Back
-        </Link>
+        </Button>
       </Container>
 
       <div className="card-area">
