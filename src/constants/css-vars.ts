@@ -53,8 +53,8 @@ export const $pageHeaderHeight = "79px;";
 export const $searchHeight = "72px;";
 export const $wrapper = "780px";
 export const $wrapperSm = "425px";
-export const CARD_HEIGHT = "500px;";
-export const CARD_WIDTH = "340px;";
+export const CARD_HEIGHT = "480px;";
+export const CARD_WIDTH = "320px;";
 export const CARD_MAX_WIDTH = "340px;";
 export const CARD_RATIO =
   Number(CARD_WIDTH.match(/\d*/)) / Number(CARD_HEIGHT.match(/\d*/));
