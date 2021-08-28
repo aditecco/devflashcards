@@ -168,7 +168,7 @@ export default function CardContent({
               width: 30px;
               height: 30px;
               border: 2px solid ${theme.colors.accent[1]};
-              border-radius: 50%;
+              border-radius: 6px;
               text-align: center;
               margin-left: 2px;
               letter-spacing: 1px;
