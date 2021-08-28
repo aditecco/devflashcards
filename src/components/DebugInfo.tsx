@@ -8,11 +8,13 @@ import { Flashcard } from "../types";
 import dayjs from "dayjs";
 import { css } from "@emotion/react";
 import { Button } from "./Button";
+import MaterialIcon from "./MaterialIcon";
 
 type OwnProps = {
   cards: Flashcard[];
 };
 
+// TODO extract a UI component from this
 export default function DebugInfo({
   cards,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
@@ -22,9 +24,9 @@ export default function DebugInfo({
     <div
       css={css`
         position: fixed;
-        ${visible ? "top: 20px; right: 20px" : "top: 0; right: 0"};
-        background: rgba(255, 255, 255, 0.9);
-        padding: 1rem 1.5rem;
+        ${visible ? "top: 20px; right: 20px" : "top: 5px; right: 5px"};
+        background: ${visible ? "rgba(255, 255, 255, 0.9)" : "none"};
+        padding: ${visible ? "1rem 1.5rem" : 0};
         box-shadow: ${visible ? "0 2px 20px 10px rgba(0, 0, 0, 0.25)" : "none"};
         border-radius: ${visible ? "6px" : "0"};
         font-size: small;
@@ -36,6 +38,7 @@ export default function DebugInfo({
         }
 
         button {
+          ${!visible ? "padding: .25rem" : ""};
           margin-top: ${visible ? "1.5rem" : "0"};
         }
       `}
@@ -52,7 +55,11 @@ export default function DebugInfo({
       )}
 
       <Button onClick={() => setVisible((v) => !v)}>
-        Show/Hide debug info
+        {visible ? (
+          "Show/Hide debug info"
+        ) : (
+          <MaterialIcon icon={"add"} style={{ margin: 0 }} />
+        )}
       </Button>
     </div>
   );
