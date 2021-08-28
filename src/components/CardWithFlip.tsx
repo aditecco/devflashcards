@@ -93,7 +93,7 @@ export default function CardWithFlip({
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
                 >
-                  Check answer
+                  Answer
                 </button>
               </CardControls>
             </CardFooter>

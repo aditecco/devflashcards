@@ -6,7 +6,7 @@ import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css, useTheme } from "@emotion/react";
 import { rem } from "../lib/css-functions";
-import { $backgroundLight, $font } from "../constants/css-vars";
+import { $font, cardContentMetaHeight } from "../constants/css-vars";
 import classNames from "classnames";
 
 type OwnProps = {
@@ -24,6 +24,7 @@ export default function CardContent({
       className={classNames(["card-content", back && "card-content--back"])}
       css={css`
         overflow-y: auto;
+        position: relative;
 
         > *:not(.card-content-main) {
           padding: 0 1rem;
@@ -38,6 +39,14 @@ export default function CardContent({
           justify-content: space-between;
           font-family: ${theme?.fonts?.lato};
           color: ${theme?.colors?.typography?.[2]};
+          position: fixed;
+          background: white;
+          left: 0;
+          right: 0;
+          top: 0;
+          z-index: 1;
+          border-top-left-radius: ${theme?.radii?.card};
+          border-top-right-radius: ${theme?.radii?.card};
         }
 
         .card-content-meta-item {
@@ -50,6 +59,7 @@ export default function CardContent({
         }
 
         .card-content-title {
+          margin-top: ${cardContentMetaHeight}px;
           padding: ${rem(22)} 1rem;
           border-left: 4px solid ${theme?.colors?.accent?.["1"]};
 

@@ -60,6 +60,7 @@ export const CARD_RATIO =
   Number(CARD_WIDTH.match(/\d*/)) / Number(CARD_HEIGHT.match(/\d*/));
 export const CARD_RADIUS = "10px";
 export const mediaHeight = "400px;";
+export const cardContentMetaHeight = 42;
 
 // FX
 export const $border = "1px solid rgba($flat-gray-2, 0.5)";
