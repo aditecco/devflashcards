@@ -49,41 +49,41 @@ export default function ReviewEngine({
     }
   }, [time, cards]);
 
-  // Initializes cards with
-  // supermemo's default values
+  // Initializes cards with supermemo's default values
   function initCards(card: CardNode): Flashcard {
     return {
       ...card?.node,
       interval: 0,
       repetition: 0,
       efactor: 2.5,
-      dueDate: time.initial.toISOString(),
+      dueDate: time.initial.toISOString(), // TODO keep it as unix, convert to string only for parsing
     };
   }
 
-  //
-  function sortDates(a, b) {
-    const x = dayjs(a.dueDate).unix();
-    const y = dayjs(b.dueDate).unix();
+  // Sorts cards by date
+  function sortDates(card: Flashcard, nextCard: Flashcard) {
+    const date = dayjs(card.dueDate).unix();
+    const nextDate = dayjs(nextCard.dueDate).unix();
 
-    if (x > y) {
+    if (date > nextDate) {
       return 1;
     }
 
-    if (x < y) {
+    if (date < nextDate) {
       return -1;
     }
 
     return 0;
   }
 
-  // Passes cards through the algo and updates relevant values
-  // based on the given grade.
+  // Passes cards through the algo and updates
+  // relevant values based on the given grade.
   function practice(flashcard: Flashcard, grade: SuperMemoGrade): Flashcard {
     const { interval, repetition, efactor } = supermemo(flashcard, grade);
 
     const dueDate = dayjs(flashcard.dueDate).add(interval, "day").toISOString();
 
+    // TODO remove
     console.log(
       "UNIX >>> ",
       dayjs(flashcard.dueDate).add(interval, "day").unix()
@@ -92,8 +92,8 @@ export default function ReviewEngine({
     return { ...flashcard, interval, repetition, efactor, dueDate };
   }
 
-  // Replaces a card in the card pool when the user reviews it
-  // via the card buttons.
+  // Replaces a card in the card pool when
+  // the user  reviews it via the card buttons.
   function reviewCard(flashcard: Flashcard, grade: SuperMemoGrade) {
     const i = cards.findIndex((c) => c?.id === flashcard?.id);
 
