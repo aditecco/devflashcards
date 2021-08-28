@@ -30,18 +30,16 @@ export default function CardWithFlip({
   ...cardProps
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const {
-    node: {
-      id,
-      html,
-      frontmatter: {
-        order,
-        timestamp,
-        topic,
-        deck,
-        contentSource,
-        title,
-        answer,
-      },
+    id,
+    html,
+    frontmatter: {
+      order,
+      timestamp,
+      topic,
+      deck,
+      contentSource,
+      title,
+      answer,
     },
   } = card ?? {};
 
