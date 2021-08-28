@@ -7,10 +7,14 @@ import { PropsWithChildren, ReactElement, useRef } from "react";
 import CardWithFlip from "./CardWithFlip";
 import { css } from "@emotion/react";
 import { motion } from "framer-motion";
-import { $navbarHeight, CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
+import { CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
 import { Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
 import { DRAG_TRIGGER } from "../constants/constants";
+import { flex } from "../lib/css-functions";
+import { Link } from "gatsby";
+import MaterialIcon from "./MaterialIcon";
+import { Container } from "./Container";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -28,18 +32,15 @@ export default function CardViewer({
     <div
       className="card-viewer"
       css={css`
-        background: radial-gradient(at center, white, whitesmoke);
-        height: calc(100vh - ${$navbarHeight});
-        position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        background: radial-gradient(at center, white, whitesmoke);
+        height: 100vh;
+        position: relative;
 
         .card-area {
+          ${flex()};
           flex-grow: 1;
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
 
         .card-container {
@@ -54,6 +55,12 @@ export default function CardViewer({
         }
       `}
     >
+      <Container>
+        <Link to={"/"}>
+          <MaterialIcon icon={"arrow_back"} /> Back
+        </Link>
+      </Container>
+
       <div className="card-area">
         <motion.div className="card-container" ref={dragBoundaries}>
           {cards?.map?.((card, i, cards) => {
