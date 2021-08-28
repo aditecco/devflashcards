@@ -8,23 +8,33 @@ import Navbar from "./Navbar";
 import { css } from "@emotion/react";
 import { $navbarHeight } from "../constants/css-vars";
 
-type OwnProps = {};
+type OwnProps = {
+  bare?: boolean;
+};
 
 export default function Layout({
+  bare,
   children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   return (
     <div
       className={"layout"}
       css={css`
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
         > main {
-          margin-top: ${$navbarHeight};
+          ${!bare ? "margin-top: " + $navbarHeight + "px" : ""};
+          flex-grow: 1;
         }
       `}
     >
-      <Navbar />
+      {!bare && <Navbar />}
 
       <main>{children}</main>
+
+      {!bare && <footer>TODO create a footer</footer>}
     </div>
   );
 }
