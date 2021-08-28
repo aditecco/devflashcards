@@ -5,9 +5,10 @@ CurrentTime
 import * as React from "react";
 import { PropsWithChildren, ReactElement, useEffect, useState } from "react";
 import dayjs from "dayjs";
+import { TimeObject } from "../types";
 
 type OwnProps = {
-  render: (t0: dayjs.Dayjs, t: dayjs.Dayjs) => ReactElement;
+  render: (t: TimeObject) => ReactElement;
 };
 
 // Session start
@@ -24,5 +25,5 @@ export default function CurrentTime({
     return () => clearInterval(timer);
   }, []);
 
-  return render(INITIAL_TIME, currentDate);
+  return render({ initial: INITIAL_TIME, current: currentDate });
 }
