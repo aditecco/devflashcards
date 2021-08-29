@@ -81,13 +81,10 @@ export default function ReviewEngine({
   function practice(flashcard: Flashcard, grade: SuperMemoGrade): Flashcard {
     const { interval, repetition, efactor } = supermemo(flashcard, grade);
 
-    const dueDate = dayjs(flashcard.dueDate).add(interval, "day").toISOString();
+    const dueDate = dayjs().add(interval, "day").toISOString();
 
     // TODO remove
-    console.log(
-      "UNIX >>> ",
-      dayjs(flashcard.dueDate).add(interval, "day").unix()
-    );
+    console.log("UNIX >>> ", dayjs().add(interval, "day").unix());
 
     return { ...flashcard, interval, repetition, efactor, dueDate };
   }
