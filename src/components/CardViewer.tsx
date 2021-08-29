@@ -5,7 +5,7 @@ CardViewer
 import * as React from "react";
 import { PropsWithChildren, ReactElement, useRef } from "react";
 import CardWithFlip from "./CardWithFlip";
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
 import { motion } from "framer-motion";
 import { CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
 import { Flashcard } from "../types";
@@ -26,6 +26,7 @@ export default function CardViewer({
   children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const dragBoundaries = useRef(null);
+  const theme = useTheme();
 
   return (
     <div
@@ -39,13 +40,13 @@ export default function CardViewer({
 
         .nav-controls {
           ${flex()};
-          padding: 0 1rem;
-          margin-top: 0.8rem;
+          padding: 0.8rem 1rem;
         }
 
         .card-area {
           ${flex()};
           flex-grow: 1;
+          border-top: 1px solid ${theme?.colors?.stroke?.[2]};
         }
 
         .card-container {
