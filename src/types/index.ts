@@ -4,7 +4,7 @@ types
 
 import dayjs from "dayjs";
 import { SuperMemoGrade } from "supermemo";
-import { Card, CardNode } from "./gatsby-support";
+import { Card } from "./gatsby-support";
 
 export * from "./theme";
 export * from "./gatsby-support";
