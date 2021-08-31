@@ -1,6 +1,6 @@
 # DevFlashCards (WIP)
 
-![](./.preview/dfc-01.png)
+![](./.preview/dfc-02.png)
 
 A flashcards app for developers!
 
