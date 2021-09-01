@@ -46,9 +46,10 @@
 - [ ] define all colors (move to theme)
 - [ ] define fonts
 - [ ] Create custom scrollbar
+- [x] Add fullscreen functionality
 - [x] Implement answer options as form with radio buttons
   - [ ] when submitting the form, the card flips
-- [ ] Fix theme TS issues
+- [x] Fix theme TS issues
 - [x] Create POC
 - [x] Implement Card layout
 - [x] Find data source

@@ -14,6 +14,9 @@ import { DRAG_TRIGGER } from "../constants/constants";
 import { flex } from "../lib/css-functions";
 import { Container } from "./Container";
 import Logo from "./Logo";
+import screenfull from "screenfull";
+import MaterialIcon from "./MaterialIcon";
+import { Button } from "./Button";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -27,10 +30,21 @@ export default function CardViewer({
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const dragBoundaries = useRef(null);
   const theme = useTheme();
+  const cardViewerRef = useRef(null);
+
+  function handleFullScreen(el: HTMLDivElement | null) {
+    if (el && screenfull.isEnabled) {
+      screenfull
+        .toggle(el)
+        .then() // TODO show a notif
+        .catch((err: Error) => console.error(err?.message, err));
+    }
+  }
 
   return (
     <div
       className="card-viewer"
+      ref={cardViewerRef}
       css={css`
         display: flex;
         flex-direction: column;
@@ -40,7 +54,18 @@ export default function CardViewer({
 
         .nav-controls {
           ${flex()};
+          position: relative;
           padding: 0.8rem 1rem;
+
+          button {
+            position: absolute;
+            right: 0;
+            padding: 0.25rem;
+
+            .material-icons {
+              margin: 0;
+            }
+          }
         }
 
         .card-area {
@@ -63,6 +88,13 @@ export default function CardViewer({
     >
       <Container className={"nav-controls"}>
         <Logo />
+
+        <Button
+          onClick={() => handleFullScreen(cardViewerRef?.current)}
+          title={"Go full-screen"}
+        >
+          <MaterialIcon icon={"fullscreen"} />
+        </Button>
       </Container>
 
       <div className="card-area">

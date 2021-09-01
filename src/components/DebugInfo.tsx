@@ -24,7 +24,7 @@ export default function DebugInfo({
     <div
       css={css`
         position: fixed;
-        ${visible ? "top: 20px; right: 20px" : "top: 5px; right: 5px"};
+        ${visible ? "bottom: 20px; right: 20px" : "bottom: 5px; right: 5px"};
         background: ${visible ? "rgba(255, 255, 255, 0.9)" : "none"};
         padding: ${visible ? "1rem 1.5rem" : 0};
         box-shadow: ${visible ? "0 2px 20px 10px rgba(0, 0, 0, 0.25)" : "none"};
