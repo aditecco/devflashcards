@@ -59,7 +59,6 @@ export default function CardContent({
         }
 
         .card-content-title {
-          margin-top: ${cardContentMetaHeight}px;
           padding: ${rem(22)} 1rem;
           border-left: 4px solid ${theme?.colors?.accent?.["1"]};
 
@@ -156,6 +155,17 @@ export default function CardContent({
         }
 
         .card-content-options {
+        }
+
+        // ad-hoc styles for the card's
+        // front only
+        &:not(.card-content--back) {
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+
+          .card-content-title {
+            margin-top: ${cardContentMetaHeight}px;
+          }
         }
 
         // different styles for
