@@ -89,12 +89,14 @@ export default function CardViewer({
       <Container className={"nav-controls"}>
         <Logo />
 
-        <Button
-          onClick={() => handleFullScreen(cardViewerRef?.current)}
-          title={"Go full-screen"}
-        >
-          <MaterialIcon icon={"fullscreen"} />
-        </Button>
+        {screenfull.isEnabled && (
+          <Button
+            onClick={() => handleFullScreen(cardViewerRef?.current)}
+            title={"Go full-screen"}
+          >
+            <MaterialIcon icon={"fullscreen"} />
+          </Button>
+        )}
       </Container>
 
       <div className="card-area">
