@@ -92,7 +92,7 @@ export default function CardViewer({
         {screenfull.isEnabled && (
           <Button
             onClick={() => handleFullScreen(cardViewerRef?.current)}
-            title={"Go full-screen"}
+            title={"Toggle full-screen"}
           >
             <MaterialIcon icon={"fullscreen"} />
           </Button>

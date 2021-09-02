@@ -85,7 +85,7 @@ export default function CardWithFlip({
                     onCardReview(card, 0);
                   }}
                 >
-                  Pass
+                  Snooze
                 </button>
 
                 <button
@@ -93,7 +93,7 @@ export default function CardWithFlip({
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
                 >
-                  Answer
+                  Review
                 </button>
               </CardControls>
             </CardFooter>
