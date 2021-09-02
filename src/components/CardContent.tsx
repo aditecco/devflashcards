@@ -181,17 +181,25 @@ export default function CardContent({
             justify-content: space-between;
             align-items: center;
 
+            h4 {
+              font-size: 1.25rem;
+            }
+
             &-answer-wrapper {
-              display: inline-block;
+              // display: inline-block;
+              // padding: 0 2px;
+              // width: 30px;
+              // height: 30px;
+              // border: 2px solid ${theme.colors.accent[1]};
+              // border-radius: 6px;
+              // text-align: center;
+              // margin-left: 2px;
+              // letter-spacing: 1px;
+              position: relative;
+              top: -1px;
               color: ${theme.colors.accent[1]};
-              padding: 0 2px;
-              width: 30px;
-              height: 30px;
-              border: 2px solid ${theme.colors.accent[1]};
-              border-radius: 6px;
-              text-align: center;
-              margin-left: 2px;
-              letter-spacing: 1px;
+              font-size: 1.25rem;
+              vertical-align: text-bottom;
             }
           }
 

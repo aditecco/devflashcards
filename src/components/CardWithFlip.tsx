@@ -117,6 +117,7 @@ export default function CardWithFlip({
                   className="card-controls-button"
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
+                  style={{ border: 0, padding: 0 }}
                 >
                   <MaterialIcon icon={"arrow_back"} />
                   Back
