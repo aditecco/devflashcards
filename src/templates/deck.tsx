@@ -5,13 +5,12 @@ Deck
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import Layout from "../components/Layout";
-import ReviewEngine from "../components/ReviewEngine";
-import { CardNode } from "../types";
-import CardViewer from "../components/CardViewer";
-import SessionInfo from "../components/SessionInfo";
-import DebugInfo from "../components/DebugInfo";
-import CurrentTime from "../components/CurrentTime";
 import { graphql } from "gatsby";
+import CardViewer from "../components/CardViewer";
+import CurrentTime from "../components/CurrentTime";
+import SessionInfo from "../components/SessionInfo";
+import ReviewEngine from "../components/ReviewEngine";
+import DebugInfo from "../components/DebugInfo";
 
 type OwnProps = { data };
 
@@ -44,9 +43,14 @@ export default function Deck({
   );
 }
 
+// `$name` is forwarded from gatsby-node's context
 export const query = graphql`
-  {
-    allMarkdownRemark(sort: { fields: frontmatter___order }) {
+  query ($name: String!) {
+    allMarkdownRemark(
+      filter: { frontmatter: { deck: { eq: $name } } }
+      sort: { fields: frontmatter___order }
+    ) {
+      totalCount
       edges {
         node {
           id
