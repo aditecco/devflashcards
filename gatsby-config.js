@@ -70,10 +70,10 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "cards",
-        path: "./src/cards/",
+        name: "decks",
+        path: "./content/decks/",
       },
-      __key: "cards",
+      __key: "decks",
     },
   ],
 };
