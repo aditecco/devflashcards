@@ -2,8 +2,12 @@
 types
 --------------------------------- */
 
-export type GraphQLnode<T> = {
+export type GraphQLnode<T = unknown> = {
   node: T;
+};
+
+export type GraphQLedges = {
+  edges: GraphQLnode[];
 };
 
 export type CardFrontmatter = {
