@@ -17,3 +17,9 @@ export function basicSanitizer(html: string): string | undefined {
 
   return html.replace(patterns["empty tags"], "");
 }
+
+export function slugify(str) {
+  if (str.indexOf(" ") === -1) return str;
+
+  return str.toLowerCase().replace(/\s/g, "-");
+}
