@@ -17,6 +17,7 @@ import Logo from "./Logo";
 import screenfull from "screenfull";
 import MaterialIcon from "./MaterialIcon";
 import { Button } from "./Button";
+import { Link } from "gatsby";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -53,13 +54,16 @@ export default function CardViewer({
         position: relative;
 
         .nav-controls {
-          ${flex()};
+          ${flex({ justify: "space-between" })};
           position: relative;
           padding: 0.8rem 1rem;
 
-          button {
-            position: absolute;
-            right: 0;
+          a {
+            text-decoration: none;
+          }
+
+          button,
+          a {
             padding: 0.25rem;
 
             .material-icons {
@@ -87,6 +91,11 @@ export default function CardViewer({
       `}
     >
       <Container className={"nav-controls"}>
+        {/* TODO props */}
+        <Button as={Link} to={"/"}>
+          <MaterialIcon icon={"arrow_back"} />
+        </Button>
+
         <Logo />
 
         {screenfull.isEnabled && (
