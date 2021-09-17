@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import { css } from "@emotion/react";
 import { $navbarHeight } from "../constants/css-vars";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 type OwnProps = {
   bare?: boolean;
@@ -38,7 +39,18 @@ export default function Layout({
 
       <main>{children}</main>
 
-      {!bare && <footer>TODO create a footer</footer>}
+      {!bare && (
+        <Footer>
+          {" "}
+          <a
+            href="https://github.com/aditecco/devflashcards"
+            target={"_blank"}
+            rel="noopener noreferrer"
+          >
+            DevFlashcards
+          </a>
+        </Footer>
+      )}
     </motion.div>
   );
 }
