@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "_develop": "gatsby clean && gatsby develop --verbose",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
