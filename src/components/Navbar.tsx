@@ -5,7 +5,6 @@ Navbar
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css, useTheme } from "@emotion/react";
-import MaterialIcon from "./MaterialIcon";
 import { Container } from "./Container";
 import Logo from "./Logo";
 
