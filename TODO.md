@@ -9,7 +9,7 @@
   - [x] cards will display a series of buttons to choose an answer, or to snooze the card
   - ? [ ] user will be able to run the code example
   - ? [ ] user can expand the card to a page layout
-  - ? [ ]for each card, there will be a matching page
+  - ? [ ] for each card, there will be a matching page
 
 #### Flow
 
@@ -42,6 +42,7 @@
 
 ### TODO
 
+- [ ] Style home cards
 - [ ] Remove styled components if not used
 - [ ] define all colors (move to theme)
 - [ ] define fonts
