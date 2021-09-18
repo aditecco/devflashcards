@@ -31,5 +31,6 @@ declare module "@emotion/react" {
     shadows: Record<string, string>;
     zIndices: Record<string, string>;
     transitions: Record<string, string>;
+    breakpoints: Record<string, number>;
   }
 }

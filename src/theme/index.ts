@@ -72,6 +72,13 @@ const theme: Theme = {
   },
   zIndices: {},
   transitions: {},
+  breakpoints: {
+    xs: 375,
+    sm: 425,
+    md: 768,
+    lg: 1024,
+    xxl: 1400,
+  },
 };
 
 export default theme;
