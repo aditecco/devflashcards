@@ -10,9 +10,14 @@ type OwnProps = {};
 
 export const Grid = styled.div<OwnProps>`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 16rem);
+  grid-template-columns: repeat(auto-fill, 20rem);
   grid-gap: 1rem;
   justify-content: center;
+
+  @media (min-width: ${(p) =>
+      p?.theme?.breakpoints?.md && p.theme.breakpoints.md + "px"}) {
+    grid-template-columns: repeat(auto-fill, 16rem);
+  }
 
   > * {
     list-style: none;
