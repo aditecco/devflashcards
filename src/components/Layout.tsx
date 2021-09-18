@@ -41,13 +41,21 @@ export default function Layout({
 
       {!bare && (
         <Footer>
-          {" "}
+          DevFlashcards by{" "}
+          <a
+            href="https://github.com/aditecco"
+            target={"_blank"}
+            rel="noopener noreferrer"
+          >
+            aditecco
+          </a>{" "}
+          &mdash; See it on{" "}
           <a
             href="https://github.com/aditecco/devflashcards"
             target={"_blank"}
             rel="noopener noreferrer"
           >
-            DevFlashcards
+            GitHub
           </a>
         </Footer>
       )}
