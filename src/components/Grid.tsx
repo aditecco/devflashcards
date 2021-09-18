@@ -5,6 +5,7 @@ Grid
 import * as React from "react";
 import styled from "@emotion/styled";
 
+// TODO configurable grid
 type OwnProps = {};
 
 export const Grid = styled.div<OwnProps>`
