@@ -22,6 +22,7 @@ const theme: Theme = {
       offWhite: "whitesmoke",
       red: "indianred",
       paleYellow: "#fffde7",
+      gray: "#9B9B9B",
     },
     stroke: {
       [1]: chroma(ACCENT_PRIMARY).alpha(0.6).hex(),
