@@ -37,7 +37,6 @@ export default function SimpleCard({
 
           a {
             display: block;
-            padding: 2rem 1rem;
           }
         }
       `}
