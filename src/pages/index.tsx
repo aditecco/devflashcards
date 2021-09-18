@@ -12,6 +12,7 @@ import SimpleCard from "../components/SimpleCard";
 import { MutedText } from "../components/MutedText";
 import { Heading } from "../components/Heading";
 import { useTheme } from "@emotion/react";
+import dayjs from "dayjs";
 
 const Home = ({ data }) => {
   const {
@@ -26,14 +27,14 @@ const Home = ({ data }) => {
         <Heading
           style={{ textAlign: "center", marginTop: 48, marginBottom: 0 }}
         >
-          Pick a deck
+          Pick a deck and start your learning session.
         </Heading>
 
         <Grid as={"ul"} style={{ padding: "1.5rem 0" }}>
           {decks?.map?.((deck, i) => {
             const displayIndex = i + 1;
             const { node } = deck ?? {};
-            const { name, id } = node ?? {};
+            const { name, id, birthTime: creationDate } = node ?? {};
 
             return (
               <li key={i}>
@@ -48,7 +49,7 @@ const Home = ({ data }) => {
                       }}
                     >
                       <MutedText
-                        size={16}
+                        size={15}
                         style={{
                           marginRight: 10,
                           borderBottom:
@@ -66,6 +67,12 @@ const Home = ({ data }) => {
                         padding: ".5rem 1rem 1.25rem",
                       }}
                     >
+                      <MutedText>
+                        {dayjs(creationDate).format("DD/MM/YYYY")}
+                      </MutedText>
+
+                      <MutedText> &middot; </MutedText>
+
                       <MutedText>{id.substring(0, 5)}</MutedText>
                     </footer>
                   </Link>
@@ -88,6 +95,7 @@ export const query = graphql`
         node {
           name
           id
+          birthTime
         }
       }
     }
