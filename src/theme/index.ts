@@ -42,7 +42,14 @@ const theme: Theme = {
         "1": "#fffde7",
         "2": "#efebe9",
       },
-      "1": "",
+      gray: {
+        [1]: chroma.mix("#fff", "#000", 0.08).hex(),
+        [2]: chroma.mix("#fff", "#000", 0.1).hex(),
+        [3]: chroma.mix("#fff", "#000", 0.2).hex(),
+        [4]: chroma.mix("#fff", "#000", 0.3).hex(),
+        [5]: chroma.mix("#fff", "#000", 0.4).hex(),
+        [6]: chroma.mix("#fff", "#000", 0.5).hex(),
+      },
     },
   },
   fonts: {
