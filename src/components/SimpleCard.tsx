@@ -27,6 +27,10 @@ export default function SimpleCard({
         box-shadow: ${noShadow ? "" : "0 10px 20px 2px rgba(0,0,0,0.15)"};
         font-family: ${theme?.fonts?.openSans};
         font-weight: 400;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+          transform: translateY(-10px);
+        }
 
         .card-body {
           line-height: 1.8;
@@ -34,7 +38,6 @@ export default function SimpleCard({
           a {
             display: block;
             padding: 2rem 1rem;
-            width: 90%;
           }
         }
       `}
