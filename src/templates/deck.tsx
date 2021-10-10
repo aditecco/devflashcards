@@ -30,7 +30,7 @@ export default function Deck({
         render={(flashcards, onCardReview) => (
           <>
             <CardViewer cards={flashcards} onCardReview={onCardReview}>
-              <SessionInfo {...{ cards: flashcards, time }} />
+              <SessionInfo cards={flashcards} />
             </CardViewer>
 
             <DebugInfo cards={flashcards} />
