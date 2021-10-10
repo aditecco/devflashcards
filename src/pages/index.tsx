@@ -27,7 +27,7 @@ const Home = ({ data }) => {
         <Heading
           style={{ textAlign: "center", marginTop: 48, marginBottom: 32 }}
         >
-          Pick a deck and start your learning session.
+          Pick a deck to start your learning session.
         </Heading>
 
         <Grid as={"ul"} style={{ padding: "1.5rem 0" }}>
