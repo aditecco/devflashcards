@@ -3,8 +3,11 @@ Session context
 --------------------------------- */
 
 import { createContext } from "react";
-import { SessionObject } from "../types";
+import { InitialSessionContext } from "../types";
 
-const initialSession: SessionObject = {};
+const initialSession: InitialSessionContext = [{}, () => {}];
 
-export const SessionContext = createContext<SessionObject>(initialSession);
+export const SessionContext =
+  createContext<InitialSessionContext>(initialSession);
+
+SessionContext.displayName = "SessionContext";
