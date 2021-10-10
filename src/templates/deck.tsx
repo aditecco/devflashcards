@@ -3,14 +3,14 @@ Deck
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement } from "react";
+import { PropsWithChildren, ReactElement, useContext } from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import CardViewer from "../components/CardViewer";
-import CurrentTime from "../components/CurrentTime";
 import SessionInfo from "../components/SessionInfo";
 import ReviewEngine from "../components/ReviewEngine";
 import DebugInfo from "../components/DebugInfo";
+import { DateContext } from "../context";
 
 type OwnProps = { data };
 
@@ -21,22 +21,20 @@ export default function Deck({
     allMarkdownRemark: { edges: cards },
   } = data ?? {};
 
+  const time = useContext(DateContext);
+
   return (
     <Layout bare>
-      <CurrentTime
-        render={(time) => (
-          <ReviewEngine
-            {...{ cards, time }}
-            render={(flashcards, onCardReview) => (
-              <>
-                <CardViewer cards={flashcards} onCardReview={onCardReview}>
-                  <SessionInfo {...{ cards: flashcards, time }} />
-                </CardViewer>
+      <ReviewEngine
+        {...{ cards, time }}
+        render={(flashcards, onCardReview) => (
+          <>
+            <CardViewer cards={flashcards} onCardReview={onCardReview}>
+              <SessionInfo {...{ cards: flashcards, time }} />
+            </CardViewer>
 
-                <DebugInfo cards={flashcards} />
-              </>
-            )}
-          />
+            <DebugInfo cards={flashcards} />
+          </>
         )}
       />
     </Layout>
