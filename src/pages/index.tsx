@@ -25,7 +25,7 @@ const Home = ({ data }) => {
     <Layout>
       <Container>
         <Heading
-          style={{ textAlign: "center", marginTop: 48, marginBottom: 0 }}
+          style={{ textAlign: "center", marginTop: 48, marginBottom: 32 }}
         >
           Pick a deck and start your learning session.
         </Heading>
