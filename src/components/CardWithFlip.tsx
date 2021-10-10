@@ -138,52 +138,17 @@ export default function CardWithFlip({
               </div>
 
               <CardControls>
-                <button
-                  className="card-controls-button"
-                  type="button"
-                  onClick={() => onCardReview(card, 5)}
-                  title={"Perfect response"}
-                >
-                  5
-                </button>
-
-                <button
-                  className="card-controls-button"
-                  type="button"
-                  onClick={() => onCardReview(card, 4)}
-                  title={"Correct response after a hesitation"}
-                >
-                  4
-                </button>
-
-                <button
-                  className="card-controls-button"
-                  type="button"
-                  onClick={() => onCardReview(card, 3)}
-                  title={"Correct response recalled with serious difficulty"}
-                >
-                  3
-                </button>
-
-                <button
-                  className="card-controls-button"
-                  type="button"
-                  onClick={() => onCardReview(card, 2)}
-                  title={
-                    "Incorrect response; where the correct one seemed easy to recall"
-                  }
-                >
-                  2
-                </button>
-
-                <button
-                  className="card-controls-button"
-                  type="button"
-                  onClick={() => onCardReview(card, 1)}
-                  title={"Incorrect response; the correct one remembered"}
-                >
-                  1
-                </button>
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <button
+                    key={n}
+                    className="card-controls-button"
+                    type="button"
+                    onClick={() => onCardReview(card, n as SuperMemoGrade)}
+                    title={"Incorrect response; the correct one remembered"}
+                  >
+                    {String(n)}
+                  </button>
+                ))}
               </CardControls>
             </CardFooter>
           </Card>
