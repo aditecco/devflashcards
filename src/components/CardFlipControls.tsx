@@ -24,7 +24,7 @@ export default function CardFlipControls({
       css={css`
         position: absolute;
         z-index: 1;
-        ${flex("row nowrap", "flex-end", "center")}
+        ${flex({ justify: "flex-end", align: "center" })}
         width: 100%;
         height: 100%;
         background: linear-gradient(

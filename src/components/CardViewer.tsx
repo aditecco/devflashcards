@@ -3,13 +3,21 @@ CardViewer
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement, useRef, useState } from "react";
+import { PropsWithChildren, ReactElement, useRef } from "react";
 import CardWithFlip from "./CardWithFlip";
-import { css } from "@emotion/react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { $navbarHeight, CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
+import { css, useTheme } from "@emotion/react";
+import { motion } from "framer-motion";
+import { CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
 import { Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
+import { DRAG_TRIGGER } from "../constants/constants";
+import { flex } from "../lib/css-functions";
+import { Container } from "./Container";
+import Logo from "./Logo";
+import screenfull from "screenfull";
+import MaterialIcon from "./MaterialIcon";
+import { Button } from "./Button";
+import { Link } from "gatsby";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -19,92 +27,128 @@ type OwnProps = {
 export default function CardViewer({
   cards,
   onCardReview,
+  children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
-  const [cardStackingOrder, setCardStackingOrder] = useState(
-    createStackingOrderMap(cards)
-  );
-  const containerRef = useRef(null);
+  const dragBoundaries = useRef(null);
+  const theme = useTheme();
+  const cardViewerRef = useRef(null);
 
-  function createStackingOrderMap(items: Flashcard[]) {
-    const zIndexes = items.map((_, i) => i).reverse();
-
-    return items.reduce((acc, _, i) => {
-      acc[i] = zIndexes[i];
-
-      return acc;
-    }, {});
+  function handleFullScreen(el: HTMLDivElement | null) {
+    if (el && screenfull.isEnabled) {
+      screenfull
+        .toggle(el)
+        .then() // TODO show a notif
+        .catch((err: Error) => console.error(err?.message, err));
+    }
   }
-
-  console.log(cardStackingOrder);
-
-  // const x = useMotionValue(0);
-  // const background = useTransform(
-  //   x,
-  //   [-100, 0, 100],
-  //   ["#ff008c", "#7700ff", "rgb(230, 255, 0)"]
-  // );
-
-  // console.log("x", x);
 
   return (
     <div
       className="card-viewer"
+      ref={cardViewerRef}
       css={css`
-        background: radial-gradient(at center, white, whitesmoke);
-        height: calc(100vh - ${$navbarHeight});
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        background: radial-gradient(at center, white, whitesmoke);
+        height: 100vh;
+        position: relative;
+
+        .nav-controls {
+          ${flex({ justify: "space-between" })};
+          position: relative;
+          padding: 0.8rem 1rem;
+
+          a {
+            text-decoration: none;
+          }
+
+          button,
+          a {
+            padding: 0.25rem;
+
+            .material-icons {
+              margin: 0;
+            }
+          }
+        }
+
+        .card-area {
+          ${flex()};
+          flex-grow: 1;
+          border-top: 1px solid ${theme?.colors?.stroke?.[2]};
+        }
 
         .card-container {
           position: relative;
           width: ${CARD_WIDTH};
           height: ${CARD_HEIGHT};
         }
+
+        .card-wrapper {
+          position: absolute;
+          inset: 0;
+        }
       `}
     >
-      <motion.div className="card-container" ref={containerRef}>
-        {cards?.map?.((card, i) => {
-          return (
-            <motion.div
-              key={i}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              // dragTransition={{ bounceStiffness: 300, bounceDamping: 10 }}
-              // dragConstraints={containerRef}
-              data-card={"card__" + (i + 1)}
-              dragElastic={0.8}
-              onDragEnd={(_, info) => {
-                const dragMax = info.point.x;
+      <Container className={"nav-controls"}>
+        {/* TODO props */}
+        <Button as={Link} to={"/"}>
+          <MaterialIcon icon={"arrow_back"} />
+        </Button>
 
-                if (dragMax > 200 || dragMax > -200) {
-                  setCardStackingOrder((order) => {
-                    return Object.values(order).reduce((acc, curr, j) => {
-                      acc[j] = j === i ? 0 : curr + 1;
+        <Logo />
 
-                      return acc;
-                    }, {});
-                  });
-                }
-              }}
-              style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: cardStackingOrder[i],
-              }}
-            >
-              <CardWithFlip
-                card={card}
-                noShadow={i !== 0}
-                onCardReview={onCardReview} // TODO avoid drilling
-                // style={{
-                //   ...(i !== cards.length - 1 ? { boxShadow: "none" } : {}),
-                // }}
-              />
-            </motion.div>
-          );
-        })}
-      </motion.div>
+        {screenfull.isEnabled && (
+          <Button
+            onClick={() => handleFullScreen(cardViewerRef?.current)}
+            title={"Toggle full-screen"}
+          >
+            <MaterialIcon icon={"fullscreen"} />
+          </Button>
+        )}
+      </Container>
+
+      <div className="card-area">
+        <motion.div className="card-container" ref={dragBoundaries}>
+          {cards?.map?.((card, i, cards) => {
+            const first = i === 0;
+
+            return (
+              <motion.div
+                key={i}
+                className={"card-wrapper"}
+                data-card={"card__" + (i + 1)}
+                drag={first ? "x" : false}
+                dragElastic={0.8}
+                dragConstraints={dragBoundaries}
+                onDragEnd={(_, info) => {
+                  const dragMax = info.point.x;
+
+                  if (Math.abs(dragMax) > DRAG_TRIGGER) {
+                    // rate the card w/ the lowest grade
+                    onCardReview(card, 0);
+                  }
+                }}
+                style={{
+                  cursor: first ? "grab" : "pointer",
+                }}
+                animate={{
+                  zIndex: cards.length - i,
+                }}
+              >
+                <CardWithFlip
+                  card={card}
+                  noShadow={!first}
+                  onCardReview={onCardReview} // TODO avoid drilling
+                />
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+
+      {/* SessionInfo will go here */}
+      {children}
     </div>
   );
 }

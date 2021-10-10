@@ -1243,7 +1243,7 @@
 
 "@fontsource/lato@^4.4.5":
   version "4.4.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.4.5.tgz#82c16ef01ab1a1039f74d774e89ef1f76111def6"
+  resolved "https://registry.npmjs.org/@fontsource/lato/-/lato-4.4.5.tgz"
   integrity sha512-pm9am2tdLnK+21PKCK060oY8R8OKFVzTVvM6pPS+mS7JOZKe3mmDgfB2DGzzyHG/Azj3Pn6onU72BrQsh3XjNw==
 
 "@fontsource/material-icons@^4.4.0":
@@ -1253,7 +1253,7 @@
 
 "@fontsource/open-sans@^4.4.5":
   version "4.4.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.4.5.tgz#07b31617e62ed753c94cabcf552ebaed4de497ce"
+  resolved "https://registry.npmjs.org/@fontsource/open-sans/-/open-sans-4.4.5.tgz"
   integrity sha512-PDWEvO1/p8OAHHiielvEmwGXHNbZhrZn96ojV7+/mKgFu+cCUcGVJl9sFs97rCWLe3hKQsYLEsJs4EiLjwa+UQ==
 
 "@gatsbyjs/reach-router@^1.3.6":
@@ -1697,7 +1697,7 @@
 
 "@types/chroma-js@^2.1.3":
   version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@types/chroma-js/-/chroma-js-2.1.3.tgz#0b03d737ff28fad10eb884e0c6cedd5ffdc4ba0a"
+  resolved "https://registry.npmjs.org/@types/chroma-js/-/chroma-js-2.1.3.tgz"
   integrity sha512-1xGPhoSGY1CPmXLCBcjVZSQinFjL26vlR8ZqprsBWiFyED4JacJJ9zHhh5aaUXqbY9B37mKQ73nlydVAXmr1+g==
 
 "@types/common-tags@^1.8.0":
@@ -3198,7 +3198,7 @@ chokidar@^3.4.2, chokidar@^3.4.3, chokidar@^3.5.1:
 
 chroma-js@^2.1.2:
   version "2.1.2"
-  resolved "https://registry.yarnpkg.com/chroma-js/-/chroma-js-2.1.2.tgz#1075cb9ae25bcb2017c109394168b5cf3aa500ec"
+  resolved "https://registry.npmjs.org/chroma-js/-/chroma-js-2.1.2.tgz"
   integrity sha512-ri/ouYDWuxfus3UcaMxC1Tfp3IE9K5iQzxc2hSxbBRVNQFut1UuGAsZmiAf2mOUubzGJwgMSv9lHg+XqLaz1QQ==
   dependencies:
     cross-env "^6.0.3"
@@ -3622,7 +3622,7 @@ create-require@^1.1.0:
 
 cross-env@^6.0.3:
   version "6.0.3"
-  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-6.0.3.tgz#4256b71e49b3a40637a0ce70768a6ef5c72ae941"
+  resolved "https://registry.npmjs.org/cross-env/-/cross-env-6.0.3.tgz"
   integrity sha512-+KqxF6LCvfhWvADcDPqo64yVIB31gv/jQulX2NGzKS/g3GEVz6/pt4wjHFtFWsHMddebWD/sDthJemzM4MaAag==
   dependencies:
     cross-spawn "^7.0.0"
@@ -3884,7 +3884,7 @@ date-fns@^2.14.0:
 
 dayjs@^1.10.6:
   version "1.10.6"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.6.tgz#288b2aa82f2d8418a6c9d4df5898c0737ad02a63"
+  resolved "https://registry.npmjs.org/dayjs/-/dayjs-1.10.6.tgz"
   integrity sha512-AztC/IOW4L1Q41A86phW5Thhcrco3xuAA+YX/BLpLWWjRcTj5TOt/QImBLmCKlrF7u7k47arTnOyL6GnbG8Hvw==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
@@ -9488,10 +9488,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.npmjs.org/prepend-http/-/prepend-http-2.0.0.tgz"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@^2.0.5:
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.3.0.tgz"
-  integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
+prettier@^2.0.5, prettier@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-2.3.2.tgz"
+  integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
 
 pretty-bytes@^5.3.0, pretty-bytes@^5.4.1:
   version "5.6.0"
@@ -10474,6 +10474,11 @@ schema-utils@^3.0.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+screenfull@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-5.1.0.tgz#85c13c70f4ead4c1b8a935c70010dfdcd2c0e5c8"
+  integrity sha512-dYaNuOdzr+kc6J6CFcBrzkLCfyGcMg+gWkJ8us93IQ7y1cevhQAugFsaCdMHb6lw8KV3xPzSxzH7zM1dQap9mA==
+
 section-matter@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/section-matter/-/section-matter-1.0.0.tgz"
@@ -11269,7 +11274,7 @@ sudo-prompt@^8.2.0:
 
 supermemo@^2.0.17:
   version "2.0.17"
-  resolved "https://registry.yarnpkg.com/supermemo/-/supermemo-2.0.17.tgz#03341ccd1bb824a3726111e7818092e98acff99f"
+  resolved "https://registry.npmjs.org/supermemo/-/supermemo-2.0.17.tgz"
   integrity sha512-c/BMAkG+IDYtAP1AR97DVU4x4gs8vfvLA4ejND7lHKdzjaAWwxixtcZjnQNfcyAKfZn2ovIYKJAGpTG45dr8ug==
 
 supports-color@^5.3.0, supports-color@^5.5.0:

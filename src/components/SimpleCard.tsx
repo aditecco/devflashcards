@@ -1,10 +1,9 @@
 /* ---------------------------------
-Card
+SimpleCard
 --------------------------------- */
 
 import * as React from "react";
 import { CSSProperties, PropsWithChildren, ReactElement } from "react";
-import { CARD_HEIGHT, CARD_RADIUS, CARD_WIDTH } from "../constants/css-vars";
 import { css, useTheme } from "@emotion/react";
 
 export type CardProps = {
@@ -12,7 +11,7 @@ export type CardProps = {
   style?: CSSProperties;
 };
 
-export default function Card({
+export default function SimpleCard({
   children,
   noShadow,
   style,
@@ -26,19 +25,18 @@ export default function Card({
         background-color: white;
         border-radius: ${theme?.radii?.card};
         box-shadow: ${noShadow ? "" : "0 10px 20px 2px rgba(0,0,0,0.15)"};
-        width: ${CARD_WIDTH};
-        height: ${CARD_HEIGHT};
         font-family: ${theme?.fonts?.openSans};
         font-weight: 400;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+          transform: translateY(-10px);
+        }
 
         .card-body {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
+          line-height: 1.8;
 
-          > *:first-child {
-            flex-grow: 1;
+          a {
+            display: block;
           }
         }
       `}

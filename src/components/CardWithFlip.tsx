@@ -13,6 +13,9 @@ import { Flashcard } from "../types";
 import { basicSanitizer, truncate } from "../utils";
 import MaterialIcon from "./MaterialIcon";
 import { SuperMemoGrade } from "supermemo";
+import dayjs from "dayjs";
+import { SmallHeading } from "./SmallHeading";
+import { Button } from "./Button";
 
 type OwnProps = {
   card: Flashcard;
@@ -27,18 +30,16 @@ export default function CardWithFlip({
   ...cardProps
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const {
-    node: {
-      id,
-      html,
-      frontmatter: {
-        order,
-        timestamp,
-        topic,
-        deck,
-        contentSource,
-        title,
-        answer,
-      },
+    id,
+    html,
+    frontmatter: {
+      order,
+      timestamp,
+      topic,
+      deck,
+      contentSource,
+      title,
+      answer,
     },
   } = card ?? {};
 
@@ -70,8 +71,8 @@ export default function CardWithFlip({
               />
 
               <span className="card-content-debug-info">
-                ID: {id?.slice?.(-5)} &middot; Due date:{" "}
-                {card?.dueDate.toLocaleLowerCase()}
+                ID: {id?.slice?.(-3)} &middot; Due date:{" "}
+                {dayjs(card?.dueDate).format("DD/MM/YYYY HH:mm:ss")}
               </span>
             </CardContent>
 
@@ -80,9 +81,11 @@ export default function CardWithFlip({
                 <button
                   className="card-controls-button"
                   type="button"
-                  onClick={() => onCardReview(card, 0)}
+                  onClick={() => {
+                    onCardReview(card, 0);
+                  }}
                 >
-                  Pass
+                  Snooze
                 </button>
 
                 <button
@@ -90,7 +93,7 @@ export default function CardWithFlip({
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
                 >
-                  Check answer
+                  Review
                 </button>
               </CardControls>
             </CardFooter>
@@ -110,14 +113,15 @@ export default function CardWithFlip({
                   </span>
                 </h4>
 
-                <button
+                <Button
                   className="card-controls-button"
                   type="button"
                   onClick={() => setFlipped((f) => !f)}
+                  style={{ border: 0, padding: 0 }}
                 >
                   <MaterialIcon icon={"arrow_back"} />
-                  back
-                </button>
+                  Back
+                </Button>
               </header>
 
               <main
@@ -127,12 +131,18 @@ export default function CardWithFlip({
             </CardContent>
 
             <CardFooter>
+              <div className="card-footer-header">
+                <SmallHeading>Rate your answer</SmallHeading>
+                {/* TODO on click, add popover with rating notes */}
+                <MaterialIcon icon={"help"} />
+              </div>
+
               <CardControls>
                 <button
                   className="card-controls-button"
                   type="button"
                   onClick={() => onCardReview(card, 5)}
-                  title={"Perfect response."}
+                  title={"Perfect response"}
                 >
                   5
                 </button>
@@ -141,7 +151,7 @@ export default function CardWithFlip({
                   className="card-controls-button"
                   type="button"
                   onClick={() => onCardReview(card, 4)}
-                  title={"Correct response after a hesitation."}
+                  title={"Correct response after a hesitation"}
                 >
                   4
                 </button>
@@ -150,7 +160,7 @@ export default function CardWithFlip({
                   className="card-controls-button"
                   type="button"
                   onClick={() => onCardReview(card, 3)}
-                  title={"Correct response recalled with serious difficulty."}
+                  title={"Correct response recalled with serious difficulty"}
                 >
                   3
                 </button>
@@ -160,7 +170,7 @@ export default function CardWithFlip({
                   type="button"
                   onClick={() => onCardReview(card, 2)}
                   title={
-                    "Incorrect response; where the correct one seemed easy to recall."
+                    "Incorrect response; where the correct one seemed easy to recall"
                   }
                 >
                   2
@@ -170,7 +180,7 @@ export default function CardWithFlip({
                   className="card-controls-button"
                   type="button"
                   onClick={() => onCardReview(card, 1)}
-                  title={"Incorrect response; the correct one remembered."}
+                  title={"Incorrect response; the correct one remembered"}
                 >
                   1
                 </button>

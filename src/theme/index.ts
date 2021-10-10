@@ -22,6 +22,7 @@ const theme: Theme = {
       offWhite: "whitesmoke",
       red: "indianred",
       paleYellow: "#fffde7",
+      gray: "#9B9B9B",
     },
     stroke: {
       [1]: chroma(ACCENT_PRIMARY).alpha(0.6).hex(),
@@ -41,7 +42,14 @@ const theme: Theme = {
         "1": "#fffde7",
         "2": "#efebe9",
       },
-      "1": "",
+      gray: {
+        [1]: chroma.mix("#fff", "#000", 0.08).hex(),
+        [2]: chroma.mix("#fff", "#000", 0.1).hex(),
+        [3]: chroma.mix("#fff", "#000", 0.2).hex(),
+        [4]: chroma.mix("#fff", "#000", 0.3).hex(),
+        [5]: chroma.mix("#fff", "#000", 0.4).hex(),
+        [6]: chroma.mix("#fff", "#000", 0.5).hex(),
+      },
     },
   },
   fonts: {
@@ -56,12 +64,21 @@ const theme: Theme = {
   borders: {},
   borderWidths: {},
   borderStyles: {},
-  radii: {},
+  radii: {
+    card: "6px",
+  },
   shadows: {
     [1]: `0 2px 8px rgba(0,0,0,.25)`,
   },
   zIndices: {},
   transitions: {},
+  breakpoints: {
+    xs: 375,
+    sm: 425,
+    md: 768,
+    lg: 1024,
+    xxl: 1400,
+  },
 };
 
 export default theme;

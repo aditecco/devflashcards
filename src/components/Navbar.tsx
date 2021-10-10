@@ -5,8 +5,8 @@ Navbar
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css, useTheme } from "@emotion/react";
-import { rem } from "../lib/css-functions";
-import MaterialIcon from "./MaterialIcon";
+import { Container } from "./Container";
+import Logo from "./Logo";
 
 type OwnProps = {};
 
@@ -23,27 +23,15 @@ export default function Navbar({}: PropsWithChildren<OwnProps>): ReactElement | 
         right: 0;
         padding: 0.9rem 1rem;
         color: ${theme.colors.typography[1]};
-        box-shadow: ${theme.shadows[1]};
-        z-index: 1;
+        //box-shadow: ${theme.shadows[1]};
+        //z-index: 1;
         background-color: white;
-
-        h1 {
-          font-size: inherit;
-          margin: 0;
-          font-weight: normal;
-          display: flex;
-          align-items: center;
-
-          .navbar-logotype {
-            margin-left: 0.4rem;
-          }
-        }
+        border-bottom: 1px solid ${theme?.colors?.stroke?.[2]};
       `}
     >
-      <h1>
-        <MaterialIcon icon={"graphic_eq"} />
-        <span className="navbar-logotype">DevFlashcards</span>
-      </h1>
+      <Container>
+        <Logo />
+      </Container>
     </nav>
   );
 }

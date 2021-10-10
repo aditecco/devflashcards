@@ -1,52 +1,101 @@
-import * as React from "react";
-import { graphql } from "gatsby";
-import CardViewer from "../components/CardViewer";
-import Layout from "../components/Layout";
-import ReviewEngine from "../components/ReviewEngine";
-import { CardNode, Flashcard } from "../types";
-import { SuperMemoGrade } from "supermemo";
-import SessionInfo from "../components/SessionInfo";
+/* ---------------------------------
+Home
+--------------------------------- */
 
-const IndexPage = ({ data }) => {
+import * as React from "react";
+import Layout from "../components/Layout";
+import { graphql, Link } from "gatsby";
+import { slugify, truncate } from "../utils";
+import { Container } from "../components/Container";
+import { Grid } from "../components/Grid";
+import SimpleCard from "../components/SimpleCard";
+import { MutedText } from "../components/MutedText";
+import { Heading } from "../components/Heading";
+import { useTheme } from "@emotion/react";
+import dayjs from "dayjs";
+
+const Home = ({ data }) => {
   const {
-    allMarkdownRemark: { edges: cards },
+    allDirectory: { edges: decks },
   } = data ?? {};
+
+  const theme = useTheme();
 
   return (
     <Layout>
-      <ReviewEngine cards={cards as CardNode[]}>
-        {(
-          flashcards: Flashcard[],
-          onCardReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void
-        ) => (
-          <>
-            {/*<SessionInfo cards={flashcards} />*/}
-            <CardViewer cards={flashcards} onCardReview={onCardReview} />
-          </>
-        )}
-      </ReviewEngine>
+      <Container>
+        <Heading
+          style={{ textAlign: "center", marginTop: 48, marginBottom: 32 }}
+        >
+          Pick a deck to start your learning session.
+        </Heading>
+
+        <Grid as={"ul"} style={{ padding: "1.5rem 0" }}>
+          {decks?.map?.((deck, i) => {
+            const displayIndex = i + 1;
+            const { node } = deck ?? {};
+            const { name, id, birthTime: creationDate } = node ?? {};
+
+            return (
+              <li key={i}>
+                <SimpleCard>
+                  <Link to={`/decks/` + slugify(name)} title={name}>
+                    <div
+                      style={{
+                        padding: "1.8rem 1rem",
+                        background: theme?.colors?.background?.gray?.[1],
+                        borderTopLeftRadius: theme?.radii?.card,
+                        borderTopRightRadius: theme?.radii?.card,
+                      }}
+                    >
+                      <MutedText
+                        size={15}
+                        style={{
+                          marginRight: 10,
+                          borderBottom:
+                            "2px solid " + theme?.colors?.typography?.[2],
+                        }}
+                      >
+                        {displayIndex < 10 ? "0" + displayIndex : displayIndex}
+                      </MutedText>
+
+                      {truncate(name, 24)}
+                    </div>
+
+                    <footer
+                      style={{
+                        padding: ".5rem 1rem 1.25rem",
+                      }}
+                    >
+                      <MutedText>
+                        {dayjs(creationDate).format("DD/MM/YYYY")}
+                      </MutedText>
+
+                      <MutedText> &middot; </MutedText>
+
+                      <MutedText>{id.substring(0, 5)}</MutedText>
+                    </footer>
+                  </Link>
+                </SimpleCard>
+              </li>
+            );
+          })}
+        </Grid>
+      </Container>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default Home;
 
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: frontmatter___order }) {
+    allDirectory(filter: { name: { nin: ["pages", "decks"] } }) {
       edges {
         node {
+          name
           id
-          html
-          frontmatter {
-            order
-            timestamp
-            deck
-            topic
-            contentSource
-            title
-            answer
-          }
+          birthTime
         }
       }
     }

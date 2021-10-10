@@ -47,19 +47,20 @@ export const $cardInModalHeight = "470px;";
 export const $cardInModalWidth = "370px;";
 export const $cardMinWidth = "280px;";
 export const $footerHeight = "20px;";
-export const $headerHeight = "52px";
+export const $headerHeight = 54;
 export const $navbarHeight = $headerHeight;
 export const $pageHeaderHeight = "79px;";
 export const $searchHeight = "72px;";
 export const $wrapper = "780px";
 export const $wrapperSm = "425px";
-export const CARD_HEIGHT = "500px;";
-export const CARD_WIDTH = "340px;";
+export const CARD_HEIGHT = "480px;";
+export const CARD_WIDTH = "320px;";
 export const CARD_MAX_WIDTH = "340px;";
 export const CARD_RATIO =
   Number(CARD_WIDTH.match(/\d*/)) / Number(CARD_HEIGHT.match(/\d*/));
 export const CARD_RADIUS = "10px";
 export const mediaHeight = "400px;";
+export const cardContentMetaHeight = 42;
 
 // FX
 export const $border = "1px solid rgba($flat-gray-2, 0.5)";

@@ -6,7 +6,7 @@ import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css, useTheme } from "@emotion/react";
 import { rem } from "../lib/css-functions";
-import { $backgroundLight, $font } from "../constants/css-vars";
+import { $font, cardContentMetaHeight } from "../constants/css-vars";
 import classNames from "classnames";
 
 type OwnProps = {
@@ -24,6 +24,7 @@ export default function CardContent({
       className={classNames(["card-content", back && "card-content--back"])}
       css={css`
         overflow-y: auto;
+        position: relative;
 
         > *:not(.card-content-main) {
           padding: 0 1rem;
@@ -38,6 +39,14 @@ export default function CardContent({
           justify-content: space-between;
           font-family: ${theme?.fonts?.lato};
           color: ${theme?.colors?.typography?.[2]};
+          position: fixed;
+          background: white;
+          left: 0;
+          right: 0;
+          top: 0;
+          z-index: 1;
+          border-top-left-radius: ${theme?.radii?.card};
+          border-top-right-radius: ${theme?.radii?.card};
         }
 
         .card-content-meta-item {
@@ -148,6 +157,17 @@ export default function CardContent({
         .card-content-options {
         }
 
+        // ad-hoc styles for the card's
+        // front only
+        &:not(.card-content--back) {
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+
+          .card-content-title {
+            margin-top: ${cardContentMetaHeight}px;
+          }
+        }
+
         // different styles for
         // the back of the card
         &.card-content--back {
@@ -161,39 +181,25 @@ export default function CardContent({
             justify-content: space-between;
             align-items: center;
 
-            button {
-              padding: 0.5rem 1rem;
-              border-radius: 4px;
-              background: none;
-              border: 2px solid ${theme.colors.utility.offWhite};
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              color: ${theme.colors.typography[3]};
-
-              &:hover {
-                color: ${theme.colors.utility.black};
-                border: 2px solid ${theme.colors.utility.black};
-              }
-
-              > .material-icons {
-                margin-right: 6px;
-                margin-top: 2px;
-                font-size: 1.25rem;
-              }
+            h4 {
+              font-size: 1.25rem;
             }
 
             &-answer-wrapper {
-              display: inline-block;
+              // display: inline-block;
+              // padding: 0 2px;
+              // width: 30px;
+              // height: 30px;
+              // border: 2px solid ${theme.colors.accent[1]};
+              // border-radius: 6px;
+              // text-align: center;
+              // margin-left: 2px;
+              // letter-spacing: 1px;
+              position: relative;
+              top: -1px;
               color: ${theme.colors.accent[1]};
-              padding: 0 2px;
-              width: 30px;
-              height: 30px;
-              border: 2px solid ${theme.colors.accent[1]};
-              border-radius: 50%;
-              text-align: center;
-              margin-left: 2px;
-              letter-spacing: 1px;
+              font-size: 1.25rem;
+              vertical-align: text-bottom;
             }
           }
 
