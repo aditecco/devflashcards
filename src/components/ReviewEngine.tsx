@@ -6,11 +6,11 @@ import * as React from "react";
 import { PropsWithChildren, ReactElement, useEffect, useState } from "react";
 import { supermemo, SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
-import { CardNode, Flashcard, TimeObject } from "../types";
+import { CardNode, DateObject, Flashcard } from "../types";
 
 type OwnProps = {
   cards: CardNode[];
-  time: TimeObject;
+  time: DateObject;
   render: (
     flashcards: Flashcard[],
     onReview: (flashcard: Flashcard, grade: SuperMemoGrade) => void

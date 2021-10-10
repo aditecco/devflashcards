@@ -3,8 +3,8 @@ SessionInfo
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement, useEffect, useState } from "react";
-import { Flashcard, TimeObject } from "../types";
+import { PropsWithChildren, ReactElement } from "react";
+import { DateObject, Flashcard } from "../types";
 import dayjs from "dayjs";
 import { css, useTheme } from "@emotion/react";
 import { Container } from "./Container";
@@ -12,7 +12,7 @@ import { SmallHeading } from "./SmallHeading";
 
 type OwnProps = {
   cards: Flashcard[];
-  time: TimeObject;
+  time: DateObject;
 };
 
 export default function SessionInfo({

@@ -9,7 +9,7 @@ import { Card } from "./gatsby-support";
 export * from "./theme";
 export * from "./gatsby-support";
 
-export type TimeObject = {
+export type DateObject = {
   initial: dayjs.Dayjs;
   current: dayjs.Dayjs;
 };
@@ -29,3 +29,5 @@ export type SupermemoProcessor = (
 ) => Flashcard;
 
 export type Flashcard = Card & SuperMemoDefaults;
+
+export type SessionObject = {};
