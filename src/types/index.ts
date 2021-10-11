@@ -30,4 +30,12 @@ export type SupermemoProcessor = (
 
 export type Flashcard = Card & SuperMemoDefaults;
 
-export type SessionObject = {};
+type ReviewObject = Partial<Record<number, string[]>>;
+
+export type InitialSessionContext = [SessionObject, ReturnVoid];
+
+export type SessionObject = {
+  sessionStart?: dayjs.Dayjs;
+  currentCard?: string;
+  reviews?: ReviewObject;
+};
