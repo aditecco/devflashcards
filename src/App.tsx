@@ -15,7 +15,7 @@ type OwnProps = {};
 
 export const App: React.FC<OwnProps> = ({ children }) => {
   const currentDate = useGlobalDate();
-  const session = useGlobalSession();
+  const session = useGlobalSession(currentDate?.initial);
 
   return (
     <ThemeProvider theme={theme}>
