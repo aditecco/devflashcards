@@ -3,25 +3,25 @@ SessionInfo
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement } from "react";
+import { PropsWithChildren, ReactElement, useContext } from "react";
 import { DateObject, Flashcard } from "../types";
 import dayjs from "dayjs";
 import { css, useTheme } from "@emotion/react";
 import { Container } from "./Container";
 import { SmallHeading } from "./SmallHeading";
+import { DateContext, SessionContext } from "../context";
 
 type OwnProps = {
   cards: Flashcard[];
-  time: DateObject;
 };
 
 export default function SessionInfo({
   cards,
-  time,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const theme = useTheme();
-
-  const { current: currentDate, initial: initDate } = time;
+  const [session] = useContext(SessionContext);
+  const { sessionStart: initDate, reviews } = session ?? {};
+  const { current: currentDate } = useContext(DateContext);
 
   // Get how many cards are due in the same date as `currentDate`
   function computeTodaysCards(c: Flashcard) {
