@@ -93,14 +93,24 @@ export default function ReviewEngine({
   // the user  reviews it via the card buttons.
   function reviewCard(flashcard: Flashcard, grade: SuperMemoGrade) {
     const i = cards.findIndex((c) => c?.id === flashcard?.id);
-
-    setCards((cards) =>
-      [
-        ...cards.slice(0, i),
-        practice(flashcard, grade),
-        ...cards.slice(i + 1),
-      ].sort(sortDates)
+    const reviewedCard = practice(flashcard, grade);
+    const simplifiedDueDate = dayjs(reviewedCard?.dueDate).format(
+      DEFAULT_DATE_FORMAT
     );
+
+    // @ts-ignore
+    setSession((s) => ({
+      ...s,
+      reviews: {
+        ...s.reviews,
+        [simplifiedDueDate]: [
+          ...(s.reviews[simplifiedDueDate] ?? []),
+          reviewedCard,
+        ],
+      },
+    }));
+
+    setCards((cards) => [...cards.slice(0, i), ...cards.slice(i + 1)]);
   }
 
   return render(cards, reviewCard);
