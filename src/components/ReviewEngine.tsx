@@ -56,8 +56,8 @@ export default function ReviewEngine({
       ...card?.node,
       interval: 0,
       repetition: 0,
+      dueDate: initialTime.toISOString(),
       efactor: 2.5,
-      dueDate: time.initial.toISOString(), // TODO keep it as unix, convert to string only for parsing
     };
   }
 
@@ -81,13 +81,15 @@ export default function ReviewEngine({
   // relevant values based on the given grade.
   function practice(flashcard: Flashcard, grade: SuperMemoGrade): Flashcard {
     const { interval, repetition, efactor } = supermemo(flashcard, grade);
-
     const dueDate = dayjs().add(interval, "day").toISOString();
 
-    // TODO remove
-    console.log("UNIX >>> ", dayjs().add(interval, "day").unix());
-
-    return { ...flashcard, interval, repetition, efactor, dueDate };
+    return {
+      ...flashcard,
+      interval,
+      repetition,
+      efactor,
+      dueDate,
+    };
   }
 
   // Replaces a card in the card pool when
