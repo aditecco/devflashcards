@@ -65,6 +65,11 @@ export default function ReviewEngine({
     }
   }, [cards]);
 
+  // TODO move to hook
+  useEffect(() => {
+    sessionStorage?.setItem?.(PERSISTED_SESSION_KEY, JSON.stringify(session));
+  }, [session]);
+
   // Initializes cards with supermemo's default values
   function initCards(card: CardNode): Flashcard {
     return {
