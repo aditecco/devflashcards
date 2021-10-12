@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 // Session start
 const INITIAL_DATE = dayjs();
 
-export default function useGlobalDate() {
+export function useGlobalDate() {
   const [currentDate, setCurrentDate] = useState(INITIAL_DATE);
 
   useEffect(() => {

@@ -3,8 +3,7 @@ App
 --------------------------------- */
 
 import * as React from "react";
-import useGlobalDate from "./hooks/useGlobalDate";
-import useGlobalSession from "./hooks/useGlobalSession";
+import { useGlobalDate, useGlobalSession } from "./hooks";
 import { css, Global, ThemeProvider } from "@emotion/react";
 import theme from "./theme";
 import { baseFontStack } from "./constants/css-vars";
