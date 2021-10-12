@@ -80,7 +80,7 @@ export default function SessionInfo({
 
           <li>
             <SmallHeading>Session start</SmallHeading>
-            <span>{initDate?.format("DD/MM/YYYY HH:mm:ss")}</span>
+            <span>{dayjs(initDate)?.format("DD/MM/YYYY HH:mm:ss")}</span>
           </li>
 
           <li>
