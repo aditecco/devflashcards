@@ -61,22 +61,6 @@ export default function ReviewEngine({
     };
   }
 
-  // Sorts cards by date
-  function sortDates(card: Flashcard, nextCard: Flashcard) {
-    const date = dayjs(card.dueDate).unix();
-    const nextDate = dayjs(nextCard.dueDate).unix();
-
-    if (date > nextDate) {
-      return 1;
-    }
-
-    if (date < nextDate) {
-      return -1;
-    }
-
-    return 0;
-  }
-
   // Passes cards through the algo and updates
   // relevant values based on the given grade.
   function practice(flashcard: Flashcard, grade: SuperMemoGrade): Flashcard {
