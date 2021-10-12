@@ -3,7 +3,9 @@ content-processor
 --------------------------------- */
 
 const fs = require("fs");
-const PATH = "./raw-content.md";
+const IN_DIR = "./input";
+const OUT_DIR = "./output";
+const PATH = `${IN_DIR}/raw-content.md`;
 
 fs.readFile(PATH, (err, data) => {
   if (err) return;
@@ -92,7 +94,7 @@ answer: ${answer}
   `;
 
     fs.writeFile(
-      `./card-${i}${!title || !answer ? "-incomplete" : ""}.md`,
+      `${OUT_DIR}/card-${i}${!title || !answer ? "-incomplete" : ""}.md`,
       frontMatter + strippedMarkdownBlob,
       (err) => {
         if (err) {
