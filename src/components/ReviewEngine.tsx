@@ -14,7 +14,10 @@ import { supermemo, SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
 import { CardNode, DateObject, Flashcard } from "../types";
 import { SessionContext } from "../context";
-import { DEFAULT_DATE_FORMAT } from "../constants/constants";
+import {
+  DEFAULT_DATE_FORMAT,
+  PERSISTED_SESSION_KEY,
+} from "../constants/constants";
 
 type OwnProps = {
   cards: CardNode[];
@@ -30,23 +33,35 @@ export default function ReviewEngine({
   time,
   render,
 }: PropsWithChildren<OwnProps>): ReactElement {
-  let { initial: initialTime, current: currentTime } = time ?? {};
+  const { initial: initialTime, current: currentTime } = time ?? {};
   const [cards, setCards] = useState(rawCards?.map?.(initCards) ?? []);
   const [session, setSession] = useContext(SessionContext);
+
+  // currentTime mock
+  // Also set the variable as `let`
+  // currentTime = dayjs().add(1, "day");
+
+  useEffect(() => {
+    // @ts-ignore
+    setSession((s) => ({
+      ...s,
+      activeCard: s.activeCard ?? [...cards].shift(),
+    }));
+  }, []);
 
   useEffect(() => {
     const timeKey = currentTime.format(DEFAULT_DATE_FORMAT);
     const cardsToReview = session?.reviews?.[timeKey];
 
     if (cardsToReview?.length) {
+      setCards((cards) => cardsToReview.concat(cards));
+
       // @ts-ignore
       setSession((session) => {
         delete session.reviews[timeKey];
 
         return session;
       });
-
-      setCards((cards) => cardsToReview.concat(cards));
     }
   }, [cards]);
 
@@ -88,6 +103,7 @@ export default function ReviewEngine({
     // @ts-ignore
     setSession((s) => ({
       ...s,
+      activeCard: cards[i + 1],
       reviews: {
         ...s.reviews,
         [simplifiedDueDate]: [
