@@ -3,7 +3,13 @@ CardViewer
 --------------------------------- */
 
 import * as React from "react";
-import { PropsWithChildren, ReactElement, useRef } from "react";
+import {
+  PropsWithChildren,
+  ReactElement,
+  useContext,
+  useEffect,
+  useRef,
+} from "react";
 import CardWithFlip from "./CardWithFlip";
 import { css, useTheme } from "@emotion/react";
 import { motion } from "framer-motion";
@@ -11,13 +17,14 @@ import { CARD_HEIGHT, CARD_WIDTH } from "../constants/css-vars";
 import { Flashcard } from "../types";
 import { SuperMemoGrade } from "supermemo";
 import { DRAG_TRIGGER } from "../constants/constants";
-import { flex } from "../lib/css-functions";
+import { flex } from "../lib";
 import { Container } from "./Container";
 import Logo from "./Logo";
 import screenfull from "screenfull";
 import MaterialIcon from "./MaterialIcon";
 import { Button } from "./Button";
 import { Link } from "gatsby";
+import { SessionContext } from "../context";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -29,10 +36,13 @@ export default function CardViewer({
   onCardReview,
   children,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
-  const dragBoundaries = useRef(null);
   const theme = useTheme();
+  const [session] = useContext(SessionContext);
+  const { activeCard, reviews } = session ?? {};
+  const dragBoundaries = useRef(null);
   const cardViewerRef = useRef(null);
 
+  // TODO move to hook
   function handleFullScreen(el: HTMLDivElement | null) {
     if (el && screenfull.isEnabled) {
       screenfull
@@ -41,6 +51,14 @@ export default function CardViewer({
         .catch((err: Error) => console.error(err?.message, err));
     }
   }
+
+  const reviewedCards = Object.values(reviews ?? {})
+    .flat()
+    .map((c) => c?.id);
+
+  const reviewFilter = reviewedCards?.length
+    ? (card) => !reviewedCards?.includes?.(card?.id)
+    : () => true;
 
   return (
     <div
@@ -110,12 +128,12 @@ export default function CardViewer({
 
       <div className="card-area">
         <motion.div className="card-container" ref={dragBoundaries}>
-          {cards?.map?.((card, i, cards) => {
+          {cards?.filter?.(reviewFilter)?.map?.((card, i, cards) => {
             const first = i === 0;
 
             return (
               <motion.div
-                key={i}
+                key={card?.id}
                 className={"card-wrapper"}
                 data-card={"card__" + (i + 1)}
                 drag={first ? "x" : false}
