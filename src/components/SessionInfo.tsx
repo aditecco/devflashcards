@@ -40,7 +40,7 @@ export default function SessionInfo({
     // 0: complete blackout.
 
     if (Array.isArray(grade)) {
-      return grade.flatMap?.((g) => grades[g])?.length;
+      return grade.flatMap?.((g) => grades[g] ?? [])?.length;
     }
 
     return grades[grade]?.length;
