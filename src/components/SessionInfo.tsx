@@ -31,14 +31,6 @@ export default function SessionInfo({
 
   // Get how many cards are passed, correct, or incorrect
   function getGradedItems(grade: SuperMemoGrade | SuperMemoGrade[]) {
-    // grade ref: https://github.com/Maxvien/supermemo
-    // 5: perfect response.
-    // 4: correct response after a hesitation.
-    // 3: correct response recalled with serious difficulty.
-    // 2: incorrect response; where the correct one seemed easy to recall.
-    // 1: incorrect response; the correct one remembered.
-    // 0: complete blackout.
-
     if (Array.isArray(grade)) {
       return grade.flatMap?.((g) => grades[g] ?? [])?.length;
     }
