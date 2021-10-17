@@ -16,6 +16,7 @@ import { SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
 import { SmallHeading } from "./SmallHeading";
 import { Button } from "./Button";
+import { getSuperMemoGradeDescriptions } from "../lib";
 
 type OwnProps = {
   card: Flashcard;
@@ -144,7 +145,7 @@ export default function CardWithFlip({
                     className="card-controls-button"
                     type="button"
                     onClick={() => onCardReview(card, n as SuperMemoGrade)}
-                    title={"Incorrect response; the correct one remembered"}
+                    title={getSuperMemoGradeDescriptions(n)}
                   >
                     {String(n)}
                   </button>
