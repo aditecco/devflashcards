@@ -23,18 +23,9 @@ export default function SessionInfo({
   const { sessionStart: initDate, reviews } = session ?? {};
   const { current: currentDate } = useContext(DateContext);
 
-  // Get how many cards are due in the same date as `currentDate`
-  function computeTodaysCards(c: Flashcard) {
-    return (
-      dayjs(c.dueDate).format("DD/MM/YYYY") === currentDate.format("DD/MM/YYYY")
-    );
-  }
-
-  // Get how many cards are not due in the same date as `currentDate`
-  function computeNextUpCards(c: Flashcard) {
-    return (
-      dayjs(c.dueDate).format("DD/MM/YYYY") !== currentDate.format("DD/MM/YYYY")
-    );
+  // Get how many cards are in the review buckets
+  function getReviewedCards() {
+    return Object.values(reviews)?.flat?.()?.length;
   }
 
   return (
@@ -85,15 +76,12 @@ export default function SessionInfo({
 
           <li>
             <SmallHeading>Due today</SmallHeading>
-            <span>
-              {cards?.filter?.(computeTodaysCards)?.length ||
-                "No cards for today"}
-            </span>
+            <span>{cards?.length || "No cards for today"}</span>
           </li>
 
           <li>
-            <SmallHeading>Up next</SmallHeading>
-            <span>{cards?.filter?.(computeNextUpCards)?.length || "-"}</span>
+            <SmallHeading>Reviewed</SmallHeading>
+            <span>{getReviewedCards() || "-"}</span>
           </li>
 
           <li>
