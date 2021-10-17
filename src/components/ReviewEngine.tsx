@@ -42,7 +42,6 @@ export default function ReviewEngine({
   // currentTime = dayjs().add(1, "day");
 
   useEffect(() => {
-    // @ts-ignore
     setSession((s) => ({
       ...s,
       activeCard: s.activeCard ?? [...cards].shift(),
@@ -56,7 +55,6 @@ export default function ReviewEngine({
     if (cardsToReview?.length) {
       setCards((cards) => cardsToReview.concat(cards));
 
-      // @ts-ignore
       setSession((session) => {
         delete session.reviews[timeKey];
 
@@ -105,7 +103,6 @@ export default function ReviewEngine({
       DEFAULT_DATE_FORMAT
     );
 
-    // @ts-ignore
     setSession((s) => ({
       ...s,
       activeCard: cards[i + 1],
@@ -115,6 +112,10 @@ export default function ReviewEngine({
           ...(s.reviews[simplifiedDueDate] ?? []),
           reviewedCard,
         ],
+      },
+      grades: {
+        ...s.grades,
+        [grade]: [...(s.grades[grade] ?? []), reviewedCard.id],
       },
     }));
 
