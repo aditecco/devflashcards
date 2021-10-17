@@ -33,6 +33,8 @@ export type Flashcard = Card & SuperMemoDefaults;
 
 type ReviewObject = Partial<Record<string, Flashcard[]>>;
 
+type GradeObject = Record<SuperMemoGrade, string[]>;
+
 export type InitialSessionContext = [
   Partial<SessionObject>,
   React.Dispatch<React.SetStateAction<SessionObject>>
@@ -42,4 +44,5 @@ export type SessionObject = {
   sessionStart: dayjs.Dayjs;
   activeCard: Flashcard;
   reviews: ReviewObject;
+  grades: GradeObject;
 };

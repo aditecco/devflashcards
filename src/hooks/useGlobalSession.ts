@@ -18,6 +18,7 @@ export function useGlobalSession(sessionStart: dayjs.Dayjs) {
       sessionStart,
       activeCard: undefined,
       reviews: {},
+      grades: {},
     }
   );
 
