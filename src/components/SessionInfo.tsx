@@ -10,6 +10,7 @@ import { css, useTheme } from "@emotion/react";
 import { Container } from "./Container";
 import { SmallHeading } from "./SmallHeading";
 import { DateContext, SessionContext } from "../context";
+import { SuperMemoGrade } from "supermemo";
 
 type OwnProps = {
   cards: Flashcard[];
@@ -20,12 +21,29 @@ export default function SessionInfo({
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const theme = useTheme();
   const [session] = useContext(SessionContext);
-  const { sessionStart: initDate, reviews } = session ?? {};
+  const { sessionStart: initDate, reviews, grades } = session ?? {};
   const { current: currentDate } = useContext(DateContext);
 
   // Get how many cards are in the review buckets
   function getReviewedCards() {
     return Object.values(reviews)?.flat?.()?.length;
+  }
+
+  // Get how many cards are passed, correct, or incorrect
+  function getGradedItems(grade: SuperMemoGrade | SuperMemoGrade[]) {
+    // grade ref: https://github.com/Maxvien/supermemo
+    // 5: perfect response.
+    // 4: correct response after a hesitation.
+    // 3: correct response recalled with serious difficulty.
+    // 2: incorrect response; where the correct one seemed easy to recall.
+    // 1: incorrect response; the correct one remembered.
+    // 0: complete blackout.
+
+    if (Array.isArray(grade)) {
+      return grade.flatMap?.((g) => grades[g])?.length;
+    }
+
+    return grades[grade]?.length;
   }
 
   return (
@@ -86,17 +104,17 @@ export default function SessionInfo({
 
           <li>
             <SmallHeading>Correct</SmallHeading>
-            <span>-</span>
+            <span>{getGradedItems([5, 4, 3]) || "-"}</span>
           </li>
 
           <li>
             <SmallHeading>Incorrect</SmallHeading>
-            <span>-</span>
+            <span>{getGradedItems([2, 1]) || "-"}</span>
           </li>
 
           <li>
             <SmallHeading>Passed</SmallHeading>
-            <span>-</span>
+            <span>{getGradedItems(0) || "-"}</span>
           </li>
         </ul>
       </Container>
