@@ -32,10 +32,10 @@ export default function SessionInfo({
   // Get how many cards are passed, correct, or incorrect
   function getGradedItems(grade: SuperMemoGrade | SuperMemoGrade[]) {
     if (Array.isArray(grade)) {
-      return grade.flatMap?.((g) => grades[g] ?? [])?.length;
+      return grade.flatMap?.((g) => grades?.[g] ?? [])?.length;
     }
 
-    return grades[grade]?.length;
+    return grades?.[grade]?.length;
   }
 
   return (
