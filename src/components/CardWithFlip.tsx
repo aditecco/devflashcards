@@ -10,13 +10,14 @@ import CardControls from "./CardControls";
 import CardFooter from "./CardFooter";
 import CardContent from "./CardContent";
 import { Flashcard } from "../types";
-import { basicSanitizer, truncate } from "../utils";
+import { basicSanitizer } from "../utils";
 import MaterialIcon from "./MaterialIcon";
 import { SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
 import { SmallHeading } from "./SmallHeading";
 import { Button } from "./Button";
 import { getSuperMemoGradeDescriptions } from "../lib";
+import CardMeta from "./CardMeta";
 
 type OwnProps = {
   card: Flashcard;
@@ -52,6 +53,8 @@ export default function CardWithFlip({
       <Flip.Front>
         {({ setFlipped }) => (
           <Card {...{ ...cardProps, deck, order }}>
+            <CardMeta {...{ deck, order }} />
+
             <CardContent>
               <header className="card-content-title">
                 <h4>{title}</h4>
@@ -98,6 +101,8 @@ export default function CardWithFlip({
       <Flip.Back>
         {({ setFlipped }) => (
           <Card>
+            <CardMeta {...{ deck, order }} />
+
             <CardContent back>
               <header className="card-content-title">
                 <h4>

@@ -6,7 +6,7 @@ import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css, useTheme } from "@emotion/react";
 import { rem } from "../lib/css-functions";
-import { $font, cardContentMetaHeight } from "../constants/css-vars";
+import { $font } from "../constants/css-vars";
 import classNames from "classnames";
 
 type OwnProps = {
@@ -132,12 +132,6 @@ export default function CardContent({
         // ad-hoc styles for the card's
         // front only
         &:not(.card-content--back) {
-          border-top-left-radius: 6px;
-          border-top-right-radius: 6px;
-
-          .card-content-title {
-            margin-top: ${cardContentMetaHeight}px;
-          }
         }
 
         // different styles for
