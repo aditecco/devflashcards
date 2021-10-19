@@ -51,15 +51,8 @@ export default function CardWithFlip({
     <Flip style={style ?? {}}>
       <Flip.Front>
         {({ setFlipped }) => (
-          <Card {...cardProps}>
+          <Card {...{ ...cardProps, deck, order }}>
             <CardContent>
-              <div className="card-content-meta">
-                <span className={"card-content-meta-item"}>
-                  {truncate(deck, 30)}
-                </span>
-                <span className={"card-content-meta-item"}>#{order + 1}</span>
-              </div>
-
               <header className="card-content-title">
                 <h4>{title}</h4>
               </header>

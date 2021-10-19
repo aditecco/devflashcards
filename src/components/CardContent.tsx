@@ -30,34 +30,6 @@ export default function CardContent({
           padding: 0 1rem;
         }
 
-        .card-content-meta {
-          padding: 0 1rem;
-          font-size: small;
-          text-transform: uppercase;
-          border-bottom: 1px solid ${theme?.colors?.stroke?.[2]};
-          display: flex;
-          justify-content: space-between;
-          font-family: ${theme?.fonts?.lato};
-          color: ${theme?.colors?.typography?.[2]};
-          position: fixed;
-          background: white;
-          left: 0;
-          right: 0;
-          top: 0;
-          z-index: 1;
-          border-top-left-radius: ${theme?.radii?.card};
-          border-top-right-radius: ${theme?.radii?.card};
-        }
-
-        .card-content-meta-item {
-          padding: 0.8rem 0;
-        }
-
-        .card-content-meta-item:last-child {
-          border-left: 1px solid ${theme?.colors?.stroke?.[2]};
-          padding-left: 1rem;
-        }
-
         .card-content-title {
           padding: ${rem(22)} 1rem;
           border-left: 4px solid ${theme?.colors?.accent?.["1"]};
