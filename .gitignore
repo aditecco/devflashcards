@@ -39,3 +39,6 @@ yarn-error.log*
 
 # IDE
 .idea
+
+# generated
+!/src/lib/content-processor/output/
