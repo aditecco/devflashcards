@@ -8,7 +8,7 @@ import {
   ReactElement,
   useContext,
   useEffect,
-  useState
+  useState,
 } from "react";
 import { supermemo, SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
