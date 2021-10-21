@@ -8,16 +8,13 @@ import {
   ReactElement,
   useContext,
   useEffect,
-  useState,
+  useState
 } from "react";
 import { supermemo, SuperMemoGrade } from "supermemo";
 import dayjs from "dayjs";
 import { CardNode, DateObject, Flashcard } from "../types";
 import { SessionContext } from "../context";
-import {
-  DEFAULT_DATE_FORMAT,
-  PERSISTED_SESSION_KEY,
-} from "../constants/constants";
+import { PERSISTED_SESSION_KEY, US_DATE_FORMAT } from "../constants/constants";
 
 type OwnProps = {
   cards: CardNode[];
@@ -33,7 +30,7 @@ export default function ReviewEngine({
   time,
   render,
 }: PropsWithChildren<OwnProps>): ReactElement {
-  const { initial: initialTime, current: currentTime } = time ?? {};
+  let { initial: initialTime, current: currentTime } = time ?? {};
   const [cards, setCards] = useState(rawCards?.map?.(initCards) ?? []);
   const [session, setSession] = useContext(SessionContext);
 
@@ -49,14 +46,42 @@ export default function ReviewEngine({
   }, []);
 
   useEffect(() => {
-    const timeKey = currentTime.format(DEFAULT_DATE_FORMAT);
-    const cardsToReview = session?.reviews?.[timeKey];
+    /**
+     * get all the reviews
+     *
+     * if reviews include today => prepend today
+     *
+     * if reviews include day before today => prepend day before today
+     *
+     * if reviews include today & day before today => prepend [day before today].concat(today)
+     */
 
-    if (cardsToReview?.length) {
-      setCards((cards) => cardsToReview.concat(cards));
+    const { reviews } = session ?? {};
+    const reviewKeys = Object.keys(reviews);
+    const toReviewToday = [];
+
+    if (reviewKeys?.length) {
+      for (const reviewDate of reviewKeys) {
+        if (
+          currentTime.isSame(reviewDate, "day") ||
+          currentTime.isAfter(reviewDate, "day")
+        ) {
+          toReviewToday.push(reviews[reviewDate]);
+        }
+      }
+    }
+
+    console.log(toReviewToday);
+
+    if (toReviewToday?.length) {
+      setCards((cards) => toReviewToday.flat().concat(cards));
 
       setSession((session) => {
-        delete session.reviews[timeKey];
+        if (reviewKeys?.length) {
+          for (const k of reviewKeys) {
+            delete session.reviews[k];
+          }
+        }
 
         return session;
       });
@@ -100,7 +125,7 @@ export default function ReviewEngine({
     const i = cards.findIndex((c) => c?.id === flashcard?.id);
     const reviewedCard = practice(flashcard, grade);
     const simplifiedDueDate = dayjs(reviewedCard?.dueDate).format(
-      DEFAULT_DATE_FORMAT
+      US_DATE_FORMAT
     );
 
     setSession((s) => ({
