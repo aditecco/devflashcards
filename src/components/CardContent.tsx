@@ -12,7 +12,7 @@ import { CardProps } from "./Card";
 
 type OwnProps = {
   back?: boolean;
-} & Omit<CardProps, "style" | "noShadow">;
+} & Omit<CardProps, "style" | "i">;
 
 export default function CardContent({
   children,
