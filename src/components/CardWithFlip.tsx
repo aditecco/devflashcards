@@ -52,7 +52,7 @@ export default function CardWithFlip({
     <Flip style={style ?? {}}>
       <Flip.Front>
         {({ setFlipped }) => (
-          <Card {...{ ...cardProps, deck, order }}>
+          <Card {...cardProps}>
             <CardMeta {...{ deck, order }} />
 
             <CardContent {...cardProps}>
@@ -101,8 +101,6 @@ export default function CardWithFlip({
       <Flip.Back>
         {({ setFlipped }) => (
           <Card>
-            <CardMeta {...{ deck, order }} />
-
             <CardContent back>
               <header className="card-content-title">
                 <h4>
