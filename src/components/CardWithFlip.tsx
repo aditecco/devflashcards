@@ -55,7 +55,7 @@ export default function CardWithFlip({
           <Card {...{ ...cardProps, deck, order }}>
             <CardMeta {...{ deck, order }} />
 
-            <CardContent>
+            <CardContent {...cardProps}>
               <header className="card-content-title">
                 <h4>{title}</h4>
               </header>

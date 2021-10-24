@@ -5,17 +5,19 @@ CardContent
 import * as React from "react";
 import { PropsWithChildren, ReactElement } from "react";
 import { css, useTheme } from "@emotion/react";
-import { rem } from "../lib/css-functions";
+import { rem } from "../lib";
 import { $font } from "../constants/css-vars";
 import classNames from "classnames";
+import { CardProps } from "./Card";
 
 type OwnProps = {
   back?: boolean;
-};
+} & Omit<CardProps, "style" | "noShadow">;
 
 export default function CardContent({
   children,
   back,
+  isDragging,
 }: PropsWithChildren<OwnProps>): ReactElement | null {
   const theme = useTheme();
 
@@ -23,7 +25,7 @@ export default function CardContent({
     <div
       className={classNames(["card-content", back && "card-content--back"])}
       css={css`
-        overflow-y: auto;
+        overflow-y: ${isDragging ? "hidden" : "auto"};
         position: relative;
 
         > *:not(.card-content-main) {

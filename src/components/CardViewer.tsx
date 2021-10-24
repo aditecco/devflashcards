@@ -9,6 +9,7 @@ import {
   useContext,
   useEffect,
   useRef,
+  useState,
 } from "react";
 import CardWithFlip from "./CardWithFlip";
 import { css, useTheme } from "@emotion/react";
@@ -39,6 +40,7 @@ export default function CardViewer({
   const theme = useTheme();
   const [session] = useContext(SessionContext);
   const { activeCard, reviews } = session ?? {};
+  const [isDragging, setIsDragging] = useState(false);
   const dragBoundaries = useRef(null);
   const cardViewerRef = useRef(null);
 
@@ -139,6 +141,9 @@ export default function CardViewer({
                 drag={first ? "x" : false}
                 dragElastic={0.8}
                 dragConstraints={dragBoundaries}
+                onDragStart={() => {
+                  setIsDragging(true);
+                }}
                 onDragEnd={(_, info) => {
                   const dragMax = info.point.x;
 
@@ -146,6 +151,8 @@ export default function CardViewer({
                     // rate the card w/ the lowest grade
                     onCardReview(card, 0);
                   }
+
+                  setIsDragging(false);
                 }}
                 style={{
                   cursor: first ? "grab" : "pointer",
@@ -154,11 +161,7 @@ export default function CardViewer({
                   zIndex: cards.length - i,
                 }}
               >
-                <CardWithFlip
-                  card={card}
-                  noShadow={!first}
-                  onCardReview={onCardReview} // TODO avoid drilling
-                />
+                <CardWithFlip {...{ card, onCardReview, isDragging, i }} />
               </motion.div>
             );
           })}
